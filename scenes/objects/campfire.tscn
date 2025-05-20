@@ -89,7 +89,8 @@ double_sided = false
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_gv1jp")
 autoplay = "default"
-frame_progress = 0.8369
+frame = 2
+frame_progress = 0.769269
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.619301, 0)
