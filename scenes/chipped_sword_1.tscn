@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4tbqmau8gei7"]
+
+[ext_resource type="PackedScene" uid="uid://br5puqn6xb5m" path="res://assets/models/chipped_sword_1/chipped_sword_1.gltf" id="1_lsivo"]
+
+[node name="ChippedSword1" instance=ExtResource("1_lsivo")]
+
+[node name="Sword" parent="." index="0"]
+cast_shadow = 0

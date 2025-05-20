@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwal73wxkfikj"]
+
+[ext_resource type="PackedScene" uid="uid://8moryynjr2r7" path="res://assets/models/training_dummy/training_dummy.gltf" id="1_v6s2v"]
+[ext_resource type="Script" uid="uid://c4bcuwcrymmaj" path="res://src/health_component.gd" id="2_jt8kp"]
+[ext_resource type="AudioStream" uid="uid://bjkgwqncxy0wy" path="res://assets/sound/weapon_impact_1.wav" id="3_np7qd"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yl1v0"]
+data = PackedVector3Array(-0.684746, -1, 0.19178, -0.684746, 0.656369, -0.19178, -0.684746, 0.656369, 0.19178, -0.684746, -1, 0.19178, -0.684746, -1, -0.19178, -0.684746, 0.656369, -0.19178, -0.684746, -1, -0.19178, 0.684746, 0.656369, -0.19178, -0.684746, 0.656369, -0.19178, -0.684746, -1, -0.19178, 0.684746, -1, -0.19178, 0.684746, 0.656369, -0.19178, 0.684746, -1, -0.19178, 0.684746, 0.656369, 0.19178, 0.684746, 0.656369, -0.19178, 0.684746, -1, -0.19178, 0.684746, -1, 0.19178, 0.684746, 0.656369, 0.19178, 0.684746, -1, 0.19178, -0.684746, 0.656369, 0.19178, 0.684746, 0.656369, 0.19178, 0.684746, -1, 0.19178, -0.684746, -1, 0.19178, -0.684746, 0.656369, 0.19178, -0.684746, -1, -0.19178, 0.684746, -1, 0.19178, 0.684746, -1, -0.19178, -0.684746, -1, -0.19178, -0.684746, -1, 0.19178, 0.684746, -1, 0.19178, 0.684746, 0.656369, -0.19178, -0.684746, 0.656369, 0.19178, -0.684746, 0.656369, -0.19178, 0.684746, 0.656369, -0.19178, 0.684746, 0.656369, 0.19178, -0.684746, 0.656369, 0.19178)
+
+[sub_resource type="Animation" id="Animation_np7qd"]
+resource_name = "impact"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrainingDummy:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.4),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.174533, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_444kd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrainingDummy:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o7ju8"]
+_data = {
+&"RESET": SubResource("Animation_444kd"),
+&"impact": SubResource("Animation_np7qd")
+}
+
+[node name="TrainingDummy" instance=ExtResource("1_v6s2v")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="Hurtbox" type="Area3D" parent="." index="2"]
+monitorable = false
+script = ExtResource("2_jt8kp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("ConcavePolygonShape3D_yl1v0")
+
+[node name="WeaponImpact" type="AudioStreamPlayer3D" parent="Hurtbox" index="1"]
+stream = ExtResource("3_np7qd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+libraries = {
+&"": SubResource("AnimationLibrary_o7ju8")
+}
+
+[connection signal="area_entered" from="Hurtbox" to="Hurtbox" method="_on_area_entered"]

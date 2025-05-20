@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://5hcnsrmmrhe4"]
+
+[ext_resource type="Material" uid="uid://bmkybo6ligry1" path="res://assets/materials/stone_floor_1_mat.material" id="1_058od"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m8bl7"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0),
+"name": "StoneFloor1Mat",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_30kvb"]
+resource_name = "dungeon_kit_1_Plane_016"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray(255, 255, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0),
+"material": ExtResource("1_058od"),
+"name": "StoneFloor1Mat",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_m8bl7")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5ewmq"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, -1, 0, -1, 1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[node name="StoneFloor1" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_30kvb")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_5ewmq")

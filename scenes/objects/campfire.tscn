@@ -1,0 +1,115 @@
+[gd_scene load_steps=18 format=3 uid="uid://cuq4nganbkh86"]
+
+[ext_resource type="PackedScene" uid="uid://b8namb0422d55" path="res://assets/models/campfire/campfire.glb" id="1_hwlge"]
+[ext_resource type="Texture2D" uid="uid://s58apj333asj" path="res://assets/textures/fire/fire_1.png" id="2_lpj6a"]
+[ext_resource type="Texture2D" uid="uid://cm21c04cr0318" path="res://assets/textures/fire/fire_2.png" id="3_os0we"]
+[ext_resource type="Texture2D" uid="uid://b6kpkyhljtwkk" path="res://assets/textures/fire/fire_3.png" id="4_v7jko"]
+[ext_resource type="Texture2D" uid="uid://cche612p6oxa4" path="res://assets/textures/fire/fire_4.png" id="5_n5g7v"]
+[ext_resource type="Texture2D" uid="uid://buu0bkba7a5xo" path="res://assets/textures/fire/fire_7.png" id="6_4agls"]
+[ext_resource type="Texture2D" uid="uid://cmj1nl1c2i612" path="res://assets/textures/fire/fire_5.png" id="7_7o7d8"]
+[ext_resource type="Texture2D" uid="uid://c0v1nsaxkhnce" path="res://assets/textures/fire/fire_6.png" id="8_dn2kd"]
+[ext_resource type="Texture2D" uid="uid://dun0nrdck3dun" path="res://assets/textures/fire/fire_8.png" id="9_pldx6"]
+[ext_resource type="Texture2D" uid="uid://chmigwp33dkya" path="res://assets/textures/fire/fire_9.png" id="10_w65en"]
+[ext_resource type="Texture2D" uid="uid://cbq2hol5owhp" path="res://assets/textures/fire/fire_10.png" id="11_1gwhy"]
+[ext_resource type="Texture2D" uid="uid://bs5tqvjk6qyc1" path="res://assets/textures/fire/fire_11.png" id="12_g4ouk"]
+[ext_resource type="AudioStream" uid="uid://c3ei40h15igq3" path="res://assets/sound/fire_crackle.wav" id="13_os0we"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gv1jp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lpj6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_os0we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v7jko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n5g7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4agls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7o7d8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dn2kd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pldx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_w65en")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1gwhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g4ouk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lpj6a"]
+lifetime_randomness = 1.0
+emission_shape_scale = Vector3(1, 0.2, 1)
+emission_shape = 3
+emission_box_extents = Vector3(0.2, 0.3, 0.2)
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_min = 0.5
+initial_velocity_max = 2.0
+gravity = Vector3(0, 0, 0)
+tangential_accel_min = -2.23517e-06
+tangential_accel_max = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lpj6a"]
+specular_mode = 2
+albedo_color = Color(0.831605, 0.59038, 0.315725, 1)
+emission_enabled = true
+emission = Color(0.878723, 0.740818, 0.428204, 1)
+disable_receive_shadows = true
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_os0we"]
+material = SubResource("StandardMaterial3D_lpj6a")
+size = Vector2(0.04, 0.04)
+
+[node name="Campfire" instance=ExtResource("1_hwlge")]
+
+[node name="FireSprite" type="AnimatedSprite3D" parent="." index="2"]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0.646, 0)
+billboard = 2
+double_sided = false
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_gv1jp")
+autoplay = "default"
+frame_progress = 0.8369
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.619301, 0)
+light_color = Color(1, 0.85, 0.55, 1)
+light_energy = 3.0
+light_size = 0.3
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.147655, 0)
+visibility_range_end = 20.0
+amount = 12
+lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_lpj6a")
+draw_pass_1 = SubResource("QuadMesh_os0we")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.270761, 0)
+stream = ExtResource("13_os0we")
+volume_db = -10.0
+autoplay = true
+max_distance = 15.0

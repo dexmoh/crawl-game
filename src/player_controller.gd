@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-
 @export_group("Movement")
 @export_range(0, 30, 0.5) var walk_speed: float = 3.0
 @export_range(0, 30, 0.5) var sprint_speed: float = 8.0
@@ -18,10 +17,8 @@ var head_bob_t: float = 0.0
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var camera: Camera3D = $CameraPivot/Camera
 
-
-func _ready():
+func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -31,7 +28,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -90, 90)
 	elif event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
-
 
 func _physics_process(delta: float) -> void:
 	# Handle sprinting.
