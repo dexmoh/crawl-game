@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://chmigwp33dkya" path="res://assets/textures/fire/fire_9.png" id="10_w65en"]
 [ext_resource type="Texture2D" uid="uid://cbq2hol5owhp" path="res://assets/textures/fire/fire_10.png" id="11_1gwhy"]
 [ext_resource type="Texture2D" uid="uid://bs5tqvjk6qyc1" path="res://assets/textures/fire/fire_11.png" id="12_g4ouk"]
-[ext_resource type="AudioStream" uid="uid://c3ei40h15igq3" path="res://assets/sound/fire_crackle.wav" id="13_os0we"]
+[ext_resource type="AudioStream" uid="uid://c3ei40h15igq3" path="res://assets/audio/fire_crackle.wav" id="13_os0we"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gv1jp"]
 animations = [{

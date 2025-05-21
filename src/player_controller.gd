@@ -16,6 +16,8 @@ var head_bob_t: float = 0.0
 
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var camera: Camera3D = $CameraPivot/Camera
+@onready var interaction_ray: RayCast3D = $CameraPivot/Camera/InteractionRayCast
+@onready var interaction_label: Label = $UserInterface/InteractionLabel
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -27,7 +29,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -90, 90)
 	elif event.is_action_pressed("ui_cancel"):
-		get_tree().quit()
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _physics_process(delta: float) -> void:
 	# Handle sprinting.
@@ -70,5 +72,16 @@ func _physics_process(delta: float) -> void:
 		head_bob_position.y = sin(head_bob_t * head_bob_frequency) * head_bob_amplitude
 		
 		camera.transform.origin = head_bob_position
+	
+	# Handle interactions.
+	interaction_label.text = ""
+	if interaction_ray.is_colliding():
+		var collider = interaction_ray.get_collider()
+		
+		if collider is Interactable:
+			interaction_label.text = "[E] " + collider.label_text
+			
+			if Input.is_action_just_pressed("interact"):
+				collider.interact(self)
 	
 	move_and_slide()

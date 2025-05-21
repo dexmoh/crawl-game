@@ -1,0 +1,314 @@
+[gd_scene load_steps=14 format=3 uid="uid://d2leetcwhmapw"]
+
+[ext_resource type="PackedScene" uid="uid://cqp6h5tv84tre" path="res://scenes/entities/player.tscn" id="1_dp8al"]
+[ext_resource type="AudioStream" uid="uid://by7ew70lfvig4" path="res://assets/audio/dungeon_ambient_noise_1.wav" id="2_f1v6p"]
+[ext_resource type="PackedScene" uid="uid://5hcnsrmmrhe4" path="res://scenes/kits/dungeon-kit-1/stone_floor_1.tscn" id="3_csbb7"]
+[ext_resource type="PackedScene" uid="uid://b4efggeqp6twg" path="res://scenes/kits/dungeon-kit-1/stone_wall_2_corner_out.tscn" id="4_mmplq"]
+[ext_resource type="PackedScene" uid="uid://lphb8btyoph0" path="res://scenes/kits/dungeon-kit-1/stone_wall_2_corner_in.tscn" id="5_de0io"]
+[ext_resource type="PackedScene" uid="uid://b6r10stufau4x" path="res://scenes/kits/dungeon-kit-1/stone_wall_2.tscn" id="6_xidr1"]
+[ext_resource type="PackedScene" uid="uid://biyy7eawelu7n" path="res://scenes/kits/dungeon-kit-1/stone_wall_1.tscn" id="7_8c33x"]
+[ext_resource type="PackedScene" uid="uid://88cqp8ofwu70" path="res://scenes/objects/interactive_box.tscn" id="8_f1v6p"]
+[ext_resource type="PackedScene" uid="uid://cuq4nganbkh86" path="res://scenes/objects/campfire.tscn" id="8_y40x4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e5uuo"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+energy_multiplier = 0.3
+
+[sub_resource type="Sky" id="Sky_fpimf"]
+sky_material = SubResource("ProceduralSkyMaterial_e5uuo")
+
+[sub_resource type="Environment" id="Environment_nnsk1"]
+background_mode = 2
+sky = SubResource("Sky_fpimf")
+ambient_light_source = 2
+ambient_light_color = Color(0.39, 0.30082, 0.1989, 1)
+ambient_light_energy = 0.2
+tonemap_mode = 3
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(1, 0.886667, 0.66, 1)
+fog_light_energy = 0.2
+fog_density = 0.04
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_i7141"]
+cell_size = 0.05
+agent_radius = 0.7
+
+[node name="World" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nnsk1")
+
+[node name="Player" parent="." instance=ExtResource("1_dp8al")]
+
+[node name="DungeonAmbientNoise1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_f1v6p")
+volume_db = -20.0
+autoplay = true
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_i7141")
+
+[node name="StoneFloor1" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+
+[node name="StoneFloor2" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="StoneFloor3" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StoneFloor4" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="StoneFloor6" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="StoneFloor7" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
+
+[node name="StoneFloor8" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="StoneFloor9" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="StoneFloor10" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="StoneFloor11" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
+
+[node name="StoneFloor12" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="StoneFloor13" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+
+[node name="StoneFloor14" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="StoneFloor15" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="StoneFloor16" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="StoneFloor22" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="StoneFloor17" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="StoneFloor18" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="StoneFloor19" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="StoneFloor20" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="StoneFloor21" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+
+[node name="StoneFloor5" parent="NavigationRegion3D" instance=ExtResource("3_csbb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="StoneWall2CornerOut" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="StoneWall2CornerOut2" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -3)
+
+[node name="StoneWall2CornerOut3" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, -3)
+
+[node name="StoneWall2CornerOut4" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 3, 0, -1)
+
+[node name="StoneWall2CornerOut5" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
+
+[node name="StoneWall2CornerOut6" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 0, -3)
+
+[node name="StoneWall2CornerOut7" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, 0, -3)
+
+[node name="StoneWall2CornerOut8" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -1, 0, -1)
+
+[node name="StoneWall2CornerOut9" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+
+[node name="StoneWall2CornerOut10" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 0, 1)
+
+[node name="StoneWall2CornerOut11" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, 0, 1)
+
+[node name="StoneWall2CornerOut12" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -1, 0, 3)
+
+[node name="StoneWall2CornerOut13" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+
+[node name="StoneWall2CornerOut14" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 1)
+
+[node name="StoneWall2CornerOut15" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, 1)
+
+[node name="StoneWall2CornerOut16" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 3, 0, 3)
+
+[node name="StoneWall2CornerIn" parent="NavigationRegion3D" instance=ExtResource("5_de0io")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, 5)
+
+[node name="StoneWall2CornerIn2" parent="NavigationRegion3D" instance=ExtResource("5_de0io")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -5, 0, 5)
+
+[node name="StoneWall2CornerIn3" parent="NavigationRegion3D" instance=ExtResource("5_de0io")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0, -5)
+
+[node name="StoneWall2CornerIn4" parent="NavigationRegion3D" instance=ExtResource("5_de0io")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
+
+[node name="StoneWall2" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, 5)
+
+[node name="StoneWall3" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1, 0, 5)
+
+[node name="StoneWall4" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3, 0, 5)
+
+[node name="StoneWall5" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, 0, 5)
+
+[node name="StoneWall6" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -5)
+
+[node name="StoneWall7" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -5)
+
+[node name="StoneWall8" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5)
+
+[node name="StoneWall9" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -5)
+
+[node name="StoneWall10" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, -3)
+
+[node name="StoneWall12" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, 3)
+
+[node name="StoneWall14" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -5, 0, 3)
+
+[node name="StoneWall15" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -5, 0, 1)
+
+[node name="StoneWall16" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -5, 0, -3)
+
+[node name="StoneWall17" parent="NavigationRegion3D" instance=ExtResource("6_xidr1")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -5, 0, -1)
+
+[node name="StoneWall1" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4, 3, 3)
+
+[node name="StoneWall18" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2, 3, 3)
+
+[node name="StoneWall19" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3, 3)
+
+[node name="StoneWall20" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2, 3, 3)
+
+[node name="StoneWall21" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4, 3, 3)
+
+[node name="StoneWall22" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4, 3, 1)
+
+[node name="StoneWall23" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2, 3, 1)
+
+[node name="StoneWall24" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3, 1)
+
+[node name="StoneWall25" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2, 3, 1)
+
+[node name="StoneWall26" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4, 3, 1)
+
+[node name="StoneWall27" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4, 3, -1)
+
+[node name="StoneWall28" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2, 3, -1)
+
+[node name="StoneWall29" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3, -1)
+
+[node name="StoneWall30" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2, 3, -1)
+
+[node name="StoneWall31" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4, 3, -1)
+
+[node name="StoneWall42" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 6, 3, -1)
+
+[node name="StoneWall32" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4, 3, -3)
+
+[node name="StoneWall33" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2, 3, -3)
+
+[node name="StoneWall34" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3, -3)
+
+[node name="StoneWall35" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2, 3, -3)
+
+[node name="StoneWall36" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4, 3, -3)
+
+[node name="StoneWall37" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4, 3, -5)
+
+[node name="StoneWall38" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2, 3, -5)
+
+[node name="StoneWall39" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3, -5)
+
+[node name="StoneWall40" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2, 3, -5)
+
+[node name="StoneWall41" parent="NavigationRegion3D" instance=ExtResource("7_8c33x")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4, 3, -5)
+
+[node name="StoneWall2CornerIn5" parent="NavigationRegion3D" instance=ExtResource("5_de0io")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+
+[node name="StoneWall2CornerIn6" parent="NavigationRegion3D" instance=ExtResource("5_de0io")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0, 1)
+
+[node name="StoneWall2CornerOut17" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+
+[node name="StoneWall2CornerOut18" parent="NavigationRegion3D" instance=ExtResource("4_mmplq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, 1)
+
+[node name="InteractiveBox" parent="NavigationRegion3D" instance=ExtResource("8_f1v6p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48903, 4)
+
+[node name="Campfire" parent="." instance=ExtResource("8_y40x4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)

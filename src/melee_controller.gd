@@ -20,7 +20,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			else:
 				weapon_swing_2.play()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	var camera_rotation: float = camera.rotation_degrees.x
 	if camera_rotation < -20.0:

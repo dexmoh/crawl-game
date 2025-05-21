@@ -56,6 +56,6 @@ void fragment() {
 			closest_color = vec4(palette_color, 1.0);
 		}
 	}
-	
+
 	COLOR = closest_color;
 }
