@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://cqp6h5tv84tre"]
 
 [ext_resource type="Script" uid="uid://bxhkx24n73ja3" path="res://src/player_controller.gd" id="1_3vyb7"]
-[ext_resource type="PackedScene" uid="uid://b4tbqmau8gei7" path="res://scenes/chipped_sword_1.tscn" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://b4tbqmau8gei7" path="res://scenes/objects/chipped_sword_1.tscn" id="2_g2els"]
 [ext_resource type="Script" uid="uid://b152iatks744d" path="res://src/melee_controller.gd" id="2_qhqgy"]
 [ext_resource type="Script" uid="uid://c36rn1egjwxi2" path="res://src/reticle.gd" id="5_fjrip"]
 [ext_resource type="Shader" uid="uid://gh3w1tb6k0oa" path="res://src/shaders/pixel_dither.gdshader" id="5_smehm"]

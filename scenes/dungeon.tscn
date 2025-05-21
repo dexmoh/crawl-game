@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckrineaxs5ysu"]
-
-[ext_resource type="PackedScene" uid="uid://c50klx51c3fan" path="res://assets/models/dungeon/dungeon.gltf" id="1_ubp1v"]
-
-[node name="Dungeon" instance=ExtResource("1_ubp1v")]
-
-[node name="CollisionShape3D" parent="Dungeon/StaticBody3D" index="0"]
-visible = false
