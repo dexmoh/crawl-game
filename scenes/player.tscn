@@ -1,9 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://cqp6h5tv84tre"]
+[gd_scene load_steps=18 format=3 uid="uid://cqp6h5tv84tre"]
 
 [ext_resource type="Script" uid="uid://bxhkx24n73ja3" path="res://src/player_controller.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://b4tbqmau8gei7" path="res://scenes/chipped_sword_1.tscn" id="2_g2els"]
 [ext_resource type="Script" uid="uid://b152iatks744d" path="res://src/melee_controller.gd" id="2_qhqgy"]
-[ext_resource type="Shader" uid="uid://bgdxgb4wsqxwd" path="res://src/shaders/pixelate.gdshader" id="4_dqkch"]
 [ext_resource type="Script" uid="uid://c36rn1egjwxi2" path="res://src/reticle.gd" id="5_fjrip"]
 [ext_resource type="Shader" uid="uid://gh3w1tb6k0oa" path="res://src/shaders/pixel_dither.gdshader" id="5_smehm"]
 [ext_resource type="AudioStream" uid="uid://cpqaoi03s42l5" path="res://assets/sound/weapon_swing_1.mp3" id="5_tuyoq"]
@@ -184,10 +183,6 @@ _data = {
 &"weapon_idle": SubResource("Animation_g2els")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qlg0r"]
-shader = ExtResource("4_dqkch")
-shader_parameter/pixel_size = 256.0
-
 [sub_resource type="Gradient" id="Gradient_smehm"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0.03125, 0.0625, 0.09375, 0.125, 0.15625, 0.1875, 0.21875, 0.25, 0.28125, 0.3125, 0.34375, 0.375, 0.40625, 0.4375, 0.46875, 0.5, 0.53125, 0.5625, 0.59375, 0.625, 0.65625, 0.6875, 0.71875, 0.75, 0.78125, 0.8125, 0.84375, 0.875, 0.90625, 0.9375, 0.96875, 1)
@@ -259,18 +254,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-
-[node name="PixelShaderRect" type="ColorRect" parent="UserInterface"]
-visible = false
-material = SubResource("ShaderMaterial_qlg0r")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(1, 1, 1, 0)
 
 [node name="PixelDitherShaderRect" type="ColorRect" parent="UserInterface"]
 material = SubResource("ShaderMaterial_ur7pv")
