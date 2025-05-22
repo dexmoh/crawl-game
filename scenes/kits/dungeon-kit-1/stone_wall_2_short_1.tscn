@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=4 uid="uid://cys330gxwf7v2"]
+
+[ext_resource type="Texture2D" uid="uid://d4kxah50l0csu" path="res://assets/models/dungeon_kit_1/dungeon_kit_1_brick_wall_1_color_128.png" id="1_ljspq"]
+[ext_resource type="Texture2D" uid="uid://bmyj2b80n4s22" path="res://assets/models/dungeon_kit_1/dungeon_kit_1_brick_wall_1_normal_128.png" id="2_wp1a7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jlvxj"]
+resource_name = "BrickWall1Mat"
+albedo_texture = ExtResource("1_ljspq")
+normal_enabled = true
+normal_texture = ExtResource("2_wp1a7")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wuugd"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -2.18557e-08, 0.5, 3, 1),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAAAEAAEAAAAFAAQA"),
+"name": "BrickWall1Mat",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("/v9U1f//AAD+/1TVAAAAAAAA//8AAAAAAAD/////AAD//wAAAAAAAP7/AAD//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bmh5v"]
+resource_name = "dungeon_kit_1_Plane_008"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -2.18557e-08, 0.5, 3, 1),
+"attribute_data": PackedByteArray("/v8HYAHAB2ABwMgy///IMv7/B2D+////AcD//wHAB2A="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcA"),
+"material": SubResource("StandardMaterial3D_jlvxj"),
+"name": "BrickWall1Mat",
+"primitive": 3,
+"uv_scale": Vector4(1.99962, 1.99975, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/v9U1f///MX+/1TVAAD8xQAA//8AAPzFAAD//////MX+/1TV////v/7/AAD///+///8AAAAA/7/+/1TVAAD/vwFG/+IBRv/iAUb/4gFG/+L/f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wuugd")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1xhn2"]
+data = PackedVector3Array(-8.74228e-08, 2.5, 1, -4.37114e-08, 2.5, -1.91069e-15, -0.5, 3, -2.18557e-08, -8.74228e-08, 2.5, 1, 0, 0, 1, 4.37114e-08, 0, 1.91069e-15, -8.74228e-08, 2.5, 1, -0.5, 3, -2.18557e-08, -0.5, 3, 1, -8.74228e-08, 2.5, 1, 4.37114e-08, 0, 1.91069e-15, -4.37114e-08, 2.5, -1.91069e-15)
+
+[node name="StoneWall2Short1" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_bmh5v")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_1xhn2")

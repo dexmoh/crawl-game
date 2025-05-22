@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=4 uid="uid://cln6xcgknkxa"]
+
+[ext_resource type="Texture2D" uid="uid://d4kxah50l0csu" path="res://assets/models/dungeon_kit_1/dungeon_kit_1_brick_wall_1_color_128.png" id="1_ktni7"]
+[ext_resource type="Texture2D" uid="uid://bmyj2b80n4s22" path="res://assets/models/dungeon_kit_1/dungeon_kit_1_brick_wall_1_normal_128.png" id="2_6n6h8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jlvxj"]
+resource_name = "BrickWall1Mat"
+albedo_texture = ExtResource("1_ktni7")
+normal_enabled = true
+normal_texture = ExtResource("2_6n6h8")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sr6vu"]
+_surfaces = [{
+"aabb": AABB(-0.25, 0, -0.25, 0.5, 1, 0.5),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAwAEAAEAAAACAAUABQADAAAABQACAAYABwAEAAMABQAHAAMABwAGAAQABQAGAAcA"),
+"name": "BrickWall1Mat",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP//AAD//wAAAAD//wAAAAAAAAAAAAAAAP///////wAAAAAAAP//AAAAAP////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m8bl7"]
+resource_name = "dungeon_kit_1_Cube_003"
+_surfaces = [{
+"aabb": AABB(-0.25, 0, -0.25, 0.5, 1, 0.5),
+"attribute_data": PackedByteArray("0b8wQNG/y78DgMu/A4AwQDVAMEA1QMu/aADLv2gAMECe/zBAnv/Lv9G/y7/RvzBAA4AwQAOAy781QMu/NUAwQNG/MEADgDBAA4BiANG/YgA="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMA"),
+"material": SubResource("StandardMaterial3D_jlvxj"),
+"name": "BrickWall1Mat",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("/////wAA/7///wAAAAD/v///AAD///+//////////78AAP//////vwAAAAD///+/AAAAAAAA/78AAP//AAD/vwAA//8AAP//AAAAAAAA/////wAAAAD///////8AAP//////////AID//wAA//8AgAAAAAD//wCAAAD/////AID/////////vwAA//////+/AAD//wAA/7//////AAD/v/9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////3////9/////f////3////9/////f////3////9///////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_sr6vu")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_30kvb"]
+data = PackedVector3Array(0.25, 1, -0.25, 0.25, 0, -0.25, 0.25, 0, 0.25, -0.25, 1, 0.25, -0.25, 0, 0.25, -0.25, 0, -0.25, -0.25, 1, -0.25, -0.25, 0, -0.25, 0.25, 0, -0.25, 0.25, 1, 0.25, 0.25, 0, 0.25, -0.25, 0, 0.25, 0.25, 1, 0.25, -0.25, 1, 0.25, -0.25, 1, -0.25, 0.25, 1, -0.25, 0.25, 0, 0.25, 0.25, 1, 0.25, -0.25, 1, 0.25, -0.25, 0, -0.25, -0.25, 1, -0.25, -0.25, 1, -0.25, 0.25, 0, -0.25, 0.25, 1, -0.25, 0.25, 1, 0.25, -0.25, 0, 0.25, -0.25, 1, 0.25, 0.25, 1, 0.25, -0.25, 1, -0.25, 0.25, 1, -0.25)
+
+[node name="StonePillar1Mid" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_m8bl7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_30kvb")

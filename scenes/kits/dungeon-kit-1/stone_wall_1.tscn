@@ -1,41 +1,49 @@
-[gd_scene load_steps=5 format=4 uid="uid://biyy7eawelu7n"]
+[gd_scene load_steps=7 format=3 uid="uid://dwttk4kuvhn2h"]
 
-[ext_resource type="Material" uid="uid://dl3l2yc4rx6bw" path="res://assets/materials/stone_wall_1_mat.material" id="1_uh68d"]
+[ext_resource type="Texture2D" uid="uid://d4kxah50l0csu" path="res://assets/models/dungeon_kit_1/dungeon_kit_1_brick_wall_1_color_128.png" id="1_0c77i"]
+[ext_resource type="Texture2D" uid="uid://bmyj2b80n4s22" path="res://assets/models/dungeon_kit_1/dungeon_kit_1_brick_wall_1_normal_128.png" id="2_vmbyn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jlvxj"]
+resource_name = "BrickWall1Mat"
+albedo_texture = ExtResource("1_0c77i")
+normal_enabled = true
+normal_texture = ExtResource("2_vmbyn")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_aij5f"]
 _surfaces = [{
-"aabb": AABB(-1, 0, -4.37114e-08, 2, 2, 1e-05),
-"format": 34359742465,
+"aabb": AABB(-8.74228e-08, 0, -1, 1e-05, 2, 2),
+"format": 34896613377,
 "index_count": 6,
-"index_data": PackedByteArray("AAABAAIAAAACAAMA"),
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0),
 "name": "BrickWall1Mat",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray("AACAPwAAAAAuvTuzAACAvwAAAAAuvTuzAACAvwAAAEAuvTszAACAPwAAAEAuvTsz")
+"vertex_data": PackedByteArray(60, 2, 0, 0, 255, 255, 0, 0, 121, 4, 0, 0, 0, 0, 0, 0, 60, 2, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0)
 }]
 blend_shape_mode = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_n1fgo"]
 resource_name = "dungeon_kit_1_Plane_006"
 _surfaces = [{
-"aabb": AABB(-1, 0, -4.37114e-08, 2, 2, 1e-05),
-"attribute_data": PackedByteArray("AACAPwAAgD8AAAAAAACAPwAAAAAAAAAAAACAPwAAAAA="),
-"format": 34359742487,
+"aabb": AABB(-8.74228e-08, 0, -1, 1e-05, 2, 2),
+"attribute_data": PackedByteArray(255, 255, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
 "index_count": 6,
-"index_data": PackedByteArray("AAABAAIAAAACAAMA"),
-"material": ExtResource("1_uh68d"),
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_jlvxj"),
 "name": "BrickWall1Mat",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray("AACAPwAAAAAuvTuzAACAvwAAAAAuvTuzAACAvwAAAEAuvTszAACAPwAAAEAuvTsz/3//f////7//f/9/////v/9//3////+//3//f////78=")
+"vertex_data": PackedByteArray(60, 2, 0, 0, 255, 255, 255, 191, 121, 4, 0, 0, 0, 0, 255, 191, 60, 2, 255, 255, 0, 0, 255, 191, 0, 0, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_aij5f")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_36m4o"]
-data = PackedVector3Array(1, 0, -4.37114e-08, -1, 0, -4.37114e-08, -1, 2, 4.37114e-08, 1, 0, -4.37114e-08, -1, 2, 4.37114e-08, 1, 2, 4.37114e-08)
+data = PackedVector3Array(0, 0, 1, 8.74228e-08, 0, -1, 0, 2, -1, 0, 0, 1, 0, 2, -1, -8.74228e-08, 2, 1)
 
 [node name="StoneWall1" type="MeshInstance3D"]
 mesh = SubResource("ArrayMesh_n1fgo")

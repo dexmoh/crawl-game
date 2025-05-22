@@ -79,9 +79,11 @@ func _physics_process(delta: float) -> void:
 		var collider = interaction_ray.get_collider()
 		
 		if collider is Interactable:
-			interaction_label.text = "[E] " + collider.label_text
-			
-			if Input.is_action_just_pressed("interact"):
-				collider.interact(self)
+			if collider.is_active:
+				collider.on_focus(self)
+				interaction_label.text = "[E] " + collider.label_text
+				
+				if Input.is_action_just_pressed("interact"):
+					collider.interact(self)
 	
 	move_and_slide()
