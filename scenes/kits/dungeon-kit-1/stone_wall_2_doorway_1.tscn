@@ -1,14 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://denjfd4wc4pt"]
+[gd_scene load_steps=5 format=4 uid="uid://denjfd4wc4pt"]
 
-[ext_resource type="Texture2D" uid="uid://d4kxah50l0csu" path="res://assets/models/dungeon_kit_1/dungeon_kit_1_brick_wall_1_color_128.png" id="1_a5v3j"]
-[ext_resource type="Texture2D" uid="uid://bmyj2b80n4s22" path="res://assets/models/dungeon_kit_1/dungeon_kit_1_brick_wall_1_normal_128.png" id="2_hx0r3"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jlvxj"]
-resource_name = "BrickWall1Mat"
-albedo_texture = ExtResource("1_a5v3j")
-normal_enabled = true
-normal_texture = ExtResource("2_hx0r3")
-texture_filter = 2
+[ext_resource type="Material" uid="uid://ddo31vlkb3qwb" path="res://assets/materials/brick_wall_mat_1.res" id="1_fpe6s"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_rt7hp"]
 _surfaces = [{
@@ -34,7 +26,7 @@ _surfaces = [{
 "index_count": 180,
 "index_data": PackedByteArray("AgAoAAYAAgAGAAcAKAAIAAYAKAApAAgACAApACoACAAqAAoAKgALAAoAKgAJAAsAKwAsAAEAKwABAC0AAQAuAC0AAAAsACsAAAArAC8AAwAsAAAAAwAwACwAAwAFADAAAwAEAAUAAQAxAC4ADAAuADEADAAyAC4ADQAMADEADQAxADMADgANADMADgAPAA0AEgA0ABwAEgAcAB0ANQAcADQANQAbABwAGwA1ADYAGwA2AB4AHgA2ABYAHgAWAB8ANwA4ABEANwARADkAEQA6ADkAEAA4ADcAEAA3ADsAEwA4ABAAEwA8ADgAEwAUADwAEwAVABQAEQA9ADoAGAA6AD0AGAA+ADoAGQAYAD0AGQA9AD8AFwAZAD8AFwAaABkAQAAhACIAQAAiAEEAQgBDAEQAQgBEAEUARgBHACMARgAjACAAJAAlAEgAJABIAEkASgBLAEwASgBMAE0AJgBOAE8AJgBPACcA"),
 "lods": [0.505757, PackedByteArray("AAABAAIAAwABAAAAAwAEAAUAAwAFAAEAAgAGAAcAAgAIAAYACAACAAkAAQAJAAIACAAJAAoACQALAAoADAAJAAEADQAMAAEADQABAA4ADgAPAA0AEAARABIAEwARABAAEwAUABEAEwAVABQAEQAWABIAEQAXABYAGAAWABcAGQAYABcAFwAaABkAGwASABYAEgAbABwAEgAcAB0AGwAWAB4AHgAWAB8AIAAhACIAIAAiACMAJAAlACYAJgAlACcA")],
-"material": SubResource("StandardMaterial3D_jlvxj"),
+"material": ExtResource("1_fpe6s"),
 "name": "BrickWall1Mat",
 "primitive": 3,
 "uv_scale": Vector4(1.99737, 2, 0, 0),

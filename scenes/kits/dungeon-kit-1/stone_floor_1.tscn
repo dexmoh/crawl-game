@@ -1,15 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3xsru4yvse76"]
+[gd_scene load_steps=5 format=3 uid="uid://c3xsru4yvse76"]
 
-[ext_resource type="Texture2D" uid="uid://c0ccnhgfyfe2u" path="res://assets/models/dungeon_kit_1/dungeon_kit_1_stone_floor_1_color_64.png" id="1_b10nh"]
-[ext_resource type="Texture2D" uid="uid://6b2ca4wjlnc7" path="res://assets/models/dungeon_kit_1/dungeon_kit_1_stone_floor_1_normal_64.png" id="2_rcy1i"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ik3ea"]
-resource_name = "StoneFloor1Mat"
-albedo_texture = ExtResource("1_b10nh")
-normal_enabled = true
-normal_scale = 3.0
-normal_texture = ExtResource("2_rcy1i")
-texture_filter = 2
+[ext_resource type="Material" uid="uid://oxdqglt5em6j" path="res://assets/materials/stone_floor_mat_1.res" id="1_058od"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_fr4mw"]
 _surfaces = [{
@@ -33,7 +24,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 6,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0),
-"material": SubResource("StandardMaterial3D_ik3ea"),
+"material": ExtResource("1_058od"),
 "name": "StoneFloor1Mat",
 "primitive": 3,
 "uv_scale": Vector4(4, 2, 0, 0),

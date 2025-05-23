@@ -1,15 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://ctb1575m6i23y"]
+[gd_scene load_steps=4 format=4 uid="uid://ctb1575m6i23y"]
 
-[ext_resource type="Texture2D" uid="uid://nme5olbiqk5y" path="res://assets/models/dungeon_kit_1/dungeon_kit_1_dirt_floor_1_color_128.png" id="1_78t7m"]
-[ext_resource type="Texture2D" uid="uid://eudj3qv5mkyx" path="res://assets/models/dungeon_kit_1/dungeon_kit_1_dirt_floor_1_normal_128.png" id="2_r0vd0"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7egca"]
-resource_name = "DirtFloor1Mat"
-albedo_texture = ExtResource("1_78t7m")
-normal_enabled = true
-normal_scale = 2.0
-normal_texture = ExtResource("2_r0vd0")
-texture_filter = 2
+[ext_resource type="Material" uid="uid://bxqpr7d62wjja" path="res://assets/materials/dirt_mat_1.res" id="1_o6wbv"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2j714"]
 _surfaces = [{
@@ -35,7 +26,7 @@ _surfaces = [{
 "index_count": 144,
 "index_data": PackedByteArray("EwAXAAAAFwACAAAAEwAAAAQAFwAQAAIAEAABAAIAEgAXABMAEgAQABcAGAATAAQAEgATABgAGAAEAAYAEAAZAAEAEgAZABAAGQADAAEAGQARAAMAEgARABkAEQAPAAMAGgAYAAYAEgAYABoAGgAGAAcAGgAHAAUAEQAbAA8AEgAbABEAHAAPABsAEgAcABsAHAAOAA8AGgAFABQAEgAaABQAFAAFAAgAFAAIAB0AEgAUAB0AHgAdAAgAEgAdAB4AHgAIAAoAFgAOABwAEgAWABwAFgAMAA4AHwAeAAoAEgAeAB8AHwAKAAkAFQAfAAkAEgAfABUAFQAJAAsAEgAgABYAEgAVACAAIAAMABYAIAAVAAsAIAANAAwAIAALAA0A"),
 "lods": [0.114774, PackedByteArray("AAAQAAIAEAABAAIAEAADAAEAEAARAAMAEQAPAAMAEgARABAAEgAPABEAEgAQAAAAEgAOAA8AEgAAABMAEwAAAAQAEwAEAAYAFAATAAYAEgATABQAFAAGAAcAFAAHAAUAFAAFAAgAEgAUAAgAEgAIAAkACQAIAAoAEgAJABUAFQAJAAsAEgAVABYAFgAVAAsAEgAWAA4AFgALAA0AFgAMAA4AFgANAAwA"), 0.230143, PackedByteArray("AAABAAIAAwABAAAAAwAAAAQAAwAEAAUABQAEAAYABQAGAAcAAwAFAAgACQAIAAoAAwAIAAkAAwAJAAsAAwALAAwADAALAA0AAwAMAA4AAwAOAA8A")],
-"material": SubResource("StandardMaterial3D_7egca"),
+"material": ExtResource("1_o6wbv"),
 "name": "DirtFloor1Mat",
 "primitive": 3,
 "uv_scale": Vector4(2.35092, 2.35092, 0, 0),

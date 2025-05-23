@@ -9,6 +9,7 @@ extends Interactable
 func _ready() -> void:
 	if is_open:
 		rotate_y(deg_to_rad(-85.0))
+		label_text = "Close"
 
 func interact(_src: Object) -> void:
 	if animation_player.is_playing():
@@ -29,5 +30,5 @@ func interact(_src: Object) -> void:
 		label_text = "Open"
 		is_open = false
 
-func _on_animation_finished(anim_name: StringName) -> void:
+func _on_animation_finished(_anim_name: StringName) -> void:
 	is_active = true
