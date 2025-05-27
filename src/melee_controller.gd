@@ -11,7 +11,7 @@ var attack_animations: Array = ["weapon_attack_1", "weapon_attack_2"]
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("attack"):
 		if animation_player.current_animation == "weapon_idle":
-			hitbox.monitorable = true
+			hitbox.monitoring = true
 			var next_animation = attack_animations.pick_random()
 			animation_player.play(next_animation)
 			
@@ -31,5 +31,9 @@ func _on_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "RESET":
 		animation_player.play("weapon_idle")
 	else:
-		hitbox.monitorable = false
+		hitbox.monitoring = false
 		animation_player.play("RESET")
+
+func _on_hitbox_area_entered(area: Area3D) -> void:
+	if area is HealthComponent:
+		area.damage(AttackInfo.new(null, 40))

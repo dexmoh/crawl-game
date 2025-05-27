@@ -313,4 +313,5 @@ stream = ExtResource("5_tuyoq")
 [node name="WeaponSwing2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_fjrip")
 
+[connection signal="area_entered" from="CameraPivot/Camera/Hitbox" to="CameraPivot/WeaponPivot" method="_on_hitbox_area_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="CameraPivot/WeaponPivot" method="_on_animation_finished"]

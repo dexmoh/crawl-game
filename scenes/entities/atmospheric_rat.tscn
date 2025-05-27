@@ -69,3 +69,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_jse0y")
 }
 autoplay = "rotate"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.214354, 0)
+light_color = Color(0.138208, 0.584411, 1, 1)
+light_energy = 10.0
+shadow_enabled = true
