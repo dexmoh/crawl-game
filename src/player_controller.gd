@@ -1,29 +1,49 @@
 extends CharacterBody3D
 
 @export_group("Movement")
-@export_range(0, 30, 0.5) var walk_speed: float = 3.0
-@export_range(0, 30, 0.5) var sprint_speed: float = 8.0
-@export var jump_velocity: float = 4.5
+@export_range(1, 30, 0.5) var walk_speed: float = 3.0
+@export_range(1, 30, 0.5) var sprint_speed: float = 6.0
+@export_range(1, 30, 0.5) var crouch_speed: float = 1.5
+@export_range(1, 20, 0.1) var crouch_anim_speed: float = 6.0
+@export_range(1, 20, 0.25) var jump_velocity: float = 4.0
 
 @export_group("Camera Controls")
 @export_range(0, 0.02, 0.001) var mouse_sensitivity: float = 0.004
 @export_range(0, 110, 5) var vertical_camera_clamp: float = 85.0
 @export var head_bob_enabled: bool = true
-@export var head_bob_frequency: float = 2.0
-@export var head_bob_amplitude: float = 0.08
+@export var head_bob_frequency: float = 1.8
+@export var head_bob_amplitude: float = 0.05
 
+var is_crouching: bool = false
+var crouch_key_released: bool = false
 var head_bob_t: float = 0.0
 
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var camera: Camera3D = $CameraPivot/Camera
+@onready var anim_player: AnimationPlayer = $AnimationPlayer
+@onready var crouch_shape_cast: ShapeCast3D = $CrouchShapeCast
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta: float) -> void:
+	# Handle crouch.
+	if Input.is_action_just_pressed("crouch") and !crouch_key_released:
+		anim_player.play("crouch", -1, crouch_anim_speed)
+		is_crouching = true
+	elif Input.is_action_just_released("crouch"):
+		crouch_key_released = true
+	
+	if crouch_key_released and !crouch_shape_cast.is_colliding():
+		anim_player.play("crouch", -1, -crouch_anim_speed, true)
+		crouch_key_released = false
+		is_crouching = false
+
 	# Handle sprinting.
 	var current_speed: float = walk_speed
-	if (Input.is_action_pressed("sprint")):
+	if is_crouching:
+		current_speed = crouch_speed
+	elif (Input.is_action_pressed("sprint")):
 		current_speed = sprint_speed
 	
 	# Get the input direction and handle the movement/deceleration.
@@ -32,7 +52,7 @@ func _physics_process(delta: float) -> void:
 	
 	if is_on_floor():
 		# Handle jump.
-		if Input.is_action_just_pressed("jump"):
+		if Input.is_action_just_pressed("jump") and !is_crouching:
 			velocity.y = jump_velocity
 		
 		# Handle movement.
