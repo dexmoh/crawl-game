@@ -43,7 +43,6 @@ func _physics_process(delta: float) -> void:
 			# Slow down gradually.
 			velocity.x = lerp(velocity.x, direction.x * current_speed, delta * 7.0)
 			velocity.z = lerp(velocity.z, direction.z * current_speed, delta * 7.0)
-		
 	else:
 		# Add the gravity.
 		velocity += get_gravity() * delta

@@ -4,3 +4,6 @@
 
 # Code editor ignores.
 .vscode/
+
+# Blender
+*.blend1

@@ -1,0 +1,5 @@
+# Assets
+- Textures and HDRI's from PolyHaven -- https://polyhaven.com/
+
+# Code
+- Minimal CRT Shader by blitpxl -- https://godotshaders.com/shader/minimal-crt-shader/
