@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://ib806qonusxn"]
+
+[ext_resource type="Script" uid="uid://bew5chbmra4dk" path="res://src/components/health_indicator_component.gd" id="1_8k4t5"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_elnke"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_elnke"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8k4t5"]
+bg_color = Color(0.17, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3j1vf"]
+bg_color = Color(0.8, 0.168, 0.168, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[node name="HealthIndicatorComponent" type="Sprite3D"]
+billboard = 1
+no_depth_test = true
+texture = SubResource("ViewportTexture_elnke")
+script = ExtResource("1_8k4t5")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(205, 30)
+
+[node name="Panel" type="Panel" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_elnke")
+
+[node name="ProgressBar" type="ProgressBar" parent="SubViewport/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.5
+offset_top = 2.5
+offset_right = -2.5
+offset_bottom = -2.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_8k4t5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3j1vf")
+value = 75.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0

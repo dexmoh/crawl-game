@@ -141,4 +141,7 @@ size = Vector3(3, 1, 5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32163, 0.97673, 3.04062)
 
 [node name="HealthBox" parent="." instance=ExtResource("13_xidr1")]
-transform = Transform3D(0.929429, 0, -0.369001, 0, 1, 0, 0.369001, 0, 0.929429, 6.29363, 0.5, 7.80945)
+transform = Transform3D(0.929429, 0, -0.369001, 0, 1, 0, 0.369001, 0, 0.929429, 6.56849, 0.5, 7.62338)
+
+[node name="HealthBox2" parent="." instance=ExtResource("13_xidr1")]
+transform = Transform3D(0.772634, 0, 0.634852, 0, 1, 0, -0.634852, 0, 0.772634, 5.51309, 0.5, 4.47209)

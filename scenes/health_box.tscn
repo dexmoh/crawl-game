@@ -1,17 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnvi18pdis06b"]
+[gd_scene load_steps=6 format=3 uid="uid://bnvi18pdis06b"]
 
 [ext_resource type="PackedScene" uid="uid://c0djonequf3rc" path="res://scenes/components/health_component.tscn" id="1_2qbln"]
+[ext_resource type="PackedScene" uid="uid://ib806qonusxn" path="res://scenes/components/health_indicator_component.tscn" id="2_hpwdt"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fhgpo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hpwdt"]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_fhgpo"]
+viewport_path = NodePath("SubViewport")
+
 [node name="HealthBox" type="MeshInstance3D"]
 mesh = SubResource("BoxMesh_fhgpo")
 
 [node name="HealthComponent" parent="." node_paths=PackedStringArray("mesh") instance=ExtResource("1_2qbln")]
-invincible = true
+max_health = 500
 mesh = NodePath("..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HealthComponent"]
 shape = SubResource("BoxShape3D_hpwdt")
+
+[node name="HealthIndicatorComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("2_hpwdt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.956125, 0)
+texture = SubResource("ViewportTexture_fhgpo")
+health_component = NodePath("../HealthComponent")
