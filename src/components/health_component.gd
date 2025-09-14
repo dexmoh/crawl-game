@@ -9,6 +9,11 @@ signal died
 @export var max_health: int = 100
 @export var invincible: bool = false
 
+@export_group("Damage Material")
+@export var mesh: MeshInstance3D
+@export var damage_mat: StandardMaterial3D
+@export var mat_timer: float = 0.5
+
 var is_dead: bool = false
 
 @onready var current_health: int = max_health
@@ -29,6 +34,16 @@ func damage(amount: int) -> int:
 	if current_health <= 0:
 		die()
 	
+	# Flash the mesh.
+	if mesh and damage_mat:
+		mesh.material_override = damage_mat
+
+		var timer := get_tree().create_timer(mat_timer)
+		timer.timeout.connect(
+			func ():
+				mesh.material_override = null
+		)
+
 	return current_health
 
 func heal(amount: int) -> int:

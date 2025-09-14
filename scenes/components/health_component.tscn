@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0djonequf3rc"]
+[gd_scene load_steps=3 format=3 uid="uid://c0djonequf3rc"]
 
 [ext_resource type="Script" uid="uid://ciguahnkironn" path="res://src/components/health_component.gd" id="1_2wcl1"]
+[ext_resource type="Material" uid="uid://b7dmp34h41i4f" path="res://assets/materials/entity_damaged_mat.res" id="2_at0e7"]
 
 [node name="HealthComponent" type="Area3D"]
 collision_layer = 2
 collision_mask = 2
 monitoring = false
 script = ExtResource("1_2wcl1")
+damage_mat = ExtResource("2_at0e7")
 metadata/_custom_type_script = "uid://ciguahnkironn"

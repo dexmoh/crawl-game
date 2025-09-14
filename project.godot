@@ -101,6 +101,7 @@ attack={
 3d_render/layer_2="Weapon"
 3d_physics/layer_1="World"
 3d_physics/layer_2="Combat"
+3d_physics/layer_3="Interactions"
 
 [physics]
 

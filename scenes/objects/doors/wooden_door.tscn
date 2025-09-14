@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=4 uid="uid://bifi0qkik1ll5"]
+[gd_scene load_steps=15 format=4 uid="uid://bifi0qkik1ll5"]
 
 [ext_resource type="Material" uid="uid://du8l5qqugrq11" path="res://assets/materials/diffuse_mat.res" id="1_8gnwi"]
+[ext_resource type="Script" uid="uid://b7gmi5mgq4wyi" path="res://src/interactables/interactable_door.gd" id="1_pjw8m"]
 [ext_resource type="Material" uid="uid://bwexdgo3exa3n" path="res://assets/materials/metal_mat.res" id="2_pjw8m"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_g3jo8"]
@@ -71,6 +72,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fxsp3")
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qgqto"]
+data = PackedVector3Array(-0.0810356, 0, 0.241177, -0.0810356, 2.10833, -0.0587243, -0.0810356, 0, -0.0587245, -0.0810356, 0, 0.241177, -0.0810356, 2.10833, 0.241177, -0.0810356, 2.10833, -0.0587243, -0.181418, 2.20852, -0.0587243, -0.0810356, 0, -0.0587245, -0.0810356, 2.10833, -0.0587243, -0.181418, 2.20852, -0.0587243, -0.181418, 0, -0.0587245, -0.0810356, 0, -0.0587245, -0.0810356, 2.10833, 0.241177, -0.181418, 0, 0.241177, -0.181418, 2.20852, 0.241177, -0.0810356, 2.10833, 0.241177, -0.0810356, 0, 0.241177, -0.181418, 0, 0.241177, 1.14888, 2.20852, 0.241177, -0.0810356, 2.10833, 0.241177, -0.181418, 2.20852, 0.241177, 1.14888, 2.20852, 0.241177, 1.0485, 2.10833, 0.241177, -0.0810356, 2.10833, 0.241177, 1.0485, 2.10833, -0.0587243, -0.181418, 2.20852, -0.0587243, -0.0810356, 2.10833, -0.0587243, 1.0485, 2.10833, -0.0587243, 1.14888, 2.20852, -0.0587243, -0.181418, 2.20852, -0.0587243, 1.14888, 2.20852, 0.241177, -0.181418, 2.20852, -0.0587243, 1.14888, 2.20852, -0.0587243, 1.14888, 2.20852, 0.241177, -0.181418, 2.20852, 0.241177, -0.181418, 2.20852, -0.0587243, -0.181418, 0, 0.241177, -0.181418, 2.20852, -0.0587243, -0.181418, 2.20852, 0.241177, -0.181418, 0, 0.241177, -0.181418, 0, -0.0587245, -0.181418, 2.20852, -0.0587243, 1.0485, 0, 0.241177, 1.0485, 2.10833, -0.0587243, 1.0485, 2.10833, 0.241177, 1.0485, 0, 0.241177, 1.0485, 0, -0.0587245, 1.0485, 2.10833, -0.0587243, 1.14888, 2.20852, -0.0587243, 1.0485, 0, -0.0587245, 1.14888, 0, -0.0587245, 1.14888, 2.20852, -0.0587243, 1.0485, 2.10833, -0.0587243, 1.0485, 0, -0.0587245, 1.0485, 2.10833, 0.241177, 1.14888, 0, 0.241177, 1.0485, 0, 0.241177, 1.0485, 2.10833, 0.241177, 1.14888, 2.20852, 0.241177, 1.14888, 0, 0.241177, 1.14888, 0, 0.241177, 1.14888, 2.20852, -0.0587243, 1.14888, 0, -0.0587245, 1.14888, 0, 0.241177, 1.14888, 2.20852, 0.241177, 1.14888, 2.20852, -0.0587243, 1.0485, 2.10833, 0.241177, -0.0810356, 2.10833, -0.0587243, -0.0810356, 2.10833, 0.241177, 1.0485, 2.10833, 0.241177, 1.0485, 2.10833, -0.0587243, -0.0810356, 2.10833, -0.0587243)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_ujcvy"]
 _surfaces = [{
 "aabb": AABB(-0.665151, 0, -0.0587245, 1.3303, 2.20852, 0.318529),
@@ -116,23 +120,63 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tma5e")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qgqto"]
-data = PackedVector3Array(-0.0810356, 0, 0.241177, -0.0810356, 2.10833, -0.0587243, -0.0810356, 0, -0.0587245, -0.0810356, 0, 0.241177, -0.0810356, 2.10833, 0.241177, -0.0810356, 2.10833, -0.0587243, -0.181418, 2.20852, -0.0587243, -0.0810356, 0, -0.0587245, -0.0810356, 2.10833, -0.0587243, -0.181418, 2.20852, -0.0587243, -0.181418, 0, -0.0587245, -0.0810356, 0, -0.0587245, -0.0810356, 2.10833, 0.241177, -0.181418, 0, 0.241177, -0.181418, 2.20852, 0.241177, -0.0810356, 2.10833, 0.241177, -0.0810356, 0, 0.241177, -0.181418, 0, 0.241177, 1.14888, 2.20852, 0.241177, -0.0810356, 2.10833, 0.241177, -0.181418, 2.20852, 0.241177, 1.14888, 2.20852, 0.241177, 1.0485, 2.10833, 0.241177, -0.0810356, 2.10833, 0.241177, 1.0485, 2.10833, -0.0587243, -0.181418, 2.20852, -0.0587243, -0.0810356, 2.10833, -0.0587243, 1.0485, 2.10833, -0.0587243, 1.14888, 2.20852, -0.0587243, -0.181418, 2.20852, -0.0587243, 1.14888, 2.20852, 0.241177, -0.181418, 2.20852, -0.0587243, 1.14888, 2.20852, -0.0587243, 1.14888, 2.20852, 0.241177, -0.181418, 2.20852, 0.241177, -0.181418, 2.20852, -0.0587243, -0.181418, 0, 0.241177, -0.181418, 2.20852, -0.0587243, -0.181418, 2.20852, 0.241177, -0.181418, 0, 0.241177, -0.181418, 0, -0.0587245, -0.181418, 2.20852, -0.0587243, 1.0485, 0, 0.241177, 1.0485, 2.10833, -0.0587243, 1.0485, 2.10833, 0.241177, 1.0485, 0, 0.241177, 1.0485, 0, -0.0587245, 1.0485, 2.10833, -0.0587243, 1.14888, 2.20852, -0.0587243, 1.0485, 0, -0.0587245, 1.14888, 0, -0.0587245, 1.14888, 2.20852, -0.0587243, 1.0485, 2.10833, -0.0587243, 1.0485, 0, -0.0587245, 1.0485, 2.10833, 0.241177, 1.14888, 0, 0.241177, 1.0485, 0, 0.241177, 1.0485, 2.10833, 0.241177, 1.14888, 2.20852, 0.241177, 1.14888, 0, 0.241177, 1.14888, 0, 0.241177, 1.14888, 2.20852, -0.0587243, 1.14888, 0, -0.0587245, 1.14888, 0, 0.241177, 1.14888, 2.20852, 0.241177, 1.14888, 2.20852, -0.0587243, 1.0485, 2.10833, 0.241177, -0.0810356, 2.10833, -0.0587243, -0.0810356, 2.10833, 0.241177, 1.0485, 2.10833, 0.241177, 1.0485, 2.10833, -0.0587243, -0.0810356, 2.10833, -0.0587243)
+[sub_resource type="Animation" id="Animation_8gnwi"]
+resource_name = "open_and_close"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DoorCollider:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -1.5708, 0)]
+}
 
-[node name="WoodenDoor" type="StaticBody3D"]
+[sub_resource type="Animation" id="Animation_pjw8m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DoorCollider:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
-[node name="FrameCollider" type="CollisionShape3D" parent="."]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gq5pv"]
+_data = {
+&"RESET": SubResource("Animation_pjw8m"),
+&"open_and_close": SubResource("Animation_8gnwi")
+}
+
+[node name="WoodenDoor" type="AnimatableBody3D"]
+collision_layer = 5
+script = ExtResource("1_pjw8m")
+
+[node name="DoorCollider" type="CollisionShape3D" parent="."]
 shape = SubResource("ConcavePolygonShape3D_g3jo8")
 
-[node name="DoorMesh" type="MeshInstance3D" parent="."]
+[node name="DoorMesh" type="MeshInstance3D" parent="DoorCollider"]
 mesh = SubResource("ArrayMesh_kh8tg")
 skeleton = NodePath("")
 
-[node name="FrameMesh" type="MeshInstance3D" parent="."]
+[node name="FrameCollider" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_qgqto")
+
+[node name="FrameMesh" type="MeshInstance3D" parent="FrameCollider"]
 mesh = SubResource("ArrayMesh_u0baf")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="FrameMesh"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="FrameMesh/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_qgqto")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+callback_mode_process = 0
+libraries = {
+&"": SubResource("AnimationLibrary_gq5pv")
+}
