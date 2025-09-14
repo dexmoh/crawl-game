@@ -7,11 +7,11 @@ shader = ExtResource("1_ahhtf")
 shader_parameter/scanline_color = Color(0.099, 0.1206, 0.18, 1)
 shader_parameter/flicker_color = Color(0, 0, 0, 1)
 shader_parameter/scanlines_count = 10.0
-shader_parameter/scanlines_intensity = 0.05
-shader_parameter/flicker_speed = 30.0
+shader_parameter/scanlines_intensity = 0.06
+shader_parameter/flicker_speed = 27.0
 shader_parameter/flicker_intensity = 0.025
 shader_parameter/color_offset = 1.5
-shader_parameter/blur = 0.25
+shader_parameter/blur = 0.3
 
 [node name="HUD" type="Control"]
 layout_mode = 3

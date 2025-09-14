@@ -20,7 +20,7 @@ var head_bob_t: float = 0.0
 
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var camera: Camera3D = $CameraPivot/Camera
-@onready var anim_player: AnimationPlayer = $AnimationPlayer
+@onready var crouch_anim_player: AnimationPlayer = $CrouchAnimationPlayer
 @onready var crouch_shape_cast: ShapeCast3D = $CrouchShapeCast
 
 func _ready() -> void:
@@ -28,16 +28,20 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	# Handle crouch.
-	if Input.is_action_just_pressed("crouch") and !crouch_key_released:
-		anim_player.play("crouch", -1, crouch_anim_speed)
+	if Input.is_action_just_pressed("crouch"):
+		if !crouch_key_released:
+			crouch_anim_player.play("crouch", -1, crouch_anim_speed)
+		crouch_key_released = false
 		is_crouching = true
 	elif Input.is_action_just_released("crouch"):
 		crouch_key_released = true
 	
-	if crouch_key_released and !crouch_shape_cast.is_colliding():
-		anim_player.play("crouch", -1, -crouch_anim_speed, true)
-		crouch_key_released = false
-		is_crouching = false
+	if crouch_key_released:
+		crouch_shape_cast.force_shapecast_update()
+		if !crouch_shape_cast.is_colliding():
+			crouch_anim_player.play("crouch", -1, -crouch_anim_speed, true)
+			crouch_key_released = false
+			is_crouching = false
 
 	# Handle sprinting.
 	var current_speed: float = walk_speed

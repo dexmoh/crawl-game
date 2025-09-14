@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnvi18pdis06b"]
+
+[ext_resource type="PackedScene" uid="uid://c0djonequf3rc" path="res://scenes/components/health_component.tscn" id="1_2qbln"]
+[ext_resource type="Material" uid="uid://b7dmp34h41i4f" path="res://assets/materials/entity_damaged_mat.res" id="1_fhgpo"]
+[ext_resource type="Script" uid="uid://1m45oos7usf2" path="res://src/health_box.gd" id="1_hpwdt"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fhgpo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hpwdt"]
+
+[node name="HealthBox" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_fhgpo")
+script = ExtResource("1_hpwdt")
+damaged_mat = ExtResource("1_fhgpo")
+
+[node name="HealthComponent" parent="." instance=ExtResource("1_2qbln")]
+invincible = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HealthComponent"]
+shape = SubResource("BoxShape3D_hpwdt")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://btayvugja36qd"]
+[gd_scene load_steps=17 format=3 uid="uid://btayvugja36qd"]
 
 [ext_resource type="Texture2D" uid="uid://b0ro7kpw1xnbw" path="res://assets/hdri/skybox.hdr" id="1_8c33x"]
 [ext_resource type="PackedScene" uid="uid://cqus8xc7ctibe" path="res://scenes/player.tscn" id="1_nnsk1"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://caktu0yx5ojom" path="res://scenes/objects/decorations/wooden_bucket_1.tscn" id="8_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://1qx4mboste8h" path="res://scenes/objects/decorations/wooden_bucket_2.tscn" id="9_7r4gi"]
 [ext_resource type="PackedScene" uid="uid://b0yelmp8i6fq5" path="res://scenes/objects/decorations/candle_3.tscn" id="10_w7kh3"]
+[ext_resource type="PackedScene" uid="uid://dkx0qsnxsadnv" path="res://scenes/objects/weapons/swords/chipped_iron_shortsword.tscn" id="12_de0io"]
+[ext_resource type="PackedScene" uid="uid://bnvi18pdis06b" path="res://scenes/health_box.tscn" id="13_xidr1"]
 [ext_resource type="PackedScene" uid="uid://bifi0qkik1ll5" path="res://scenes/objects/doors/wooden_door.tscn" id="14_8c33x"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_71j4m"]
@@ -42,7 +44,7 @@ environment = SubResource("Environment_4wyf3")
 transform = Transform3D(-0.72094, -0.471058, -0.508281, 0.341557, -0.879712, 0.330827, -0.602979, 0.0649001, 0.795112, 0, 5.38932, 0)
 light_color = Color(1, 0.612119, 0.570923, 1)
 light_energy = 1.5
-light_angular_distance = 3.0
+light_angular_distance = 2.0
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
@@ -113,7 +115,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55158, 0.160313, 1.64039)
 transform = Transform3D(-0.229031, 0, -0.973419, 0, 1, 0, 0.973419, 0, -0.229031, 3.54903, 0.946528, 2.34551)
 
 [node name="WoodenDoor" parent="." instance=ExtResource("14_8c33x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08532, 1.54338e-09, 3.82711)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85378, 1.54338e-09, 4.30578)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 2.5, -7.5)
@@ -134,3 +136,9 @@ size = Vector3(3, 1, 5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.9, 7.5)
 use_collision = true
 size = Vector3(3, 1, 5)
+
+[node name="ChippedIronShortsword" parent="." instance=ExtResource("12_de0io")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32163, 0.97673, 3.04062)
+
+[node name="HealthBox" parent="." instance=ExtResource("13_xidr1")]
+transform = Transform3D(0.929429, 0, -0.369001, 0, 1, 0, 0.369001, 0, 0.929429, 6.29363, 0.5, 7.80945)
