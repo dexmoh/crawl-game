@@ -73,7 +73,19 @@ transform = Transform3D(0.859576, 0, -0.511008, 0, 1, 0, 0.511008, 0, 0.859576, 
 transform = Transform3D(0.329295, 0, -0.944227, 0, 1, 0, 0.944227, 0, 0.329295, 2.64609, 0, 2.38769)
 
 [node name="WoodenChair3" parent="." instance=ExtResource("4_k0juu")]
-transform = Transform3D(0.822154, 0, 0.569265, 0, 1, 0, -0.569265, 0, 0.822154, 0.193281, 1.19209e-07, 2.31863)
+transform = Transform3D(0.822154, 0, 0.569265, 0, 1, 0, -0.569265, 0, 0.822154, -2.44532, 1.19209e-07, 5.97445)
+
+[node name="WoodenChair4" parent="." instance=ExtResource("4_k0juu")]
+transform = Transform3D(0.822154, 0, 0.569265, 0, 1, 0, -0.569265, 0, 0.822154, -1.44979, 1.19209e-07, 6.37906)
+
+[node name="WoodenChair5" parent="." instance=ExtResource("4_k0juu")]
+transform = Transform3D(0.822154, 0, 0.569265, 0, 1, 0, -0.569265, 0, 0.822154, -3.50453, -1.1921e-07, 6.65565)
+
+[node name="WoodenChair6" parent="." instance=ExtResource("4_k0juu")]
+transform = Transform3D(0.822154, 0, 0.569265, 0, 1, 0, -0.569265, 0, 0.822154, -3.31507, -1.1921e-07, 1.95254)
+
+[node name="WoodenChair7" parent="." instance=ExtResource("4_k0juu")]
+transform = Transform3D(0.822154, 0, 0.569265, 0, 1, 0, -0.569265, 0, 0.822154, -2.37021, -1.1921e-07, 2.34634)
 
 [node name="WoodenChair2" parent="." instance=ExtResource("4_k0juu")]
 transform = Transform3D(-0.0769278, 0, -0.997037, 0, 1, 0, 0.997037, 0, -0.0769278, 3.30735, 2.38419e-07, 2.16919)
@@ -103,7 +115,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42867, 2.38419e-07, 2.15283
 transform = Transform3D(-0.739208, 0, 0.673477, 0, 1, 0, -0.673477, 0, -0.739208, 0.747767, -1.19209e-07, 0.0214866)
 
 [node name="WoodenBucket1" parent="." instance=ExtResource("8_4mrxx")]
-transform = Transform3D(0.69058, 0, 0.723256, 0, 1, 0, -0.723256, 0, 0.69058, 2.10695, 0.160312, 0.753409)
+transform = Transform3D(0.69058, 0, 0.723256, 0, 1, 0, -0.723256, 0, 0.69058, -1.26384, 0.924762, -4.24846)
+
+[node name="WoodenBucket4" parent="." instance=ExtResource("8_4mrxx")]
+transform = Transform3D(0.69058, 0, 0.723256, 0, 1, 0, -0.723256, 0, 0.69058, -1.26384, 1.5698, -4.24846)
+
+[node name="WoodenBucket5" parent="." instance=ExtResource("8_4mrxx")]
+transform = Transform3D(0.69058, 0, 0.723256, 0, 1, 0, -0.723256, 0, 0.69058, -1.26384, 2.08097, -4.24846)
+
+[node name="WoodenBucket6" parent="." instance=ExtResource("8_4mrxx")]
+transform = Transform3D(0.69058, 0, 0.723256, 0, 1, 0, -0.723256, 0, 0.69058, -1.26384, 2.54789, -4.24846)
 
 [node name="WoodenBucket2" parent="." instance=ExtResource("9_7r4gi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.875078, 0.740915, -0.174571)

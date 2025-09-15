@@ -21,6 +21,6 @@ mesh = NodePath("..")
 shape = SubResource("BoxShape3D_hpwdt")
 
 [node name="HealthIndicatorComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("2_hpwdt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.956125, 0)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.956125, 0)
 texture = SubResource("ViewportTexture_fhgpo")
 health_component = NodePath("../HealthComponent")

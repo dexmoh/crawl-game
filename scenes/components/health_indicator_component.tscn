@@ -24,6 +24,7 @@ corner_radius_bottom_left = 4
 anti_aliasing = false
 
 [node name="HealthIndicatorComponent" type="Sprite3D"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 billboard = 1
 no_depth_test = true
 texture = SubResource("ViewportTexture_elnke")

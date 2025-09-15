@@ -3,6 +3,7 @@ extends Interactable
 @export var is_open: bool = false
 
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
+@onready var occluder: OccluderInstance3D = $OccluderInstance3D
 
 func _ready() -> void:
 	anim_player.animation_finished.connect(_on_animation_finished)
@@ -22,6 +23,7 @@ func interact():
 	if not is_open:
 		# Open the door.
 		anim_player.play("open_and_close")
+		occluder.hide()
 		label_text = "Close"
 		is_open = true
 	else:
@@ -32,3 +34,6 @@ func interact():
 
 func _on_animation_finished(_anim_name: StringName):
 	is_active = true
+
+	if !is_open:
+		occluder.show()

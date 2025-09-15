@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bifi0qkik1ll5"]
+[gd_scene load_steps=16 format=4 uid="uid://bifi0qkik1ll5"]
 
 [ext_resource type="Material" uid="uid://du8l5qqugrq11" path="res://assets/materials/diffuse_mat.res" id="1_8gnwi"]
 [ext_resource type="Script" uid="uid://b7gmi5mgq4wyi" path="res://src/interactables/interactable_door.gd" id="1_pjw8m"]
@@ -120,6 +120,21 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tma5e")
 
+[sub_resource type="Animation" id="Animation_pjw8m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DoorCollider:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_8gnwi"]
 resource_name = "open_and_close"
 length = 0.6
@@ -136,26 +151,14 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, -1.5708, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_pjw8m"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("DoorCollider:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gq5pv"]
 _data = {
 &"RESET": SubResource("Animation_pjw8m"),
 &"open_and_close": SubResource("Animation_8gnwi")
 }
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_pjw8m"]
+size = Vector3(1.77925, 2.47137, 0.0653787)
 
 [node name="WoodenDoor" type="AnimatableBody3D"]
 collision_layer = 5
@@ -180,3 +183,7 @@ callback_mode_process = 0
 libraries = {
 &"": SubResource("AnimationLibrary_gq5pv")
 }
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.481572, 1.11029, 0.00361317)
+occluder = SubResource("BoxOccluder3D_pjw8m")
