@@ -10,6 +10,7 @@ func _ready() -> void:
 	
 	if is_open:
 		anim_player.play("open_and_close")
+		occluder.hide()
 		label_text = "Close"
 	else:
 		label_text = "Open"

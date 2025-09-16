@@ -413,7 +413,7 @@ script = ExtResource("2_dqkch")
 [node name="WeaponPivot" type="Node3D" parent="Weapon"]
 
 [node name="WeaponHolder" type="Node3D" parent="Weapon/WeaponPivot"]
-transform = Transform3D(0.0250832, -0.999678, -0.00369413, 0.979144, 0.0253129, -0.201578, 0.201607, 0.00143914, 0.979464, 0.327, -0.392, -0.448)
+transform = Transform3D(0.025083216, -0.999678, -0.0036941345, 0.979144, 0.025312925, -0.20157798, 0.20160672, 0.0014391373, 0.979464, 0.327, -0.392, -0.448)
 
 [node name="ChippedIronShortsword" parent="Weapon/WeaponPivot/WeaponHolder" instance=ExtResource("2_qhqgy")]
 metadata/_edit_lock_ = true
@@ -443,11 +443,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+stretch = true
+metadata/_edit_lock_ = true
 
 [node name="WeaponViewport" type="SubViewport" parent="WeaponViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(640, 480)
+size = Vector2i(800, 480)
 render_target_update_mode = 4
 script = ExtResource("5_qlg0r")
 
@@ -455,9 +457,7 @@ script = ExtResource("5_qlg0r")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 cull_mask = 1048574
 fov = 60.0
+metadata/_edit_lock_ = true
 
 [node name="HUD" parent="." instance=ExtResource("2_g2els")]
-offset_left = 29.0
-offset_top = 1.0
-offset_right = 29.0
-offset_bottom = 1.0
+metadata/_edit_lock_ = true
