@@ -7,9 +7,9 @@ extends CollisionObject3D
 @export var is_active: bool = true
 
 # Called while the player is looking at the object.
-func on_focus():
+func _on_focus():
 	pass
 
 # Called when the player tries to interact with the object.
-func interact():
+func _interact():
 	pass

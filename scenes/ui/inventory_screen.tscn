@@ -1,0 +1,175 @@
+[gd_scene load_steps=10 format=3 uid="uid://dbnw7ia0wii7n"]
+
+[ext_resource type="Theme" uid="uid://bbnv02w4af0cw" path="res://data/ui/ui_theme.res" id="1_rwj71"]
+[ext_resource type="Script" uid="uid://c65raraliqtak" path="res://src/inventory/inventory_screen_ui.gd" id="2_u68l8"]
+[ext_resource type="Texture2D" uid="uid://broddx13mtpjh" path="res://assets/textures/icons/ui_icons.png" id="3_gqdh3"]
+[ext_resource type="Texture2D" uid="uid://8wxs5gfjck4l" path="res://assets/icon.svg" id="4_dhce7"]
+[ext_resource type="PackedScene" uid="uid://ckq3dw3qp2l4c" path="res://scenes/ui/inventory_item_container.tscn" id="5_5idlm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fi6k"]
+bg_color = Color(0.09803922, 0.105882354, 0.16470589, 1)
+border_width_left = 1
+border_width_top = 15
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.2784314, 0.43137255, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+anti_aliasing = false
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6fi6k"]
+load_path = "res://.godot/imported/ui_icons.png-621372537a5a3adea98e450df4f6f600.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uo2fv"]
+atlas = SubResource("CompressedTexture2D_6fi6k")
+region = Rect2(4, 0, 9, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_047uy"]
+atlas = ExtResource("3_gqdh3")
+region = Rect2(19, 0, 10, 16)
+
+[node name="Inventory" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -217.0
+offset_top = -127.0
+offset_right = 217.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rwj71")
+theme_override_styles/panel = SubResource("StyleBoxFlat_6fi6k")
+script = ExtResource("2_u68l8")
+item_container_scene = ExtResource("5_5idlm")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.2784314, 0.43137255, 1)
+text = "Inventory"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer1"]
+modulate = Color(1, 0.8784314, 0.1882353, 1)
+layout_mode = 2
+
+[node name="WealthLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer1/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "100"
+horizontal_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer1/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_uo2fv")
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer1"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer1"]
+modulate = Color(0.7137255, 0.7137255, 0.7137255, 1)
+layout_mode = 2
+
+[node name="WeightLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer1/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0/50"
+horizontal_alignment = 2
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer1/HBoxContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_047uy")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("4_dhce7")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("4_dhce7")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("4_dhce7")
+expand_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("4_dhce7")
+expand_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("4_dhce7")
+expand_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="ItemSearchBar" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Search..."
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_right = 4
+
+[node name="ItemsContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="ItemContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" instance=ExtResource("5_5idlm")]
+layout_mode = 2
+
+[node name="ItemContainer2" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" instance=ExtResource("5_5idlm")]
+layout_mode = 2
+
+[node name="ItemContainer3" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" instance=ExtResource("5_5idlm")]
+layout_mode = 2
+
+[node name="ItemContainer4" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" instance=ExtResource("5_5idlm")]
+layout_mode = 2
+
+[node name="ItemContainer5" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" instance=ExtResource("5_5idlm")]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2

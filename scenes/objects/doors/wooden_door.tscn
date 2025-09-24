@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=4 uid="uid://bifi0qkik1ll5"]
 
-[ext_resource type="Material" uid="uid://du8l5qqugrq11" path="res://assets/materials/diffuse_mat.res" id="1_8gnwi"]
-[ext_resource type="Script" uid="uid://b7gmi5mgq4wyi" path="res://src/interactables/interactable_door.gd" id="1_pjw8m"]
-[ext_resource type="Material" uid="uid://bwexdgo3exa3n" path="res://assets/materials/metal_mat.res" id="2_pjw8m"]
+[ext_resource type="Material" uid="uid://du8l5qqugrq11" path="res://data/materials/diffuse_mat.res" id="1_8gnwi"]
+[ext_resource type="Script" uid="uid://b7gmi5mgq4wyi" path="res://src/interactables/door_interactable.gd" id="1_pjw8m"]
+[ext_resource type="Material" uid="uid://bwexdgo3exa3n" path="res://data/materials/metal_mat.res" id="2_pjw8m"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_g3jo8"]
 data = PackedVector3Array(1.03424, 0.0185233, 0.037, -0.0667747, 0.0185233, -0.037, -0.0667747, 0.0185233, 0.037, 1.03424, 0.0185233, 0.037, 1.03424, 0.0185233, -0.037, -0.0667747, 0.0185233, -0.037, 1.03424, 2.08384, 0.037, -0.0667747, 2.08384, -0.037, 1.03424, 2.08384, -0.037, 1.03424, 2.08384, 0.037, -0.0667747, 2.08384, 0.037, -0.0667747, 2.08384, -0.037, -0.0667747, 0.0185233, -0.037, 1.03424, 2.08384, -0.037, -0.0667747, 2.08384, -0.037, -0.0667747, 0.0185233, -0.037, 1.03424, 0.0185233, -0.037, 1.03424, 2.08384, -0.037, -0.0667747, 0.0185233, 0.037, -0.0667747, 2.08384, -0.037, -0.0667747, 2.08384, 0.037, -0.0667747, 0.0185233, 0.037, -0.0667747, 0.0185233, -0.037, -0.0667747, 2.08384, -0.037, 1.03424, 0.0185233, -0.037, 1.03424, 2.08384, 0.037, 1.03424, 2.08384, -0.037, 1.03424, 0.0185233, -0.037, 1.03424, 0.0185233, 0.037, 1.03424, 2.08384, 0.037, 1.03424, 0.0185233, 0.037, -0.0667747, 2.08384, 0.037, 1.03424, 2.08384, 0.037, 1.03424, 0.0185233, 0.037, -0.0667747, 0.0185233, 0.037, -0.0667747, 2.08384, 0.037)

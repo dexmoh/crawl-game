@@ -1,12 +1,12 @@
 [gd_scene load_steps=22 format=3 uid="uid://cqus8xc7ctibe"]
 
-[ext_resource type="Script" uid="uid://ntxyq81ee02s" path="res://src/player_controller.gd" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://ccl1lhr6c3i7t" path="res://src/weapon_controller.gd" id="2_dqkch"]
+[ext_resource type="Script" uid="uid://ntxyq81ee02s" path="res://src/player/player_controller.gd" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://ccl1lhr6c3i7t" path="res://src/player/weapon_controller.gd" id="2_dqkch"]
 [ext_resource type="Script" uid="uid://bpatksasov0ob" path="res://src/interactables/interaction_raycast.gd" id="2_fjrip"]
 [ext_resource type="PackedScene" uid="uid://cfs2a7a6caqw7" path="res://scenes/hud.tscn" id="2_g2els"]
 [ext_resource type="PackedScene" uid="uid://dkx0qsnxsadnv" path="res://scenes/objects/weapons/swords/chipped_iron_shortsword.tscn" id="2_qhqgy"]
 [ext_resource type="FontFile" uid="uid://c2veccd7e7b5r" path="res://assets/fonts/RasterForgeRegular-JpBgm.ttf" id="2_tuyoq"]
-[ext_resource type="Script" uid="uid://y1m4hft8g2hk" path="res://src/weapon_viewport.gd" id="5_qlg0r"]
+[ext_resource type="Script" uid="uid://y1m4hft8g2hk" path="res://src/player/weapon_viewport.gd" id="5_qlg0r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 radius = 0.4
@@ -377,6 +377,7 @@ fov = 90.0
 [node name="InteractionRay" type="RayCast3D" parent="CameraPivot/Camera"]
 target_position = Vector3(0, 0, -1.5)
 collision_mask = 4
+collide_with_areas = true
 script = ExtResource("2_fjrip")
 
 [node name="InteractionLabel" type="Label" parent="CameraPivot/Camera/InteractionRay"]
@@ -413,7 +414,7 @@ script = ExtResource("2_dqkch")
 [node name="WeaponPivot" type="Node3D" parent="Weapon"]
 
 [node name="WeaponHolder" type="Node3D" parent="Weapon/WeaponPivot"]
-transform = Transform3D(0.025083216, -0.999678, -0.0036941345, 0.979144, 0.025312925, -0.20157798, 0.20160672, 0.0014391373, 0.979464, 0.327, -0.392, -0.448)
+transform = Transform3D(0.025083212, -0.999678, -0.0036941345, 0.97914386, 0.025312925, -0.20157798, 0.20160669, 0.0014391373, 0.979464, 0.327, -0.392, -0.448)
 
 [node name="ChippedIronShortsword" parent="Weapon/WeaponPivot/WeaponHolder" instance=ExtResource("2_qhqgy")]
 metadata/_edit_lock_ = true
@@ -460,4 +461,3 @@ fov = 60.0
 metadata/_edit_lock_ = true
 
 [node name="HUD" parent="." instance=ExtResource("2_g2els")]
-metadata/_edit_lock_ = true

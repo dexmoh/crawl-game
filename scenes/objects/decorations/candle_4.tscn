@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://dmni86dfwgsdj"]
 
-[ext_resource type="Material" uid="uid://dfok1mmh887h1" path="res://assets/materials/wax_mat.res" id="1_sc414"]
-[ext_resource type="Material" uid="uid://du8l5qqugrq11" path="res://assets/materials/diffuse_mat.res" id="2_sw2gy"]
+[ext_resource type="Material" uid="uid://dfok1mmh887h1" path="res://data/materials/wax_mat.res" id="1_sc414"]
+[ext_resource type="Material" uid="uid://du8l5qqugrq11" path="res://data/materials/diffuse_mat.res" id="2_sw2gy"]
 [ext_resource type="PackedScene" uid="uid://cx25xtpffplwm" path="res://scenes/candle_flame.tscn" id="3_sw2gy"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_opxm0"]

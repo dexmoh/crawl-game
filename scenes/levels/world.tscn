@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://caktu0yx5ojom" path="res://scenes/objects/decorations/wooden_bucket_1.tscn" id="8_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://1qx4mboste8h" path="res://scenes/objects/decorations/wooden_bucket_2.tscn" id="9_7r4gi"]
 [ext_resource type="PackedScene" uid="uid://b0yelmp8i6fq5" path="res://scenes/objects/decorations/candle_3.tscn" id="10_w7kh3"]
-[ext_resource type="PackedScene" uid="uid://dkx0qsnxsadnv" path="res://scenes/objects/weapons/swords/chipped_iron_shortsword.tscn" id="12_de0io"]
+[ext_resource type="PackedScene" uid="uid://getkuo43b81d" path="res://scenes/objects/item-pickups/chipped_iron_shortsword_item.tscn" id="13_8c33x"]
 [ext_resource type="PackedScene" uid="uid://bnvi18pdis06b" path="res://scenes/health_box.tscn" id="13_xidr1"]
 [ext_resource type="PackedScene" uid="uid://bifi0qkik1ll5" path="res://scenes/objects/doors/wooden_door.tscn" id="14_8c33x"]
 
@@ -158,11 +158,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.9, 7.5)
 use_collision = true
 size = Vector3(3, 1, 5)
 
-[node name="ChippedIronShortsword" parent="." instance=ExtResource("12_de0io")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32163, 0.97673, 3.04062)
-
 [node name="HealthBox" parent="." instance=ExtResource("13_xidr1")]
 transform = Transform3D(0.929429, 0, -0.369001, 0, 1, 0, 0.369001, 0, 0.929429, 6.56849, 0.5, 7.62338)
 
 [node name="HealthBox2" parent="." instance=ExtResource("13_xidr1")]
 transform = Transform3D(0.772634, 0, 0.634852, 0, 1, 0, -0.634852, 0, 0.772634, 5.51309, 0.5, 4.47209)
+
+[node name="ChippedIronShortsword" parent="." instance=ExtResource("13_8c33x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4603815, 0.97673035, 3.0876703)
