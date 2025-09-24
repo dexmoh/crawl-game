@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cyciwgd5wjuta"
-path="res://.godot/imported/wooden_bucket_2.glb-ad17004513b4c4c3e07f9e66e05c6271.scn"
+uid="uid://u3nx6alainnj"
+path="res://.godot/imported/wooden_bucket.glb-bdee125988de693abd4c1b6a4c037225.scn"
 
 [deps]
 
-source_file="res://assets/models/objects/decorations/wooden_bucket_2.glb"
-dest_files=["res://.godot/imported/wooden_bucket_2.glb-ad17004513b4c4c3e07f9e66e05c6271.scn"]
+source_file="res://assets/models/objects/decorations/wooden_bucket.glb"
+dest_files=["res://.godot/imported/wooden_bucket.glb-bdee125988de693abd4c1b6a4c037225.scn"]
 
 [params]
 

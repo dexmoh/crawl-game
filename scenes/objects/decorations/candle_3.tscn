@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://b0yelmp8i6fq5"]
+[gd_scene load_steps=5 format=4 uid="uid://b0yelmp8i6fq5"]
 
-[ext_resource type="Material" uid="uid://dfok1mmh887h1" path="res://data/materials/wax_mat.res" id="1_1xj8k"]
-[ext_resource type="Material" uid="uid://du8l5qqugrq11" path="res://data/materials/diffuse_mat.res" id="2_1xj8k"]
+[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/diffuse_mat.tres" id="1_1xj8k"]
 [ext_resource type="PackedScene" uid="uid://cx25xtpffplwm" path="res://scenes/candle_flame.tscn" id="3_1xj8k"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_dkj80"]
@@ -45,7 +44,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 162,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAIABAAGAAUABwAFAAgABwAJAAUACgAJAAsACgALAAwADQAOAAwADQAPAA4AEAARABIAEAATABEAFAAVABIAFAAWABUAFwAYABkAFwAaABgAGwAcABkAGwAdABwAHgAfACAAHgAhAB8AIgAjACAAIgAkACMAJQAjACYAJQAnACMAKAAnACkAKAApACoAKwAsACoAKwAtACwALgAvADAALgAxAC8AMgAzADAAMgA0ADMANQA2ADcANQA4ADYAOQA6ADcAOQA7ADoAPAA9AD4APAA/AD0AQABBAD4AQABCAEEAQwBBAEQAQwBFAEEARgBFAEcARgBHAEgASQBKAEgASQBLAEoATABNAE4ATABPAE0AUABRAE4AUABSAFEAUwBUAFUAUwBWAFQAVwBYAFUAVwBZAFgA"),
-"material": ExtResource("2_1xj8k"),
+"material": ExtResource("1_1xj8k"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 90,

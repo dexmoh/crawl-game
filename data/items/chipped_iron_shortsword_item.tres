@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://hqfap8y48b1x"]
+
+[ext_resource type="Script" uid="uid://bmh5xr3r73e6w" path="res://src/inventory/inventory_item.gd" id="1_jehdn"]
+
+[resource]
+script = ExtResource("1_jehdn")
+name = "Chipped Iron Shortsword"
+description = "The blade looks damaged beyond repair."
+type = 0
+rarity = 2644352511
+weight = 1.2
+value = 18
+metadata/_custom_type_script = "uid://bmh5xr3r73e6w"

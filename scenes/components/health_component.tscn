@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c0djonequf3rc"]
 
 [ext_resource type="Script" uid="uid://ciguahnkironn" path="res://src/components/health_component.gd" id="1_2wcl1"]
-[ext_resource type="Material" uid="uid://b7dmp34h41i4f" path="res://data/materials/entity_damaged_mat.res" id="2_at0e7"]
+[ext_resource type="Material" uid="uid://hfhfde7l67sq" path="res://data/materials/entity_damaged_mat.tres" id="2_at0e7"]
 
 [node name="HealthComponent" type="Area3D"]
 collision_layer = 2

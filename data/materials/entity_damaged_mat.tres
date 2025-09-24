@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://hfhfde7l67sq"]
+
+[resource]
+specular_mode = 2
+albedo_color = Color(0.8759506, 0.27749646, 0.24624786, 1)
+emission_enabled = true
+emission = Color(0.7058714, 0.08040223, 3.147751e-05, 1)
+emission_energy_multiplier = 10.0

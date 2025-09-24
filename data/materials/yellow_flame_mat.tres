@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://by2guow77py5q"]
+
+[resource]
+emission_enabled = true
+emission = Color(0.90195626, 0.7410589, 0.53186274, 1)
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false

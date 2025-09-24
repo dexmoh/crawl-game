@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cx25xtpffplwm"]
 
 [ext_resource type="Texture2D" uid="uid://p4ry3phiu3f2" path="res://assets/textures/candle_flame.png" id="1_48c7b"]
-[ext_resource type="Material" uid="uid://mm6kmrmnm85m" path="res://data/materials/yellow_flame_mat.res" id="2_yfwgs"]
+[ext_resource type="Material" uid="uid://by2guow77py5q" path="res://data/materials/yellow_flame_mat.tres" id="2_yfwgs"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_48c7b"]
 direction = Vector3(0, 1, 0)

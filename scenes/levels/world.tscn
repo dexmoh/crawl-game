@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://btayvugja36qd"]
+[gd_scene load_steps=15 format=3 uid="uid://btayvugja36qd"]
 
 [ext_resource type="Texture2D" uid="uid://b0ro7kpw1xnbw" path="res://assets/hdri/skybox.hdr" id="1_8c33x"]
 [ext_resource type="PackedScene" uid="uid://cqus8xc7ctibe" path="res://scenes/player.tscn" id="1_nnsk1"]
@@ -7,8 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://dbjse8nppioyj" path="res://scenes/objects/furniture/wooden_chair.tscn" id="4_k0juu"]
 [ext_resource type="PackedScene" uid="uid://d0np6oymomy8b" path="res://scenes/objects/furniture/wooden_stool.tscn" id="5_71j4m"]
 [ext_resource type="PackedScene" uid="uid://do2s6cen7voco" path="res://scenes/objects/furniture/wooden_single_bed.tscn" id="7_i7141"]
-[ext_resource type="PackedScene" uid="uid://caktu0yx5ojom" path="res://scenes/objects/decorations/wooden_bucket_1.tscn" id="8_4mrxx"]
-[ext_resource type="PackedScene" uid="uid://1qx4mboste8h" path="res://scenes/objects/decorations/wooden_bucket_2.tscn" id="9_7r4gi"]
 [ext_resource type="PackedScene" uid="uid://b0yelmp8i6fq5" path="res://scenes/objects/decorations/candle_3.tscn" id="10_w7kh3"]
 [ext_resource type="PackedScene" uid="uid://getkuo43b81d" path="res://scenes/objects/item-pickups/chipped_iron_shortsword_item.tscn" id="13_8c33x"]
 [ext_resource type="PackedScene" uid="uid://bnvi18pdis06b" path="res://scenes/health_box.tscn" id="13_xidr1"]
@@ -113,24 +111,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42867, 2.38419e-07, 2.15283
 
 [node name="WoodenSingleBed" parent="." instance=ExtResource("7_i7141")]
 transform = Transform3D(-0.739208, 0, 0.673477, 0, 1, 0, -0.673477, 0, -0.739208, 0.747767, -1.19209e-07, 0.0214866)
-
-[node name="WoodenBucket1" parent="." instance=ExtResource("8_4mrxx")]
-transform = Transform3D(0.69058, 0, 0.723256, 0, 1, 0, -0.723256, 0, 0.69058, -1.26384, 0.924762, -4.24846)
-
-[node name="WoodenBucket4" parent="." instance=ExtResource("8_4mrxx")]
-transform = Transform3D(0.69058, 0, 0.723256, 0, 1, 0, -0.723256, 0, 0.69058, -1.26384, 1.5698, -4.24846)
-
-[node name="WoodenBucket5" parent="." instance=ExtResource("8_4mrxx")]
-transform = Transform3D(0.69058, 0, 0.723256, 0, 1, 0, -0.723256, 0, 0.69058, -1.26384, 2.08097, -4.24846)
-
-[node name="WoodenBucket6" parent="." instance=ExtResource("8_4mrxx")]
-transform = Transform3D(0.69058, 0, 0.723256, 0, 1, 0, -0.723256, 0, 0.69058, -1.26384, 2.54789, -4.24846)
-
-[node name="WoodenBucket2" parent="." instance=ExtResource("9_7r4gi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.875078, 0.740915, -0.174571)
-
-[node name="WoodenBucket3" parent="." instance=ExtResource("9_7r4gi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55158, 0.160313, 1.64039)
 
 [node name="Candle3" parent="." instance=ExtResource("10_w7kh3")]
 transform = Transform3D(-0.229031, 0, -0.973419, 0, 1, 0, 0.973419, 0, -0.229031, 3.54903, 0.946528, 2.34551)

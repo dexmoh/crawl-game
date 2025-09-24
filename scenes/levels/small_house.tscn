@@ -1,12 +1,12 @@
 [gd_scene load_steps=29 format=4 uid="uid://u11w0orioiix"]
 
-[ext_resource type="Material" uid="uid://b58hsw3fulh17" path="res://data/materials/wooden_plank_flooring_mat.res" id="1_el2vi"]
-[ext_resource type="Material" uid="uid://cpxauobqgpnea" path="res://data/materials/stone_bricks_mat.res" id="2_7kout"]
-[ext_resource type="Material" uid="uid://dhlx1wp7d5x0r" path="res://data/materials/reed_roof_mat.res" id="5_5ru06"]
+[ext_resource type="Material" uid="uid://dydn41bvjfnu3" path="res://data/materials/wooden_plank_flooring_mat.tres" id="1_nim21"]
+[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/diffuse_mat.tres" id="3_hl678"]
 [ext_resource type="PackedScene" uid="uid://do2s6cen7voco" path="res://scenes/objects/furniture/wooden_single_bed.tscn" id="5_lqf8l"]
-[ext_resource type="Material" uid="uid://du8l5qqugrq11" path="res://data/materials/diffuse_mat.res" id="5_m22cs"]
-[ext_resource type="PackedScene" uid="uid://caktu0yx5ojom" path="res://scenes/objects/decorations/wooden_bucket_1.tscn" id="5_o0nnx"]
+[ext_resource type="Material" uid="uid://c4hpwluopgwjw" path="res://data/materials/reed_roof_mat.tres" id="5_nim21"]
+[ext_resource type="PackedScene" uid="uid://caktu0yx5ojom" path="res://scenes/objects/decorations/wooden_bucket.tscn" id="5_o0nnx"]
 [ext_resource type="PackedScene" uid="uid://dr5lynsfexk2e" path="res://scenes/objects/furniture/wooden_barrel.tscn" id="6_el2vi"]
+[ext_resource type="Material" uid="uid://dp7lubn06nv0o" path="res://data/materials/stone_bricks_mat.tres" id="6_hl678"]
 [ext_resource type="PackedScene" uid="uid://ffbgnntag8er" path="res://scenes/objects/furniture/small_wooden_table.tscn" id="7_5ru06"]
 [ext_resource type="PackedScene" uid="uid://dbjse8nppioyj" path="res://scenes/objects/furniture/wooden_chair.tscn" id="8_nim21"]
 [ext_resource type="PackedScene" uid="uid://b0yelmp8i6fq5" path="res://scenes/objects/decorations/candle_3.tscn" id="9_hl678"]
@@ -51,7 +51,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 6,
 "index_data": PackedByteArray("AAABAAIAAAADAAEA"),
-"material": ExtResource("1_el2vi"),
+"material": ExtResource("1_nim21"),
 "primitive": 3,
 "uv_scale": Vector4(2.16753, 1.99749, 0, 0),
 "vertex_count": 4,
@@ -84,7 +84,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 696,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWABbAFkAXABdAF4AXABfAF0AYABhAGIAYABjAGEAZABlAGYAZABnAGUAaABpAGoAaABrAGkAbABtAG4AbABvAG0AcABxAHIAcABzAHEAdAB1AHYAdAB3AHUAeAB5AHoAeAB7AHkAfAB9AH4AfAB/AH0AgACBAIIAgACDAIEAhACFAIYAhACHAIUAiACJAIoAiACLAIkAjACNAI4AjACPAI0AkACRAJIAkACTAJEAlACVAJYAlACXAJUAmACZAJoAmACbAJkAnACdAJ4AnACfAJ0AoAChAKIAoACjAKEApAClAKYApACnAKUAqACpAKoAqACrAKkArACtAK4ArACvAK0AsACxALIAsACzALEAtAC1ALYAtAC3ALUAuAC5ALoAuAC7ALkAvAC9AL4AvAC/AL0AwADBAMIAwADDAMEAxADFAMYAxADHAMUAyADJAMoAyADLAMkAzADNAM4AzADPAM0A0ADRANIA0ADTANEA1ADVANYA1ADXANUA2ADZANoA2ADbANkA3ADdAN4A3ADfAN0A4ADhAOIA4ADjAOEA5ADlAOYA5ADnAOUA6ADpAOoA6ADrAOkA7ADtAO4A7ADvAO0A8ADxAPIA8ADzAPEA9AD1APYA9AD3APUA+AD5APoA+AD7APkA/AD9AP4A/AD/AP0AAAEBAQIBAAEDAQEBBAEFAQYBBAEHAQUBCAEJAQoBCAELAQkBDAENAQ4BDAEPAQ0BEAERARIBEAETAREBFAEVARYBFAEXARUBGAEZARoBGAEbARkBHAEdAR4BHAEfAR0BIAEhASIBIAEjASEBJAElASYBJAEnASUBKAEpASoBKAErASkBLAEtAS4BLAEvAS0BMAExATIBMAEzATEBNAE1ATYBNAE3ATUBOAE5AToBOAE7ATkBPAE9AT4BPAE/AT0BQAFBAUIBQAFDAUEBRAFFAUYBRAFHAUUBSAFJAUoBSAFLAUkBTAFNAU4BTAFPAU0BUAFRAVIBUAFTAVEBVAFVAVYBVAFXAVUBWAFZAVoBWAFbAVkBXAFdAV4BXAFfAV0BYAFhAWIBYAFjAWEBZAFlAWYBZAFnAWUBaAFpAWoBaAFrAWkBbAFtAW4BbAFvAW0BcAFxAXIBcAFzAXEBdAF1AXYBdAF3AXUBeAF5AXoBeAF7AXkBfAF9AX4BfAF/AX0BgAGBAYIBgAGDAYEBhAGFAYYBhAGHAYUBiAGJAYoBiAGLAYkBjAGNAY4BjAGPAY0BkAGRAZIBkAGTAZEBlAGVAZYBlAGXAZUBmAGZAZoBmAGbAZkBnAGdAZ4BnAGfAZ0BoAGhAaIBoAGjAaEBpAGlAaYBpAGnAaUBqAGpAaoBqAGrAakBrAGtAa4BrAGvAa0BsAGxAbIBsAGzAbEBtAG1AbYBtAG3AbUBuAG5AboBuAG7AbkBvAG9Ab4BvAG/Ab0BwAHBAcIBwAHDAcEBxAHFAcYBxAHHAcUByAHJAcoByAHLAckBzAHNAc4BzAHPAc0B"),
-"material": ExtResource("5_m22cs"),
+"material": ExtResource("3_hl678"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 464,
@@ -126,7 +126,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 12,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
-"material": ExtResource("2_7kout"),
+"material": ExtResource("6_hl678"),
 "primitive": 3,
 "uv_scale": Vector4(3.87047, 0.921737, 0, 0),
 "vertex_count": 8,
@@ -137,7 +137,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 12,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUA"),
-"material": ExtResource("5_5ru06"),
+"material": ExtResource("5_nim21"),
 "primitive": 3,
 "uv_scale": Vector4(3.2157, 2.02466, 0, 0),
 "vertex_count": 8,
@@ -167,7 +167,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 168,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABQADAAAABAACAAYABQAHAAMACAAEAAYACAAGAAkACgAEAAgACgALAAQADAALAAoADAANAAsADQAFAAsADQAOAAUADgAHAAUADgAPAAcAEAARABIAEAATABEAFAATABAAFAAVABMAFgAVABQAFgAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAAzADAANAA1ADMANgAwADIANgAyADcAOAA2ADcAOAA3ADkAOgA2ADgAOgA7ADYAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASgBJAEsASgBLAEwASABNAEkATgBNAEgATgBPAE0A"),
-"material": ExtResource("2_7kout"),
+"material": ExtResource("6_hl678"),
 "primitive": 3,
 "uv_scale": Vector4(6.07668, 3.44302, 0, 0),
 "vertex_count": 80,
@@ -197,7 +197,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 216,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWABbAFkAXABdAF4AXABfAF0AYABhAGIAYABjAGEAZABlAGYAZABnAGUAaABpAGoAaABrAGkAbABtAG4AbABvAG0AcABxAHIAcABzAHEAdAB1AHYAdAB3AHUAeAB5AHoAeAB7AHkAfAB9AH4AfAB/AH0AgACBAIIAgACDAIEAhACFAIYAhACHAIUAiACJAIoAiACLAIkAjACNAI4AjACPAI0A"),
-"material": ExtResource("5_m22cs"),
+"material": ExtResource("3_hl678"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 144,
