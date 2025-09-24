@@ -4,6 +4,8 @@ extends Interactable
 
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var occluder: OccluderInstance3D = $OccluderInstance3D
+@onready var open_sfx: AudioStreamPlayer3D = $OpenSFX
+@onready var close_sfx: AudioStreamPlayer3D = $CloseSFX
 
 func _ready() -> void:
 	anim_player.animation_finished.connect(_on_animation_finished)
@@ -25,11 +27,13 @@ func _interact():
 		# Open the door.
 		anim_player.play("open_and_close")
 		occluder.hide()
+		open_sfx.play()
 		label_text = "Close"
 		is_open = true
 	else:
 		# Close the door.
 		anim_player.play_backwards("open_and_close")
+		close_sfx.play()
 		label_text = "Open"
 		is_open = false
 

@@ -1,5 +1,8 @@
-# Assets
+# Textures
 - Textures and HDRI's from PolyHaven -- https://polyhaven.com/
+
+# Audio
+- Main Door Opening Closing by freesound_community -- https://pixabay.com/sound-effects/main-door-opening-closing-38280/
 
 # Code
 - Minimal CRT Shader by blitpxl -- https://godotshaders.com/shader/minimal-crt-shader/
