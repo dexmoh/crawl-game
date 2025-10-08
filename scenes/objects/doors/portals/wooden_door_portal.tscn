@@ -1,10 +1,9 @@
-[gd_scene load_steps=18 format=4 uid="uid://bifi0qkik1ll5"]
+[gd_scene load_steps=17 format=4 uid="uid://btm3t1dehumic"]
 
-[ext_resource type="Script" uid="uid://b7gmi5mgq4wyi" path="res://src/interactables/door_interactable.gd" id="1_pjw8m"]
-[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/diffuse_mat.tres" id="2_pjw8m"]
-[ext_resource type="Material" uid="uid://c4vh28vp5d7aw" path="res://data/materials/metal_mat.tres" id="3_gq5pv"]
-[ext_resource type="AudioStream" uid="uid://cm34i35chj1ta" path="res://assets/audio/door_open.wav" id="4_3c8ka"]
-[ext_resource type="AudioStream" uid="uid://dqoa4ijvm2ggk" path="res://assets/audio/door_close.wav" id="5_m5bcf"]
+[ext_resource type="Script" uid="uid://ed5mu4ecjo2i" path="res://src/interactables/portal_interactable.gd" id="1_76i3o"]
+[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/diffuse_mat.tres" id="2_djxuf"]
+[ext_resource type="Material" uid="uid://c4vh28vp5d7aw" path="res://data/materials/metal_mat.tres" id="3_ck6q6"]
+[ext_resource type="AudioStream" uid="uid://cm34i35chj1ta" path="res://assets/audio/door_open.wav" id="4_pqy8g"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_g3jo8"]
 data = PackedVector3Array(1.03424, 0.0185233, 0.037, -0.0667747, 0.0185233, -0.037, -0.0667747, 0.0185233, 0.037, 1.03424, 0.0185233, 0.037, 1.03424, 0.0185233, -0.037, -0.0667747, 0.0185233, -0.037, 1.03424, 2.08384, 0.037, -0.0667747, 2.08384, -0.037, 1.03424, 2.08384, -0.037, 1.03424, 2.08384, 0.037, -0.0667747, 2.08384, 0.037, -0.0667747, 2.08384, -0.037, -0.0667747, 0.0185233, -0.037, 1.03424, 2.08384, -0.037, -0.0667747, 2.08384, -0.037, -0.0667747, 0.0185233, -0.037, 1.03424, 0.0185233, -0.037, 1.03424, 2.08384, -0.037, -0.0667747, 0.0185233, 0.037, -0.0667747, 2.08384, -0.037, -0.0667747, 2.08384, 0.037, -0.0667747, 0.0185233, 0.037, -0.0667747, 0.0185233, -0.037, -0.0667747, 2.08384, -0.037, 1.03424, 0.0185233, -0.037, 1.03424, 2.08384, 0.037, 1.03424, 2.08384, -0.037, 1.03424, 0.0185233, -0.037, 1.03424, 0.0185233, 0.037, 1.03424, 2.08384, 0.037, 1.03424, 0.0185233, 0.037, -0.0667747, 2.08384, 0.037, 1.03424, 2.08384, 0.037, 1.03424, 0.0185233, 0.037, -0.0667747, 0.0185233, 0.037, -0.0667747, 2.08384, 0.037)
@@ -54,7 +53,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 360,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWABbAFkAXABdAF4AXABfAF0AYABhAGIAYABjAGEAZABlAGYAZABnAGUAaABpAGoAaABrAGkAbABtAG4AbABvAG0AcABxAHIAcABzAHEAdAB1AHYAdAB3AHUAeAB5AHoAeQB4AHsAeQB7AHwAfQB+AH8AfQCAAH4AgQCCAIMAggCBAIQAggCEAIUAhgCHAIgAhgCJAIcAigCLAIwAiwCKAI0AiwCNAI4AjwCQAI4AjwCRAJAAkQCPAJIAkwCUAJUAlACTAJYAlACWAJcAmACZAJoAmACbAJkAnACdAJ4AnACfAJ0AoAChAKIAoQCgAKMAoQCjAKQApQCmAKcApgClAKgApgCoAKkAqgCrAKwAqwCqAK0AqwCtAK4ArwCwALEArwCyALAAswC0ALUAswC2ALQAtwC4ALkAtwC6ALgAuwC8AL0AuwC+ALwAvwDAAMEAvwDCAMAAwwDEAMUAwwDGAMQAxwDIAMkAyADHAMoAyADKAMsAzADNAM4AzQDMAM8AzQDPANAA0QDSANMA0QDUANIA1QDWANcA1gDVANgA1gDYANkA2gDbANwA2wDaAN0A2wDdAN4A3wDgAOEA3wDiAOAA"),
-"material": ExtResource("2_pjw8m"),
+"material": ExtResource("2_djxuf"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 227,
@@ -65,7 +64,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 864,
 "index_data": PackedByteArray("AAABAAIAAAADAAEAAAAEAAUAAAAFAAYABwAIAAYABwAJAAgACgADAAsACgALAAwADQAOAAsADQALAA8AEAAJABEAEAARABIAEwAUAA8AEwAVABQAEwARABYAEwAXABEAGAAZABoAGAAbABkAGQAbABwAGwAYAB0AHQAYAB4AGwAdAB8AIAAhACIAIAAjACEAIQAjACQAIwAgACUAJQAgACYAIwAlACcAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABJAEoASABLAEkATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABZAFoAWABbAFkAXABdAF4AXABfAF0AYABhAGIAYABjAGEAZABlAGYAZABnAGUAaABpAGoAaABrAGkAbABtAG4AbABvAG0AcABxAHIAcABzAHEAdAB1AHYAdAB3AHUAeAB5AHoAeAB7AHkAfAB9AH4AfAB/AH0AgACBAIIAgACDAIEAhACFAIYAhACHAIUAiACJAIoAiACLAIkAjACNAI4AjACPAI0AkACRAJIAkACTAJEAlACVAJYAlACXAJUAmACZAJoAmACbAJkAnACdAJ4AnACfAJ0AoAChAKIAoACjAKEApAClAKYApACnAKUAqACpAKoAqACrAKkArACtAK4ArACvAK0AsACxALIAsACzALEAtAC1ALYAtAC3ALUAuAC5ALoAuAC7ALkAvAC9AL4AvAC/AL0AwADBAMIAwADDAMEAxADFAMYAxADHAMUAyADJAMoAyADLAMkAzADNAM4AzADPAM0A0ADRANIA0ADTANEA1ADVANYA1ADXANUA2ADZANoA2ADbANkA3ADdAN4A3ADfAN0A4ADhAOIA4ADjAOEA5ADlAOYA5ADnAOUA6ADpAOoA6ADrAOkA7ADtAO4A7ADvAO0A8ADxAPIA8ADzAPEA9AD1APYA9AD3APUA+AD5APoA+AD7APkA/AD9AP4A/AD/AP0AAAEBAQIBAAEDAQEBBAEFAQYBBAEHAQUBCAEJAQoBCAELAQkBDAENAQ4BDAEPAQ0BEAERARIBEAETAREBFAEVARYBFAEXARUBGAEZARoBGAEbARkBHAEdAR4BHAEfAR0BIAEhASIBIAEjASEBJAElASYBJAEnASUBKAEpASoBKAErASkBLAEtAS4BLAEvAS0BMAExATIBMAEzATEBNAE1ATYBNAE3ATUBOAE5AToBOAE7ATkBPAE9AT4BPAE/AT0BQAFBAUIBQAFDAUEBRAFFAUYBRAFHAUUBSAFJAUoBSAFLAUkBTAFNAU4BTAFPAU0BUAFRAVIBUAFTAVEBVAFVAVYBVAFXAVUBWAFZAVoBWAFbAVkBXAFdAV4BXAFfAV0BYAFhAWIBYAFjAWEBZAFlAWYBZAFnAWUBaAFpAWoBaAFrAWkBbAFtAW4BbAFvAW0BcAFxAXIBcAFzAXEBdAF1AXYBdAF3AXUBeAF5AXoBeAF7AXkBfAF9AX4BfAF/AX0BgAGBAYIBgAGDAYEBhAGFAYYBhAGHAYUBiAGJAYoBiAGLAYkBjAGNAY4BjAGPAY0BkAGRAZIBkAGTAZEBlAGVAZYBlAGXAZUBmAGZAZoBmAGbAZkBnAGdAZ4BnAGfAZ0BoAGhAaIBoAGjAaEBpAGlAaYBpAGnAaUBqAGpAaoBqAGrAakBrAGtAa4BrAGvAa0BsAGxAbIBsAGzAbEBtAG1AbYBtAG3AbUBuAG5AboBuAG7AbkBvAG9Ab4BvAG/Ab0BwAHBAcIBwAHDAcEBxAHFAcYBxAHHAcUByAHJAcoByAHLAckBzAHNAc4BzAHPAc0B0AHRAdIB0AHTAdEB1AHVAdYB1AHXAdUB2AHZAdoB2AHbAdkB3AHdAd4B3AHfAd0B4AHhAeIB4AHjAeEB5AHlAeYB5AHnAeUB6AHpAeoB6AHrAekB7AHtAe4B7AHvAe0B8AHxAfIB8AHzAfEB9AH1AfYB9AH3AfUB+AH5AfoB+AH7AfkB/AH9Af4B/AH/Af0BAAIBAgICAAIDAgECBAIFAgYCBAIHAgUCCAIJAgoCCAILAgkCDAINAg4CDAIPAg0CEAIRAg0CEAINAhICEwIUAhUCEwIWAhQCFwIYAhQCFwIUAhkCGgIbAhwCGwIaAh0CHQIaAh4CGwIdAh8CIAIhAiICIAIjAiECJAIlAiYCJQIkAicCJwIkAigCJQInAikC"),
-"material": ExtResource("3_gq5pv"),
+"material": ExtResource("3_ck6q6"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 554,
@@ -113,7 +112,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 72,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAYACAAKAAkACwAMAA0ACwAOAAwADwAQAA0ADwARABAAEgATABQAEgAVABMAFgAXABgAFgAZABcAGgAbABwAGgAdABsAHgAfACAAHgAhAB8AIgAjACQAIgAlACMAJgAnACgAJgApACcAKgArACwAKgAtACsA"),
-"material": ExtResource("2_pjw8m"),
+"material": ExtResource("2_djxuf"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 46,
@@ -138,8 +137,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_8gnwi"]
-resource_name = "open_and_close"
-length = 0.6
+resource_name = "open"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -147,24 +146,24 @@ tracks/0/path = NodePath("DoorCollider:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(-2, -2),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, -1.5708, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, -0.17453292, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gq5pv"]
 _data = {
 &"RESET": SubResource("Animation_pjw8m"),
-&"open_and_close": SubResource("Animation_8gnwi")
+&"open": SubResource("Animation_8gnwi")
 }
 
 [sub_resource type="BoxOccluder3D" id="BoxOccluder3D_pjw8m"]
 size = Vector3(1.779, 2.212, 0.065)
 
-[node name="WoodenDoor" type="AnimatableBody3D"]
+[node name="WoodenDoorPortal" type="AnimatableBody3D"]
 collision_layer = 5
-script = ExtResource("1_pjw8m")
+script = ExtResource("1_76i3o")
 
 [node name="DoorCollider" type="CollisionShape3D" parent="."]
 shape = SubResource("ConcavePolygonShape3D_g3jo8")
@@ -192,10 +191,5 @@ occluder = SubResource("BoxOccluder3D_pjw8m")
 
 [node name="OpenSFX" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5072599, 1.2909553, 0.15894014)
-stream = ExtResource("4_3c8ka")
-bus = &"Effects"
-
-[node name="CloseSFX" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5072599, 1.2909553, 0.15894014)
-stream = ExtResource("5_m5bcf")
+stream = ExtResource("4_pqy8g")
 bus = &"Effects"

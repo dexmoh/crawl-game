@@ -3,7 +3,7 @@ extends Node3D
 @export var rotation_upper_clamp: float = 30.0
 @export var rotation_bottom_clamp: float = -10.0
 
-const melee_attack_anims: Array[StringName] = ["melee_attack_1", "melee_attack_2", "melee_attack_3", "melee_attack_4"]
+const melee_attack_anims: Array[String] = ["melee_attack_1", "melee_attack_2", "melee_attack_3", "melee_attack_4"]
 
 @onready var camera_pivot: Node3D = $"../CameraPivot"
 @onready var camera: Node3D = $"../CameraPivot/Camera"

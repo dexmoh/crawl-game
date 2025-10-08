@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://ffbgnntag8er" path="res://scenes/objects/furniture/small_wooden_table.tscn" id="7_5ru06"]
 [ext_resource type="PackedScene" uid="uid://dbjse8nppioyj" path="res://scenes/objects/furniture/wooden_chair.tscn" id="8_nim21"]
 [ext_resource type="PackedScene" uid="uid://b0yelmp8i6fq5" path="res://scenes/objects/decorations/candle_3.tscn" id="9_hl678"]
-[ext_resource type="PackedScene" uid="uid://bifi0qkik1ll5" path="res://scenes/objects/doors/wooden_door.tscn" id="11_5ru06"]
-[ext_resource type="PackedScene" uid="uid://cqus8xc7ctibe" path="res://scenes/player.tscn" id="12_nim21"]
+[ext_resource type="PackedScene" uid="uid://btm3t1dehumic" path="res://scenes/objects/doors/portals/wooden_door_portal.tscn" id="12_hl678"]
+[ext_resource type="PackedScene" uid="uid://cmdgabac8nggo" path="res://scenes/portal_spawn_marker.tscn" id="12_nim21"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nim21"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -269,12 +269,6 @@ transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 1.87712,
 [node name="WoodenChair" parent="." instance=ExtResource("8_nim21")]
 transform = Transform3D(0.959432, 0, 0.28194, 0, 1, 0, -0.28194, 0, 0.959432, 1.33702, 0, -1.06795)
 
-[node name="WoodenDoor" parent="." instance=ExtResource("11_5ru06")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.7274, 1.54338e-09, 3.24517)
-
-[node name="Player" parent="." instance=ExtResource("12_nim21")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.938577, 2.38419e-07, 3.1837)
-
 [node name="WoodenBarrel2" parent="." instance=ExtResource("6_el2vi")]
 transform = Transform3D(-4.37114e-08, -1, 0, -0.371935, 1.62578e-08, -0.928259, 0.928259, -4.05755e-08, -0.371935, 1.86566, 0.36567, 3.10046)
 
@@ -286,3 +280,15 @@ transform = Transform3D(-4.37114e-08, -1, 0, -0.175126, 7.65501e-09, 0.984546, -
 
 [node name="Candle3" parent="." instance=ExtResource("9_hl678")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17101, 0.948386, -1.87224)
+
+[node name="PortalSpawnMarker" parent="." instance=ExtResource("12_nim21")]
+transform = Transform3D(-0.6950475, 0, 0.71896386, 0, 1, 0, -0.71896386, 0, -0.6950475, 1.3870435, 0.05208254, 0.18017173)
+
+[node name="PortalSpawnMarker2" parent="." instance=ExtResource("12_nim21")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.9633207, 0.05319953, 2.6923237)
+id = "enterance"
+
+[node name="WoodenDoorPortal" parent="." instance=ExtResource("12_hl678")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.7057104, 0, 3.245)
+level_path = "uid://btayvugja36qd"
+spawn_marker_id = "enterance"

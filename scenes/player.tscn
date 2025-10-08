@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ntxyq81ee02s" path="res://src/player/player_controller.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://ccl1lhr6c3i7t" path="res://src/player/weapon_controller.gd" id="2_dqkch"]
 [ext_resource type="Script" uid="uid://bpatksasov0ob" path="res://src/interactables/interaction_raycast.gd" id="2_fjrip"]
-[ext_resource type="PackedScene" uid="uid://cfs2a7a6caqw7" path="res://scenes/hud.tscn" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://cfs2a7a6caqw7" path="res://scenes/ui/hud.tscn" id="2_g2els"]
 [ext_resource type="PackedScene" uid="uid://dkx0qsnxsadnv" path="res://scenes/objects/weapons/swords/chipped_iron_shortsword.tscn" id="2_qhqgy"]
 [ext_resource type="FontFile" uid="uid://c2veccd7e7b5r" path="res://assets/fonts/RasterForgeRegular-JpBgm.ttf" id="2_tuyoq"]
 [ext_resource type="Script" uid="uid://y1m4hft8g2hk" path="res://src/player/weapon_viewport.gd" id="5_qlg0r"]

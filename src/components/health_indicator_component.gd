@@ -7,7 +7,7 @@ extends Sprite3D
 
 func _ready():
 	if !health_component:
-		push_warning("Warning: Health indicator wasn't given a health component to listen to!")
+		push_warning("Health indicator wasn't given a health component to listen to!")
 		queue_free()
 		return
 	

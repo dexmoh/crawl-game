@@ -11,8 +11,6 @@ func set_item_info(item: InventoryItem):
 	icon.texture = item.icon
 	name_label.text = item.name
 	name_label.modulate = Color(item.rarity)
-	print(item.rarity)
-	print(name_label.modulate)
 	type_label.text = item.type_to_str()
 	value_label.text = str(item.value)
 	weight_label.text = str(item.weight)

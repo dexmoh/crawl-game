@@ -44,6 +44,7 @@ import/blender/enabled=false
 
 main_camera="The main camera the player uses."
 player="Despite everything, it's still you."
+portal_spawn_marker="Marker that denotes portal target location."
 
 [gui]
 

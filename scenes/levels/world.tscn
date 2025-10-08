@@ -1,16 +1,17 @@
-[gd_scene load_steps=15 format=3 uid="uid://btayvugja36qd"]
+[gd_scene load_steps=16 format=3 uid="uid://btayvugja36qd"]
 
 [ext_resource type="Texture2D" uid="uid://b0ro7kpw1xnbw" path="res://assets/hdri/skybox.hdr" id="1_8c33x"]
-[ext_resource type="PackedScene" uid="uid://cqus8xc7ctibe" path="res://scenes/player.tscn" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://dr5lynsfexk2e" path="res://scenes/objects/furniture/wooden_barrel.tscn" id="3_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://ffbgnntag8er" path="res://scenes/objects/furniture/small_wooden_table.tscn" id="3_k0juu"]
 [ext_resource type="PackedScene" uid="uid://dbjse8nppioyj" path="res://scenes/objects/furniture/wooden_chair.tscn" id="4_k0juu"]
 [ext_resource type="PackedScene" uid="uid://d0np6oymomy8b" path="res://scenes/objects/furniture/wooden_stool.tscn" id="5_71j4m"]
 [ext_resource type="PackedScene" uid="uid://do2s6cen7voco" path="res://scenes/objects/furniture/wooden_single_bed.tscn" id="7_i7141"]
 [ext_resource type="PackedScene" uid="uid://b0yelmp8i6fq5" path="res://scenes/objects/decorations/candle_3.tscn" id="10_w7kh3"]
+[ext_resource type="PackedScene" uid="uid://btm3t1dehumic" path="res://scenes/objects/doors/portals/wooden_door_portal.tscn" id="12_de0io"]
 [ext_resource type="PackedScene" uid="uid://getkuo43b81d" path="res://scenes/objects/item-pickups/chipped_iron_shortsword_item.tscn" id="13_8c33x"]
 [ext_resource type="PackedScene" uid="uid://bnvi18pdis06b" path="res://scenes/health_box.tscn" id="13_xidr1"]
 [ext_resource type="PackedScene" uid="uid://bifi0qkik1ll5" path="res://scenes/objects/doors/wooden_door.tscn" id="14_8c33x"]
+[ext_resource type="PackedScene" uid="uid://cmdgabac8nggo" path="res://scenes/portal_spawn_marker.tscn" id="14_y40x4"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_71j4m"]
 panorama = ExtResource("1_8c33x")
@@ -49,8 +50,6 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 use_collision = true
 size = Vector3(20, 1, 20)
-
-[node name="Player" parent="." instance=ExtResource("1_nnsk1")]
 
 [node name="SmallWoodenTable" parent="." instance=ExtResource("3_k0juu")]
 transform = Transform3D(0.111816, 0, -0.993729, 0, 1, 0, 0.993729, 0, 0.111816, 3.0632, 0, 2.75446)
@@ -146,3 +145,16 @@ transform = Transform3D(0.772634, 0, 0.634852, 0, 1, 0, -0.634852, 0, 0.772634, 
 
 [node name="ChippedIronShortsword" parent="." instance=ExtResource("13_8c33x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4603815, 0.97673035, 3.0876703)
+
+[node name="WoodenDoor2" parent="." instance=ExtResource("12_de0io")]
+transform = Transform3D(0.88554776, 0, -0.4645484, 0, 1, 0, 0.4645484, 0, 0.88554776, -4.822, 0, 3.597)
+level_path = "uid://u11w0orioiix"
+destination_name = "Small House"
+spawn_marker_id = "enterance"
+
+[node name="PortalSpawnMarker" parent="." instance=ExtResource("14_y40x4")]
+transform = Transform3D(-0.7324955, 0, -0.68077195, 0, 1, 0, 0.68077195, 0, -0.7324955, -4.3551373, 0.112807035, -4.4662952)
+
+[node name="PortalSpawnMarker2" parent="." instance=ExtResource("14_y40x4")]
+transform = Transform3D(0.8512601, 0, -0.524744, 0, 1, 0, 0.524744, 0, 0.8512601, -4.1252165, 0.1128068, 3.2303667)
+id = "enterance"

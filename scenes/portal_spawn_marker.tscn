@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmdgabac8nggo"]
+
+[ext_resource type="Script" uid="uid://5nlqtmxvo6ab" path="res://src/portal_spawn_marker.gd" id="1_5iao4"]
+[ext_resource type="Texture2D" uid="uid://cbkwpg3fgvnm8" path="res://assets/textures/icons/spawn_marker.png" id="1_us2ur"]
+
+[node name="PortalSpawnMarker" type="Sprite3D" groups=["portal_spawn_marker"]]
+pixel_size = 0.007
+axis = 1
+texture = ExtResource("1_us2ur")
+script = ExtResource("1_5iao4")

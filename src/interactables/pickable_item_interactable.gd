@@ -4,7 +4,7 @@ extends Interactable
 
 func _ready():
 	if !item:
-		push_error("Error: Pickable item wasn't given an item resource, player can't pick this item up!")
+		push_error("Pickable item wasn't given an item resource, player can't pick this item up!")
 	else:
 		label_text = "Pick up: " + item.name
 
