@@ -45,6 +45,7 @@ script = ExtResource("1_5ysmq")
 layout_mode = 1
 
 [node name="CRT" type="ColorRect" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_oo0fn")
 layout_mode = 1
 anchors_preset = 15

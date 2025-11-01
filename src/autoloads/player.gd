@@ -13,7 +13,9 @@ func _ready():
 	# I hate this.
 	# TODO: Fix this when you implement a save system.
 	var spawner := get_tree().get_first_node_in_group("portal_spawn_marker") as PortalSpawnMarker
-	character.global_position = spawner.global_position
-	character.camera_pivot.rotation.y = spawner.rotation.y
+	
+	if spawner:
+		character.global_position = spawner.global_position
+		character.camera_pivot.rotation.y = spawner.rotation.y
 
 	inventory = Inventory.new()

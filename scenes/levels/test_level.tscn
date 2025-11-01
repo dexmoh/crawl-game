@@ -1,0 +1,160 @@
+[gd_scene load_steps=16 format=3 uid="uid://btayvugja36qd"]
+
+[ext_resource type="Texture2D" uid="uid://b0ro7kpw1xnbw" path="res://assets/hdri/skybox.hdr" id="1_eaa0b"]
+[ext_resource type="PackedScene" uid="uid://ffbgnntag8er" path="res://scenes/objects/furniture/small_wooden_table.tscn" id="2_a5rnb"]
+[ext_resource type="PackedScene" uid="uid://dr5lynsfexk2e" path="res://scenes/objects/furniture/wooden_barrel.tscn" id="3_fqldq"]
+[ext_resource type="PackedScene" uid="uid://dbjse8nppioyj" path="res://scenes/objects/furniture/wooden_chair.tscn" id="4_3ay3b"]
+[ext_resource type="PackedScene" uid="uid://d0np6oymomy8b" path="res://scenes/objects/furniture/wooden_stool.tscn" id="5_hppjq"]
+[ext_resource type="PackedScene" uid="uid://do2s6cen7voco" path="res://scenes/objects/furniture/wooden_single_bed.tscn" id="6_os2yb"]
+[ext_resource type="PackedScene" uid="uid://b0yelmp8i6fq5" path="res://scenes/objects/decorations/candle_3.tscn" id="7_v6k17"]
+[ext_resource type="PackedScene" uid="uid://bifi0qkik1ll5" path="res://scenes/objects/doors/wooden_door.tscn" id="8_upsmr"]
+[ext_resource type="PackedScene" uid="uid://bnvi18pdis06b" path="res://scenes/health_box.tscn" id="9_qgrpf"]
+[ext_resource type="PackedScene" uid="uid://getkuo43b81d" path="res://scenes/objects/item-pickups/chipped_iron_shortsword_item.tscn" id="10_c7nhy"]
+[ext_resource type="PackedScene" uid="uid://btm3t1dehumic" path="res://scenes/objects/doors/portals/wooden_door_portal.tscn" id="11_lxl1u"]
+[ext_resource type="PackedScene" uid="uid://cmdgabac8nggo" path="res://scenes/portal_spawn_marker.tscn" id="12_cibht"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_71j4m"]
+panorama = ExtResource("1_eaa0b")
+energy_multiplier = 0.5
+
+[sub_resource type="Sky" id="Sky_rwgxs"]
+sky_material = SubResource("PanoramaSkyMaterial_71j4m")
+
+[sub_resource type="Environment" id="Environment_4wyf3"]
+background_mode = 2
+sky = SubResource("Sky_rwgxs")
+tonemap_mode = 3
+tonemap_exposure = 0.9
+ssao_enabled = true
+ssao_intensity = 3.0
+glow_enabled = true
+glow_intensity = 0.09
+glow_bloom = 0.1
+glow_blend_mode = 1
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4wyf3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.72094, -0.471058, -0.508281, 0.341557, -0.879712, 0.330827, -0.602979, 0.0649001, 0.795112, 0, 5.38932, 0)
+light_color = Color(1, 0.612119, 0.570923, 1)
+light_energy = 1.5
+light_angular_distance = 2.0
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
+size = Vector3(20, 1, 20)
+
+[node name="SmallWoodenTable" parent="." instance=ExtResource("2_a5rnb")]
+transform = Transform3D(0.111816, 0, -0.993729, 0, 1, 0, 0.993729, 0, 0.111816, 3.0632, 0, 2.75446)
+
+[node name="WoodenBarrel" parent="." instance=ExtResource("3_fqldq")]
+transform = Transform3D(-4.88763e-09, -0.111816, -0.993729, 1, -4.37114e-08, 0, -4.34373e-08, -0.993729, 0.111816, 1.71755, 0.354126, 2.81005)
+
+[node name="WoodenBarrel4" parent="." instance=ExtResource("3_fqldq")]
+transform = Transform3D(0.913754, -0.111816, 0.390579, -0.393044, 3.17157e-08, 0.91952, -0.102817, -0.993729, -0.0439485, 1.31916, 0.992752, 2.85488)
+
+[node name="WoodenBarrel3" parent="." instance=ExtResource("3_fqldq")]
+transform = Transform3D(0.959868, -0.111816, -0.257196, 0.258819, -1.35982e-08, 0.965926, -0.108006, -0.993729, 0.0289401, 0.946509, 0.354126, 2.89681)
+
+[node name="WoodenBarrel2" parent="." instance=ExtResource("3_fqldq")]
+transform = Transform3D(0.859576, 0, -0.511008, 0, 1, 0, 0.511008, 0, 0.859576, 2.04626, 0.487115, 3.70993)
+
+[node name="WoodenChair" parent="." instance=ExtResource("4_3ay3b")]
+transform = Transform3D(0.329295, 0, -0.944227, 0, 1, 0, 0.944227, 0, 0.329295, 2.64609, 0, 2.38769)
+
+[node name="WoodenChair3" parent="." instance=ExtResource("4_3ay3b")]
+transform = Transform3D(0.822154, 0, 0.569265, 0, 1, 0, -0.569265, 0, 0.822154, -2.44532, 1.19209e-07, 5.97445)
+
+[node name="WoodenChair4" parent="." instance=ExtResource("4_3ay3b")]
+transform = Transform3D(0.822154, 0, 0.569265, 0, 1, 0, -0.569265, 0, 0.822154, -1.44979, 1.19209e-07, 6.37906)
+
+[node name="WoodenChair5" parent="." instance=ExtResource("4_3ay3b")]
+transform = Transform3D(0.822154, 0, 0.569265, 0, 1, 0, -0.569265, 0, 0.822154, -3.50453, -1.1921e-07, 6.65565)
+
+[node name="WoodenChair6" parent="." instance=ExtResource("4_3ay3b")]
+transform = Transform3D(0.822154, 0, 0.569265, 0, 1, 0, -0.569265, 0, 0.822154, -3.31507, -1.1921e-07, 1.95254)
+
+[node name="WoodenChair7" parent="." instance=ExtResource("4_3ay3b")]
+transform = Transform3D(0.822154, 0, 0.569265, 0, 1, 0, -0.569265, 0, 0.822154, -2.37021, -1.1921e-07, 2.34634)
+
+[node name="WoodenChair2" parent="." instance=ExtResource("4_3ay3b")]
+transform = Transform3D(-0.0769278, 0, -0.997037, 0, 1, 0, 0.997037, 0, -0.0769278, 3.30735, 2.38419e-07, 2.16919)
+
+[node name="WoodenStool" parent="." instance=ExtResource("5_hppjq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.40263, 0.96, 2.57504)
+
+[node name="WoodenStool2" parent="." instance=ExtResource("5_hppjq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38723, 1.46074, 2.53877)
+
+[node name="WoodenStool3" parent="." instance=ExtResource("5_hppjq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78541, 0.96, 2.59656)
+
+[node name="WoodenStool4" parent="." instance=ExtResource("5_hppjq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31719, 0, 2.68456)
+
+[node name="WoodenStool5" parent="." instance=ExtResource("5_hppjq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27661, 0.500741, 2.66007)
+
+[node name="WoodenStool6" parent="." instance=ExtResource("5_hppjq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76444, 2.38419e-07, 2.62195)
+
+[node name="WoodenStool7" parent="." instance=ExtResource("5_hppjq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42867, 2.38419e-07, 2.15283)
+
+[node name="WoodenSingleBed" parent="." instance=ExtResource("6_os2yb")]
+transform = Transform3D(-0.739208, 0, 0.673477, 0, 1, 0, -0.673477, 0, -0.739208, 0.747767, -1.19209e-07, 0.0214866)
+
+[node name="Candle3" parent="." instance=ExtResource("7_v6k17")]
+transform = Transform3D(-0.229031, 0, -0.973419, 0, 1, 0, 0.973419, 0, -0.229031, 3.54903, 0.946528, 2.34551)
+
+[node name="WoodenDoor" parent="." instance=ExtResource("8_upsmr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85378, 1.54338e-09, 4.30578)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 2.5, -7.5)
+use_collision = true
+size = Vector3(3, 1, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 2.3, -2.5)
+use_collision = true
+size = Vector3(3, 1, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 2.1, 2.5)
+use_collision = true
+size = Vector3(3, 1, 5)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 1.9, 7.5)
+use_collision = true
+size = Vector3(3, 1, 5)
+
+[node name="HealthBox" parent="." instance=ExtResource("9_qgrpf")]
+transform = Transform3D(0.929429, 0, -0.369001, 0, 1, 0, 0.369001, 0, 0.929429, 6.56849, 0.5, 7.62338)
+
+[node name="HealthBox2" parent="." instance=ExtResource("9_qgrpf")]
+transform = Transform3D(0.772634, 0, 0.634852, 0, 1, 0, -0.634852, 0, 0.772634, 5.51309, 0.5, 4.47209)
+
+[node name="ChippedIronShortsword" parent="." instance=ExtResource("10_c7nhy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4603815, 0.97673035, 3.0876703)
+
+[node name="WoodenDoor2" parent="." instance=ExtResource("11_lxl1u")]
+transform = Transform3D(0.88554776, 0, -0.4645484, 0, 1, 0, 0.4645484, 0, 0.88554776, -4.822, 0, 3.597)
+level_path = "uid://u11w0orioiix"
+destination_name = "Small House"
+spawn_marker_id = "enterance"
+
+[node name="PortalSpawnMarker" parent="." instance=ExtResource("12_cibht")]
+transform = Transform3D(-0.7324955, 0, -0.68077195, 0, 1, 0, 0.68077195, 0, -0.7324955, -4.3551373, 0.112807035, -4.4662952)
+
+[node name="PortalSpawnMarker2" parent="." instance=ExtResource("12_cibht")]
+transform = Transform3D(0.8512601, 0, -0.524744, 0, 1, 0, 0.524744, 0, 0.8512601, -4.1252165, 0.1128068, 3.2303667)
+id = "enterance"
