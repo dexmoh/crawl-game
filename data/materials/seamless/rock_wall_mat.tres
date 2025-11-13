@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://ce8bldajplbmb"]
+
+[ext_resource type="Texture2D" uid="uid://b4o48rvd3k1s7" path="res://assets/textures/seamless/rock_wall_col_128.png" id="1_6n517"]
+[ext_resource type="Texture2D" uid="uid://cktutd5vcowfi" path="res://assets/textures/seamless/rock_wall_norm_128.png" id="2_f8jja"]
+
+[resource]
+specular_mode = 2
+albedo_texture = ExtResource("1_6n517")
+roughness = 0.8
+normal_enabled = true
+normal_scale = 4.0
+normal_texture = ExtResource("2_f8jja")
+texture_filter = 2

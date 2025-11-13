@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cispoi1cec0w2"]
+
+[ext_resource type="Texture2D" uid="uid://ccrynm3ttcccx" path="res://assets/textures/birch_branch.png" id="1_iacrk"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.3
+alpha_antialiasing_mode = 0
+cull_mode = 2
+specular_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_iacrk")
+backlight_enabled = true
+backlight = Color(0.76240367, 0.76240367, 0.76240367, 1)
+texture_filter = 2

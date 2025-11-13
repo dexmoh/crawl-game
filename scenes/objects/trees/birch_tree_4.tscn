@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciko4qmrcgf6x"]
+
+[ext_resource type="PackedScene" uid="uid://btry6aaypj3pu" path="res://assets/models/objects/trees/birch_tree_4.glb" id="1_0cc4l"]
+[ext_resource type="Material" uid="uid://ddbodpf80kqqh" path="res://data/materials/seamless/birch_bark_mat.tres" id="2_3il2o"]
+[ext_resource type="Material" uid="uid://cispoi1cec0w2" path="res://data/materials/birch_leaves_mat.tres" id="3_putj5"]
+
+[node name="BirchTree4" instance=ExtResource("1_0cc4l")]
+
+[node name="BirchTree4" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_3il2o")
+
+[node name="BirchTree4Leaves" parent="BirchTree4" index="0"]
+surface_material_override/0 = ExtResource("3_putj5")

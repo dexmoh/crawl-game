@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=4 uid="uid://dkx0qsnxsadnv"]
 
-[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/diffuse_mat.tres" id="1_xy7fe"]
-[ext_resource type="Material" uid="uid://c4vh28vp5d7aw" path="res://data/materials/metal_mat.tres" id="2_f35qm"]
+[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="1_xy7fe"]
+[ext_resource type="Material" uid="uid://c4vh28vp5d7aw" path="res://data/materials/simple/metal_mat.tres" id="2_f35qm"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_j5si7"]
 _surfaces = [{

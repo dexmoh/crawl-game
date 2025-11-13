@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://b0yelmp8i6fq5"]
 
-[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/diffuse_mat.tres" id="1_1xj8k"]
+[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="1_1xj8k"]
 [ext_resource type="PackedScene" uid="uid://cx25xtpffplwm" path="res://scenes/candle_flame.tscn" id="3_1xj8k"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_dkj80"]

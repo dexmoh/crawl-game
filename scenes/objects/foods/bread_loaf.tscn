@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci2qbygwuaq85"]
+
+[ext_resource type="PackedScene" uid="uid://c71wii0l0ssx7" path="res://assets/models/objects/foods/bread_loaf.glb" id="1_xmt8t"]
+[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="2_6gled"]
+
+[node name="BreadLoaf" instance=ExtResource("1_xmt8t")]
+
+[node name="BreadLoaf" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_6gled")

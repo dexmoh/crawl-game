@@ -20,6 +20,8 @@ func _ready():
 	label_text = "Go to: " + destination_name
 
 	anim_player.animation_finished.connect(_on_animation_finished)
+	
+	super._ready()
 
 func _interact():
 	if anim_player.is_playing():

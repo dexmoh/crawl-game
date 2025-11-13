@@ -16,6 +16,8 @@ func _ready() -> void:
 		label_text = "Close"
 	else:
 		label_text = "Open"
+	
+	super._ready()
 
 func _interact():
 	if anim_player.is_playing():

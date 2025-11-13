@@ -29,7 +29,7 @@ window/stretch/aspect="keep_height"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_3d_cursor/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/gd-blender-3d-shortcuts/plugin.cfg", "res://addons/godot_3d_cursor/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
 [file_customization]
 
@@ -131,7 +131,10 @@ exit={
 
 [rendering]
 
-lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
+textures/canvas_textures/default_texture_filter=0
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
 scaling_3d/fsr_sharpness=0.0
-anti_aliasing/quality/screen_space_aa=2
+textures/decals/filter=2
+textures/light_projectors/filter=0
 occlusion_culling/use_occlusion_culling=true
+lights_and_shadows/positional_shadow/atlas_size=2048

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bba5u12xskwgr"]
+
+[ext_resource type="PackedScene" uid="uid://d32geyalro2e8" path="res://assets/models/objects/foods/red_apple.glb" id="1_wa07p"]
+[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="2_t2twp"]
+
+[node name="RedApple" instance=ExtResource("1_wa07p")]
+
+[node name="RedApple" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_t2twp")

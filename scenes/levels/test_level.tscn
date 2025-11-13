@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://btayvugja36qd"]
+[gd_scene load_steps=19 format=3 uid="uid://btayvugja36qd"]
 
 [ext_resource type="Texture2D" uid="uid://b0ro7kpw1xnbw" path="res://assets/hdri/skybox.hdr" id="1_eaa0b"]
 [ext_resource type="PackedScene" uid="uid://ffbgnntag8er" path="res://scenes/objects/furniture/small_wooden_table.tscn" id="2_a5rnb"]
@@ -12,6 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://getkuo43b81d" path="res://scenes/objects/item-pickups/chipped_iron_shortsword_item.tscn" id="10_c7nhy"]
 [ext_resource type="PackedScene" uid="uid://btm3t1dehumic" path="res://scenes/objects/doors/portals/wooden_door_portal.tscn" id="11_lxl1u"]
 [ext_resource type="PackedScene" uid="uid://cmdgabac8nggo" path="res://scenes/portal_spawn_marker.tscn" id="12_cibht"]
+[ext_resource type="PackedScene" uid="uid://ci2qbygwuaq85" path="res://scenes/objects/foods/bread_loaf.tscn" id="13_a5rnb"]
+[ext_resource type="PackedScene" uid="uid://d32x8ulfvokgr" path="res://scenes/objects/foods/green_apple.tscn" id="14_3ay3b"]
+[ext_resource type="PackedScene" uid="uid://bba5u12xskwgr" path="res://scenes/objects/foods/red_apple.tscn" id="15_hppjq"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_71j4m"]
 panorama = ExtResource("1_eaa0b")
@@ -31,7 +34,6 @@ glow_enabled = true
 glow_intensity = 0.09
 glow_bloom = 0.1
 glow_blend_mode = 1
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.01
 
 [node name="TestLevel" type="Node3D"]
@@ -87,32 +89,14 @@ transform = Transform3D(0.822154, 0, 0.569265, 0, 1, 0, -0.569265, 0, 0.822154, 
 [node name="WoodenChair2" parent="." instance=ExtResource("4_3ay3b")]
 transform = Transform3D(-0.0769278, 0, -0.997037, 0, 1, 0, 0.997037, 0, -0.0769278, 3.30735, 2.38419e-07, 2.16919)
 
-[node name="WoodenStool" parent="." instance=ExtResource("5_hppjq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.40263, 0.96, 2.57504)
-
-[node name="WoodenStool2" parent="." instance=ExtResource("5_hppjq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38723, 1.46074, 2.53877)
-
-[node name="WoodenStool3" parent="." instance=ExtResource("5_hppjq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78541, 0.96, 2.59656)
-
 [node name="WoodenStool4" parent="." instance=ExtResource("5_hppjq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31719, 0, 2.68456)
 
-[node name="WoodenStool5" parent="." instance=ExtResource("5_hppjq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27661, 0.500741, 2.66007)
-
-[node name="WoodenStool6" parent="." instance=ExtResource("5_hppjq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76444, 2.38419e-07, 2.62195)
-
-[node name="WoodenStool7" parent="." instance=ExtResource("5_hppjq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.42867, 2.38419e-07, 2.15283)
-
 [node name="WoodenSingleBed" parent="." instance=ExtResource("6_os2yb")]
-transform = Transform3D(-0.739208, 0, 0.673477, 0, 1, 0, -0.673477, 0, -0.739208, 0.747767, -1.19209e-07, 0.0214866)
+transform = Transform3D(-0.73920816, 0, 0.673477, 0, 1, 0, -0.673477, 0, -0.73920816, 0.747767, -1.19209e-07, 0.0214866)
 
 [node name="Candle3" parent="." instance=ExtResource("7_v6k17")]
-transform = Transform3D(-0.229031, 0, -0.973419, 0, 1, 0, 0.973419, 0, -0.229031, 3.54903, 0.946528, 2.34551)
+transform = Transform3D(-0.229031, 0, -0.973419, 0, 1, 0, 0.973419, 0, -0.229031, 3.6560302, 0.946528, 2.90151)
 
 [node name="WoodenDoor" parent="." instance=ExtResource("8_upsmr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85378, 1.54338e-09, 4.30578)
@@ -144,7 +128,7 @@ transform = Transform3D(0.929429, 0, -0.369001, 0, 1, 0, 0.369001, 0, 0.929429, 
 transform = Transform3D(0.772634, 0, 0.634852, 0, 1, 0, -0.634852, 0, 0.772634, 5.51309, 0.5, 4.47209)
 
 [node name="ChippedIronShortsword" parent="." instance=ExtResource("10_c7nhy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4603815, 0.97673035, 3.0876703)
+transform = Transform3D(-0.12524667, 0, -0.99212575, 0, 1, 0, 0.99212575, 0, -0.12524667, 2.4754229, 0.97673035, 2.520139)
 
 [node name="WoodenDoor2" parent="." instance=ExtResource("11_lxl1u")]
 transform = Transform3D(0.88554776, 0, -0.4645484, 0, 1, 0, 0.4645484, 0, 0.88554776, -4.822, 0, 3.597)
@@ -158,3 +142,15 @@ transform = Transform3D(-0.7324955, 0, -0.68077195, 0, 1, 0, 0.68077195, 0, -0.7
 [node name="PortalSpawnMarker2" parent="." instance=ExtResource("12_cibht")]
 transform = Transform3D(0.8512601, 0, -0.524744, 0, 1, 0, 0.524744, 0, 0.8512601, -4.1252165, 0.1128068, 3.2303667)
 id = "enterance"
+
+[node name="BreadLoaf" parent="." instance=ExtResource("13_a5rnb")]
+transform = Transform3D(0.79199135, 0, 0.6105323, 0, 1, 0, -0.6105323, 0, 0.79199135, 3.1936786, 0.96000004, 2.645016)
+
+[node name="GreenApple" parent="." instance=ExtResource("14_3ay3b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5963657, 1.021821, 2.605593)
+
+[node name="RedApple" parent="." instance=ExtResource("15_hppjq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7296278, 1.021821, 2.5548704)
+
+[node name="RedApple2" parent="." instance=ExtResource("15_hppjq")]
+transform = Transform3D(0.82, 0, 0, 0, 0.82, 0, 0, 0, 0.82, 3.6250563, 1.0100185, 2.4800653)

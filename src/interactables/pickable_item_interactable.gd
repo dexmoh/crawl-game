@@ -7,6 +7,8 @@ func _ready():
 		push_error("Pickable item wasn't given an item resource, player can't pick this item up!")
 	else:
 		label_text = "Pick up: " + item.name
+	
+	super._ready()
 
 # Add the item to player's inventory.
 func _interact():

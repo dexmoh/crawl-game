@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://caktu0yx5ojom"]
 
-[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/diffuse_mat.tres" id="1_0304e"]
+[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="1_0304e"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8w5ix"]
 _surfaces = [{

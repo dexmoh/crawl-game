@@ -1,8 +1,8 @@
 [gd_scene load_steps=18 format=4 uid="uid://bifi0qkik1ll5"]
 
 [ext_resource type="Script" uid="uid://b7gmi5mgq4wyi" path="res://src/interactables/door_interactable.gd" id="1_pjw8m"]
-[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/diffuse_mat.tres" id="2_pjw8m"]
-[ext_resource type="Material" uid="uid://c4vh28vp5d7aw" path="res://data/materials/metal_mat.tres" id="3_gq5pv"]
+[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="2_pjw8m"]
+[ext_resource type="Material" uid="uid://c4vh28vp5d7aw" path="res://data/materials/simple/metal_mat.tres" id="3_gq5pv"]
 [ext_resource type="AudioStream" uid="uid://cm34i35chj1ta" path="res://assets/audio/door_open.wav" id="4_3c8ka"]
 [ext_resource type="AudioStream" uid="uid://dqoa4ijvm2ggk" path="res://assets/audio/door_close.wav" id="5_m5bcf"]
 
@@ -163,7 +163,6 @@ _data = {
 size = Vector3(1.779, 2.212, 0.065)
 
 [node name="WoodenDoor" type="AnimatableBody3D"]
-collision_layer = 5
 script = ExtResource("1_pjw8m")
 
 [node name="DoorCollider" type="CollisionShape3D" parent="."]
