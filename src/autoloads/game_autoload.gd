@@ -29,5 +29,5 @@ func change_current_level(new_level_path: String, spawn_marker_id: String = "def
 	if not next_spawner:
 		next_spawner = default_spawner
 	
-	Player.character.global_position = next_spawner.global_position
-	Player.character.camera_pivot.rotation.y = next_spawner.rotation.y
+	Player.body.global_position = next_spawner.global_position
+	Player.body.camera_pivot.rotation.y = next_spawner.rotation.y

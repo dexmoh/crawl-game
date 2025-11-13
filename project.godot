@@ -17,8 +17,8 @@ config/icon="res://assets/icon.svg"
 
 [autoload]
 
-Game="*res://src/autoloads/game.gd"
-Player="*res://src/autoloads/player.gd"
+Game="*res://src/autoloads/game_autoload.gd"
+Player="*res://src/autoloads/player_autoload.gd"
 
 [display]
 

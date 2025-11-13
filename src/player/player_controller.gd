@@ -18,8 +18,8 @@ extends CharacterBody3D
 var can_move: bool = true
 var can_look_around: bool = true
 var is_crouching: bool = false
-var crouch_key_released: bool = false
-var head_bob_t: float = 0.0
+var _crouch_key_released: bool = false
+var _head_bob_t: float = 0.0
 
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var camera: Camera3D = $CameraPivot/Camera
@@ -27,25 +27,24 @@ var head_bob_t: float = 0.0
 @onready var crouch_shape_cast: ShapeCast3D = $CrouchShapeCast
 
 func _ready() -> void:
-	Player.character = self
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta: float) -> void:
 	if can_move:
 		# Handle crouch.
 		if Input.is_action_just_pressed("crouch"):
-			if !crouch_key_released:
+			if !_crouch_key_released:
 				crouch_anim_player.play("crouch", -1, crouch_anim_speed)
-			crouch_key_released = false
+			_crouch_key_released = false
 			is_crouching = true
 		elif Input.is_action_just_released("crouch"):
-			crouch_key_released = true
+			_crouch_key_released = true
 		
-		if crouch_key_released:
+		if _crouch_key_released:
 			crouch_shape_cast.force_shapecast_update()
 			if !crouch_shape_cast.is_colliding():
 				crouch_anim_player.play("crouch", -1, -crouch_anim_speed, true)
-				crouch_key_released = false
+				_crouch_key_released = false
 				is_crouching = false
 
 		# Handle sprinting.
@@ -82,11 +81,11 @@ func _physics_process(delta: float) -> void:
 	
 	# Head bob.
 	if head_bob_enabled:
-		head_bob_t += velocity.length() * float(is_on_floor()) * delta
+		_head_bob_t += velocity.length() * float(is_on_floor()) * delta
 		
 		var head_bob_position: Vector3 = Vector3.ZERO
-		head_bob_position.x = cos(head_bob_t * head_bob_frequency / 2) * head_bob_amplitude
-		head_bob_position.y = sin(head_bob_t * head_bob_frequency) * head_bob_amplitude
+		head_bob_position.x = cos(_head_bob_t * head_bob_frequency / 2) * head_bob_amplitude
+		head_bob_position.y = sin(_head_bob_t * head_bob_frequency) * head_bob_amplitude
 		
 		camera.transform.origin = head_bob_position
 	
