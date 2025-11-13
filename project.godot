@@ -19,6 +19,7 @@ config/icon="res://assets/icon.svg"
 
 Game="*res://src/autoloads/game_autoload.gd"
 Player="*res://src/autoloads/player_autoload.gd"
+GUI="*res://src/autoloads/gui_autoload.gd"
 
 [editor_plugins]
 
@@ -43,6 +44,7 @@ import/blender/enabled=false
 main_camera="The main camera the player uses."
 player="Despite everything, it's still you."
 portal_spawn_marker="Marker that denotes portal target location."
+gui_interaction_label="GUI element for displaying interaction text."
 
 [gui]
 

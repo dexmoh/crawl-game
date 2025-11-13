@@ -1,8 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfs2a7a6caqw7"]
+[gd_scene load_steps=7 format=3 uid="uid://cfs2a7a6caqw7"]
 
 [ext_resource type="Script" uid="uid://de3n1l1wvt2c" path="res://src/reticle.gd" id="1_5ysmq"]
 [ext_resource type="Shader" uid="uid://drnv3ccpimv7s" path="res://src/shaders/crt_effect.gdshader" id="1_ahhtf"]
 [ext_resource type="PackedScene" uid="uid://dbnw7ia0wii7n" path="res://scenes/ui/inventory_screen.tscn" id="1_oo0fn"]
+[ext_resource type="FontFile" uid="uid://c2veccd7e7b5r" path="res://assets/fonts/RasterForgeRegular-JpBgm.ttf" id="2_8qguk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_136eg"]
+font = ExtResource("2_8qguk")
+font_size = 22
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oo0fn"]
 shader = ExtResource("1_ahhtf")
@@ -15,7 +22,7 @@ shader_parameter/flicker_intensity = 0.025
 shader_parameter/color_offset = 1.0
 shader_parameter/blur = 0.2
 
-[node name="HUD" type="Control"]
+[node name="GUI" type="Control"]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -41,8 +48,30 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_5ysmq")
+dot_radius = 3.0
+
+[node name="InteractionLabel" type="Label" parent="." groups=["gui_interaction_label"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -11.0
+offset_right = 565.0
+offset_bottom = 11.333313
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "[E] Interact"
+label_settings = SubResource("LabelSettings_136eg")
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
 
 [node name="Inventory" parent="." instance=ExtResource("1_oo0fn")]
+visible = false
 layout_mode = 1
 
 [node name="CRT" type="ColorRect" parent="."]
