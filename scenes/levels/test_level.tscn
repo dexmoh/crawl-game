@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://btayvugja36qd"]
+[gd_scene load_steps=22 format=3 uid="uid://btayvugja36qd"]
 
 [ext_resource type="Texture2D" uid="uid://b0ro7kpw1xnbw" path="res://assets/hdri/skybox.hdr" id="1_eaa0b"]
 [ext_resource type="PackedScene" uid="uid://ffbgnntag8er" path="res://scenes/objects/furniture/small_wooden_table.tscn" id="2_a5rnb"]
@@ -15,6 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://ci2qbygwuaq85" path="res://scenes/objects/foods/bread_loaf.tscn" id="13_a5rnb"]
 [ext_resource type="PackedScene" uid="uid://d32x8ulfvokgr" path="res://scenes/objects/foods/green_apple.tscn" id="14_3ay3b"]
 [ext_resource type="PackedScene" uid="uid://bba5u12xskwgr" path="res://scenes/objects/foods/red_apple.tscn" id="15_hppjq"]
+[ext_resource type="PackedScene" uid="uid://cqus8xc7ctibe" path="res://scenes/player.tscn" id="16_hppjq"]
+[ext_resource type="PackedScene" uid="uid://ciko4qmrcgf6x" path="res://scenes/objects/trees/birch_tree_4.tscn" id="17_v6k17"]
+[ext_resource type="PackedScene" uid="uid://cq2om4fasb7op" path="res://scenes/objects/trees/birch_tree_3.tscn" id="18_upsmr"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_71j4m"]
 panorama = ExtResource("1_eaa0b")
@@ -93,7 +96,7 @@ transform = Transform3D(-0.0769278, 0, -0.997037, 0, 1, 0, 0.997037, 0, -0.07692
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31719, 0, 2.68456)
 
 [node name="WoodenSingleBed" parent="." instance=ExtResource("6_os2yb")]
-transform = Transform3D(-0.73920816, 0, 0.673477, 0, 1, 0, -0.673477, 0, -0.73920816, 0.747767, -1.19209e-07, 0.0214866)
+transform = Transform3D(-0.73920816, 0, 0.673477, 0, 1, 0, -0.673477, 0, -0.73920816, 0.747767, 0, 0.0214866)
 
 [node name="Candle3" parent="." instance=ExtResource("7_v6k17")]
 transform = Transform3D(-0.229031, 0, -0.973419, 0, 1, 0, 0.973419, 0, -0.229031, 3.6560302, 0.946528, 2.90151)
@@ -154,3 +157,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7296278, 1.021821, 2.554870
 
 [node name="RedApple2" parent="." instance=ExtResource("15_hppjq")]
 transform = Transform3D(0.82, 0, 0, 0, 0.82, 0, 0, 0, 0.82, 3.6250563, 1.0100185, 2.4800653)
+
+[node name="Player" parent="." instance=ExtResource("16_hppjq")]
+transform = Transform3D(0.7622505, 0, -0.6472822, 0, 1, 0, 0.6472822, 0, 0.7622505, 0.9838104, 0, -5.0254846)
+
+[node name="BirchTree4" parent="." instance=ExtResource("17_v6k17")]
+transform = Transform3D(0.9355427, 0, -0.3532136, 0, 1, 0, 0.3532136, 0, 0.9355427, -3.8384814, 0.054634627, -8.054396)
+
+[node name="BirchTree3" parent="." instance=ExtResource("18_upsmr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4957066, 0.008117436, -0.31053865)

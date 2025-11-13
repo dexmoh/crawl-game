@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://b65ap4keyrag5"]
+
+[ext_resource type="PackedScene" uid="uid://btayvugja36qd" path="res://scenes/levels/test_level.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://cfs2a7a6caqw7" path="res://scenes/ui/hud.tscn" id="2_0wfyh"]
+
+[node name="Main" type="Node"]
+
+[node name="WorldSubViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 3
+
+[node name="WorldSubViewport" type="SubViewport" parent="WorldSubViewportContainer"]
+handle_input_locally = false
+use_occlusion_culling = true
+audio_listener_enable_3d = true
+size = Vector2i(384, 216)
+render_target_update_mode = 4
+
+[node name="TestLevel" parent="WorldSubViewportContainer/WorldSubViewport" instance=ExtResource("1_o5qli")]
+
+[node name="HUD" parent="." instance=ExtResource("2_0wfyh")]

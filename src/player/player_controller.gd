@@ -28,6 +28,9 @@ var _head_bob_t: float = 0.0
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	camera_pivot.rotation.y = global_rotation.y
+	global_rotation.y = 0.0
 
 func _physics_process(delta: float) -> void:
 	if can_move:
