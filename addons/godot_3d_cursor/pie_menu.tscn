@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://igrlue2n5478"]
 
 [ext_resource type="Script" uid="uid://dul31m8bwxlxm" path="res://addons/godot_3d_cursor/pie_menu.gd" id="1_a7cko"]
-[ext_resource type="Texture2D" uid="uid://bhift5k0v2tga" path="res://addons/godot_3d_cursor/selection_ring.png" id="2_k5qvu"]
-[ext_resource type="Texture2D" uid="uid://bngw0w7d1nrgv" path="res://addons/godot_3d_cursor/selection_indicator.png" id="3_euipm"]
+[ext_resource type="Texture2D" uid="uid://c07ar5tl2x5l3" path="res://addons/godot_3d_cursor/selection_ring.png" id="2_k5qvu"]
+[ext_resource type="Texture2D" uid="uid://b6q1vyqutrj0j" path="res://addons/godot_3d_cursor/selection_indicator.png" id="3_euipm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5fna"]
 bg_color = Color(0.145098, 0.145098, 0.145098, 0.258824)
@@ -51,18 +51,18 @@ text = "3D Cursor to Selected Object(s)"
 [node name="Remove3DCursorFromScene" type="Button" parent="."]
 layout_mode = 0
 offset_left = 30.9017
-offset_top = 79.6054
-offset_right = 273.902
-offset_bottom = 110.606
+offset_top = 79.60535
+offset_right = 273.90204
+offset_bottom = 110.60595
 mouse_default_cursor_shape = 2
 text = "Remove 3D Cursor from Scene"
 
 [node name="SelectedObjectTo3DCursor" type="Button" parent="."]
 layout_mode = 0
 offset_left = -309.902
-offset_top = 43.2785
+offset_top = 43.278526
 offset_right = -80.9017
-offset_bottom = 74.2785
+offset_bottom = 74.27853
 mouse_default_cursor_shape = 2
 text = "Selected Object to 3D Cursor"
 
@@ -74,9 +74,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -237.902
-offset_top = -74.2785
+offset_top = -74.27853
 offset_right = -80.9017
-offset_bottom = -43.2785
+offset_bottom = -43.278522
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -86,9 +86,9 @@ text = "3D Cursor to Origin"
 [node name="Toggle3DCursor" type="Button" parent="."]
 layout_mode = 0
 offset_left = 30.9017
-offset_top = -110.606
-offset_right = 176.902
-offset_bottom = -79.6055
+offset_top = -110.6059
+offset_right = 176.90201
+offset_bottom = -79.6054
 mouse_default_cursor_shape = 2
 text = "Disable 3D Cursor"
 
