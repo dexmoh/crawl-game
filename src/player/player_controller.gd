@@ -5,6 +5,7 @@ const VERT_CAM_CLAMP: float = 90.0
 const CROUCH_ANIM_SPEED: float = 6.0
 const HEAD_BOB_FREQUENCY: float = 1.8
 const HEAD_BOB_AMPLITUDE: float = 0.05
+const FOOTSTEPS_SPEED: float = 2.5
 
 @export_group("Movement")
 @export_range(1, 30, 0.5) var walk_speed: float = 3.0
@@ -27,6 +28,7 @@ var _head_bob_t: float = 0.0
 @onready var camera: Camera3D = $CameraPivot/Camera
 @onready var crouch_anim_player: AnimationPlayer = $CrouchAnimationPlayer
 @onready var crouch_shape_cast: ShapeCast3D = $CrouchShapeCast
+@onready var footstep_anim_player: AnimationPlayer = %FootstepsAnimationPlayer
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -72,6 +74,15 @@ func _physics_process(delta: float) -> void:
 			if direction:
 				velocity.x = direction.x * current_speed
 				velocity.z = direction.z * current_speed
+
+				# Footsteps.
+				var current_foosteps_speed = FOOTSTEPS_SPEED
+				if current_speed > walk_speed:
+					current_foosteps_speed += 1.0
+				elif current_speed < walk_speed:
+					current_foosteps_speed -= 1.0
+				
+				footstep_anim_player.play("play_footstep_sound", -1, current_foosteps_speed)
 			else:
 				# Slow down gradually.
 				velocity.x = lerp(velocity.x, direction.x * current_speed, delta * 7.0)
