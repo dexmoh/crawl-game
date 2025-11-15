@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cqus8xc7ctibe"]
+[gd_scene load_steps=18 format=3 uid="uid://cqus8xc7ctibe"]
 
 [ext_resource type="Script" uid="uid://ntxyq81ee02s" path="res://src/player/player_controller.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://ccl1lhr6c3i7t" path="res://src/player/weapon_controller.gd" id="2_dqkch"]
@@ -9,9 +9,6 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 radius = 0.4
 height = 1.8
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_qlg0r"]
-size = Vector3(0.3, 0.3, 0.88593)
 
 [sub_resource type="Animation" id="Animation_qlg0r"]
 length = 0.001
@@ -354,7 +351,6 @@ radius = 0.4
 floor_max_angle = 1.0472
 floor_snap_length = 0.15
 script = ExtResource("1_3vyb7")
-walk_speed = 1.0
 mouse_sensitivity = 0.7
 
 [node name="WeaponViewportContainer" type="SubViewportContainer" parent="."]
@@ -377,6 +373,7 @@ script = ExtResource("5_qlg0r")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 cull_mask = 1048574
 fov = 60.0
+far = 50.0
 metadata/_edit_lock_ = true
 
 [node name="Collider" type="CollisionShape3D" parent="."]
@@ -389,6 +386,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 [node name="Camera" type="Camera3D" parent="CameraPivot" groups=["main_camera"]]
 cull_mask = 1048573
 fov = 90.0
+far = 2000.0
 
 [node name="AudioListener3D" type="AudioListener3D" parent="CameraPivot/Camera"]
 current = true
@@ -399,15 +397,12 @@ collision_mask = 4
 collide_with_areas = true
 script = ExtResource("2_fjrip")
 
-[node name="MeleeHitbox" type="Area3D" parent="CameraPivot/Camera"]
+[node name="MeleeRay" type="RayCast3D" parent="CameraPivot/Camera"]
 unique_name_in_owner = true
-collision_layer = 2
+enabled = false
+target_position = Vector3(0, 0, -1.8)
 collision_mask = 2
-monitorable = false
-
-[node name="MeleeHitboxCollider" type="CollisionShape3D" parent="CameraPivot/Camera/MeleeHitbox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.846161)
-shape = SubResource("BoxShape3D_qlg0r")
+collide_with_areas = true
 
 [node name="Weapon" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
