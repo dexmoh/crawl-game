@@ -1,23 +1,25 @@
 class_name PlayerController
 extends CharacterBody3D
 
+const VERT_CAM_CLAMP: float = 90.0
+const CROUCH_ANIM_SPEED: float = 6.0
+const HEAD_BOB_FREQUENCY: float = 1.8
+const HEAD_BOB_AMPLITUDE: float = 0.05
+
 @export_group("Movement")
 @export_range(1, 30, 0.5) var walk_speed: float = 3.0
 @export_range(1, 30, 0.5) var sprint_speed: float = 6.0
 @export_range(1, 30, 0.5) var crouch_speed: float = 1.5
-@export_range(1, 20, 0.1) var crouch_anim_speed: float = 6.0
 @export_range(1, 20, 0.25) var jump_velocity: float = 4.0
 
 @export_group("Camera Controls")
-@export_range(0, 0.02, 0.001) var mouse_sensitivity: float = 0.004
-@export_range(0, 110, 5) var vertical_camera_clamp: float = 85.0
+@export_range(0, 1.0, 0.05) var mouse_sensitivity: float = 0.5
 @export var head_bob_enabled: bool = true
-@export var head_bob_frequency: float = 1.8
-@export var head_bob_amplitude: float = 0.05
 
 var can_move: bool = true
 var can_look_around: bool = true
 var is_crouching: bool = false
+
 var _crouch_key_released: bool = false
 var _head_bob_t: float = 0.0
 
@@ -37,7 +39,7 @@ func _physics_process(delta: float) -> void:
 		# Handle crouch.
 		if Input.is_action_just_pressed("crouch"):
 			if !_crouch_key_released:
-				crouch_anim_player.play("crouch", -1, crouch_anim_speed)
+				crouch_anim_player.play("crouch", -1, CROUCH_ANIM_SPEED)
 			_crouch_key_released = false
 			is_crouching = true
 		elif Input.is_action_just_released("crouch"):
@@ -46,7 +48,7 @@ func _physics_process(delta: float) -> void:
 		if _crouch_key_released:
 			crouch_shape_cast.force_shapecast_update()
 			if !crouch_shape_cast.is_colliding():
-				crouch_anim_player.play("crouch", -1, -crouch_anim_speed, true)
+				crouch_anim_player.play("crouch", -1, -CROUCH_ANIM_SPEED, true)
 				_crouch_key_released = false
 				is_crouching = false
 
@@ -87,8 +89,8 @@ func _physics_process(delta: float) -> void:
 		_head_bob_t += velocity.length() * float(is_on_floor()) * delta
 		
 		var head_bob_position: Vector3 = Vector3.ZERO
-		head_bob_position.x = cos(_head_bob_t * head_bob_frequency / 2) * head_bob_amplitude
-		head_bob_position.y = sin(_head_bob_t * head_bob_frequency) * head_bob_amplitude
+		head_bob_position.x = cos(_head_bob_t * HEAD_BOB_FREQUENCY / 2) * HEAD_BOB_AMPLITUDE
+		head_bob_position.y = sin(_head_bob_t * HEAD_BOB_FREQUENCY) * HEAD_BOB_AMPLITUDE
 		
 		camera.transform.origin = head_bob_position
 	
@@ -96,7 +98,11 @@ func _physics_process(delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if (event is InputEventMouseMotion) and can_look_around:
-		camera.rotate_x(-event.relative.y * mouse_sensitivity)
-		camera_pivot.rotate_y(-event.relative.x * mouse_sensitivity)
+		camera.rotate_x(-event.relative.y * mouse_sensitivity / 100.0)
+		camera_pivot.rotate_y(-event.relative.x * mouse_sensitivity / 100.0)
 		
-		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, -90, 90)
+		camera.rotation_degrees.x = clamp(
+			camera.rotation_degrees.x,
+			-VERT_CAM_CLAMP,
+			VERT_CAM_CLAMP
+		)
