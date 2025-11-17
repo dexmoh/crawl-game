@@ -13,6 +13,9 @@ func _ready():
 # Add the item to player's inventory.
 func _interact():
 	if item:
+		# Message box test (temporary).
+		GUI.message_box.queue_message("You pick up [" + item.name + "].")
+		
 		Player.inventory.add_item(item)
 	
 	hide()

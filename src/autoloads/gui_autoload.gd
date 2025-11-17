@@ -1,4 +1,3 @@
 extends Node
 
-func _ready() -> void:
-	pass
+@onready var message_box: MessageBox = get_tree().get_first_node_in_group("gui_message_box")

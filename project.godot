@@ -21,6 +21,11 @@ Game="*res://src/autoloads/game_autoload.gd"
 Player="*res://src/autoloads/player_autoload.gd"
 GUI="*res://src/autoloads/gui_autoload.gd"
 
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/gd-blender-3d-shortcuts/plugin.cfg", "res://addons/godot_3d_cursor/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
@@ -45,6 +50,7 @@ main_camera="The main camera the player uses."
 player="Despite everything, it's still you."
 portal_spawn_marker="Marker that denotes portal target location."
 gui_interaction_label="GUI element for displaying interaction text."
+gui_message_box="UI element for showing messages to the player."
 
 [gui]
 

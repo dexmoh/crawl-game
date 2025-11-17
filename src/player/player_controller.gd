@@ -30,13 +30,11 @@ var _head_bob_t: float = 0.0
 @onready var crouch_shape_cast: ShapeCast3D = $CrouchShapeCast
 @onready var footstep_anim_player: AnimationPlayer = %FootstepsAnimationPlayer
 
-func _ready() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	
+func _ready():
 	camera_pivot.rotation.y = global_rotation.y
 	global_rotation.y = 0.0
 
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float):
 	if can_move:
 		# Handle crouch.
 		if Input.is_action_just_pressed("crouch"):
@@ -107,7 +105,7 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent):
 	if (event is InputEventMouseMotion) and can_look_around:
 		camera.rotate_x(-event.relative.y * mouse_sensitivity / 100.0)
 		camera_pivot.rotate_y(-event.relative.x * mouse_sensitivity / 100.0)

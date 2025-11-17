@@ -1,3 +1,5 @@
+# Script that handles drawing a reticle on the screen.
+
 extends CenterContainer
 
 @export var dot_radius: float = 2.0

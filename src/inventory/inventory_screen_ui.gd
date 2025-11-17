@@ -15,24 +15,31 @@ func _ready() -> void:
 	item_search_bar.text_changed.connect(_on_search_bar_text_changed)
 	hide()
 
-func _unhandled_input(event: InputEvent):
+func _input(event: InputEvent):
 	# Handle window opening and closing.
 	if event.is_action_pressed("inventory"):
 		if visible:
 			hide()
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-			Game.unpause()
 			item_search_bar.text = ""
+
+			Game.clear_free_mouse_request()
+			Game.clear_pause_request()
 		else:
 			show()
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			Game.pause()
 			_update_inventory()
-	elif event.is_action_pressed("exit") and visible:
+			
+			Game.request_free_mouse()
+			Game.request_pause()
+
+		get_viewport().set_input_as_handled()
+	elif visible and event.is_action_pressed("ui_cancel"):
 		hide()
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		Game.unpause()
 		item_search_bar.text = ""
+
+		Game.clear_free_mouse_request()
+		Game.clear_pause_request()
+
+		get_viewport().set_input_as_handled()
 
 func _update_inventory():
 	for child in items_container.get_children():
