@@ -5,6 +5,7 @@ var _message_queue: Array[String]
 
 @onready var _message_label: Label = %MessageLabel
 @onready var _ok_btn: Button = %OkBtn
+@onready var _popup_sound: AudioStreamPlayer = %MessagePopupSFX
 
 func _ready():
 	hide()
@@ -34,6 +35,7 @@ func _show_next_message():
 	_message_label.text = message
 
 	show()
+	_popup_sound.play()
 
 # Hide the message box and continue the game.
 func _exit_message_box():

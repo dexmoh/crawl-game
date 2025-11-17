@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://u18nfepn86h2"]
+[gd_scene load_steps=5 format=3 uid="uid://u18nfepn86h2"]
 
 [ext_resource type="Theme" uid="uid://cttjasqunbr0x" path="res://data/ui/main_ui_theme.tres" id="1_ryqp4"]
 [ext_resource type="Script" uid="uid://t3gp78g3y4wu" path="res://src/ui/message_box.gd" id="2_crc0q"]
+[ext_resource type="AudioStream" uid="uid://djdwvn3s7h7hs" path="res://assets/audio/ui/message_popup.wav" id="3_x62yy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb880"]
 bg_color = Color(0, 0, 0, 1)
@@ -66,3 +67,8 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 text = "[ESC] OK"
+
+[node name="MessagePopupSFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_x62yy")
+bus = &"UI"
