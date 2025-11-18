@@ -25,7 +25,7 @@ thickness = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pnwk3"]
 bg_color = Color(0, 0, 0, 1)
-border_color = Color(0.9122889, 0.9122889, 0.9122887, 1)
+border_color = Color(1, 1, 1, 1)
 corner_detail = 1
 anti_aliasing = false
 

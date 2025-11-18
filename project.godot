@@ -50,7 +50,8 @@ main_camera="The main camera the player uses."
 player="Despite everything, it's still you."
 portal_spawn_marker="Marker that denotes portal target location."
 gui_interaction_label="GUI element for displaying interaction text."
-gui_message_box="UI element for showing messages to the player."
+gui_message_box="GUI element for showing messages to the player."
+gui_notification_box="GUI element for showing floating notifications."
 
 [gui]
 

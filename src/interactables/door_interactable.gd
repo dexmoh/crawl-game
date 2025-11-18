@@ -32,12 +32,14 @@ func _interact():
 		open_sfx.play()
 		label_text = "Close"
 		is_open = true
+		GUI.notification_box.queue_notification("You open the door.")
 	else:
 		# Close the door.
 		anim_player.play_backwards("open_and_close")
 		close_sfx.play()
 		label_text = "Open"
 		is_open = false
+		GUI.notification_box.queue_notification("You close the door.")
 
 func _on_animation_finished(_anim_name: StringName):
 	is_active = true

@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cfs2a7a6caqw7"]
+[gd_scene load_steps=9 format=3 uid="uid://cfs2a7a6caqw7"]
 
 [ext_resource type="Script" uid="uid://de3n1l1wvt2c" path="res://src/ui/reticle.gd" id="1_5ysmq"]
 [ext_resource type="Shader" uid="uid://drnv3ccpimv7s" path="res://src/shaders/crt_effect.gdshader" id="1_ahhtf"]
 [ext_resource type="PackedScene" uid="uid://dbnw7ia0wii7n" path="res://scenes/ui/inventory_screen.tscn" id="1_oo0fn"]
 [ext_resource type="FontFile" uid="uid://c2veccd7e7b5r" path="res://assets/fonts/RasterForgeRegular-JpBgm.ttf" id="2_8qguk"]
 [ext_resource type="PackedScene" uid="uid://u18nfepn86h2" path="res://scenes/ui/message_box.tscn" id="4_bb880"]
+[ext_resource type="PackedScene" uid="uid://bmo37w6ud8gt8" path="res://scenes/ui/notification_box.tscn" id="5_suhd1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_136eg"]
 font = ExtResource("2_8qguk")
@@ -81,6 +82,9 @@ offset_left = -265.0
 offset_top = -176.5
 offset_right = 265.0
 offset_bottom = 176.5
+
+[node name="NotificationBox" parent="." instance=ExtResource("5_suhd1")]
+layout_mode = 1
 
 [node name="CRT" type="ColorRect" parent="."]
 visible = false
