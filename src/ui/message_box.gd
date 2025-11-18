@@ -1,3 +1,6 @@
+# Script for displaying message popups to the player.
+# The player has to press a button to clear these messages from the screen.
+
 class_name MessageBox
 extends PanelContainer
 
@@ -11,10 +14,6 @@ func _ready():
 	hide()
 	_message_label.text = ""
 	_ok_btn.pressed.connect(_exit_message_box)
-
-func _process(_delta: float):
-	if !visible and !_message_queue.is_empty():
-		_show_next_message()
 
 func _input(event: InputEvent):
 	if visible and (event is not InputEventMouse):
@@ -31,8 +30,7 @@ func _show_next_message():
 	Game.request_pause()
 	Game.request_free_mouse()
 
-	var message: String = _message_queue.pop_front()
-	_message_label.text = message
+	_message_label.text = _message_queue.pop_front()
 
 	show()
 	_popup_sound.play()
@@ -42,8 +40,14 @@ func _exit_message_box():
 	Game.clear_pause_request()
 	Game.clear_free_mouse_request()
 
-	hide()
+	if _message_queue.is_empty():
+		hide()
+	else:
+		_show_next_message()
 
 # Add a message to the queue to be displayed.
 func queue_message(message: String):
 	_message_queue.push_back(message)
+
+	if not visible:
+		_show_next_message()
