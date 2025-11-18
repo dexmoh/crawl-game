@@ -1,6 +1,4 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://drqswqame6wgb"]
-
-[ext_resource type="FontFile" uid="uid://c2veccd7e7b5r" path="res://assets/fonts/RasterForgeRegular-JpBgm.ttf" id="1_sshdp"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://drqswqame6wgb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5jac"]
 bg_color = Color(1, 0.2784314, 0.43137255, 1)
@@ -87,7 +85,6 @@ corner_detail = 6
 anti_aliasing = false
 
 [resource]
-default_font = ExtResource("1_sshdp")
 HSeparator/styles/separator = SubResource("StyleBoxFlat_u5jac")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_o3m22")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_1e50i")

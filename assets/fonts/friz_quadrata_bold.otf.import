@@ -2,21 +2,21 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c2veccd7e7b5r"
-path="res://.godot/imported/RasterForgeRegular-JpBgm.ttf-2608330dc036de8ade57b620285ee6fd.fontdata"
+uid="uid://28qysypfd7sa"
+path="res://.godot/imported/friz_quadrata_bold.otf-9b1535c948500b13c2ec4014bc2b1785.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/RasterForgeRegular-JpBgm.ttf"
-dest_files=["res://.godot/imported/RasterForgeRegular-JpBgm.ttf-2608330dc036de8ade57b620285ee6fd.fontdata"]
+source_file="res://assets/fonts/friz_quadrata_bold.otf"
+dest_files=["res://.godot/imported/friz_quadrata_bold.otf-9b1535c948500b13c2ec4014bc2b1785.fontdata"]
 
 [params]
 
 Rendering=null
-antialiasing=0
-generate_mipmaps=false
+antialiasing=1
+generate_mipmaps=true
 disable_embedded_bitmaps=true
-multichannel_signed_distance_field=false
+multichannel_signed_distance_field=true
 msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true

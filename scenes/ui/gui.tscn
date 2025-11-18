@@ -3,14 +3,14 @@
 [ext_resource type="Script" uid="uid://de3n1l1wvt2c" path="res://src/ui/reticle.gd" id="1_5ysmq"]
 [ext_resource type="Shader" uid="uid://drnv3ccpimv7s" path="res://src/shaders/crt_effect.gdshader" id="1_ahhtf"]
 [ext_resource type="PackedScene" uid="uid://dbnw7ia0wii7n" path="res://scenes/ui/inventory_screen.tscn" id="1_oo0fn"]
-[ext_resource type="FontFile" uid="uid://c2veccd7e7b5r" path="res://assets/fonts/RasterForgeRegular-JpBgm.ttf" id="2_8qguk"]
+[ext_resource type="FontFile" uid="uid://28qysypfd7sa" path="res://assets/fonts/friz_quadrata_bold.otf" id="2_suhd1"]
 [ext_resource type="PackedScene" uid="uid://u18nfepn86h2" path="res://scenes/ui/message_box.tscn" id="4_bb880"]
 [ext_resource type="PackedScene" uid="uid://bmo37w6ud8gt8" path="res://scenes/ui/notification_box.tscn" id="5_suhd1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_136eg"]
-font = ExtResource("2_8qguk")
-font_size = 22
-shadow_size = 2
+font = ExtResource("2_suhd1")
+font_size = 24
+shadow_size = 3
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oo0fn"]
@@ -54,23 +54,20 @@ dot_radius = 3.0
 
 [node name="InteractionLabel" type="Label" parent="." groups=["gui_interaction_label"]]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 16.0
-offset_top = -11.0
-offset_right = 565.0
-offset_bottom = 11.333313
-grow_horizontal = 2
+offset_top = -14.8333435
+offset_right = 130.0
+offset_bottom = 15.1666565
 grow_vertical = 2
 size_flags_horizontal = 4
 text = "[E] Interact"
 label_settings = SubResource("LabelSettings_136eg")
 vertical_alignment = 1
-clip_text = true
-text_overrun_behavior = 3
 
 [node name="Inventory" parent="." instance=ExtResource("1_oo0fn")]
 visible = false

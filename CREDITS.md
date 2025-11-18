@@ -12,4 +12,5 @@
 - [Minimal CRT Shader by blitpxl](https://godotshaders.com/shader/minimal-crt-shader)
 
 ## Fonts
-- [Raster Forge Font by GGBotNet](https://www.fontspace.com/raster-forge-font-f135159)
+- [Montserrat](https://www.1001freefonts.com/montserrat.font)
+- [Friz Quadrata](https://fontsgeek.com/fonts/Friz-Quadrata-Regular)
