@@ -1,10 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://cqus8xc7ctibe"]
+[gd_scene load_steps=15 format=3 uid="uid://cqus8xc7ctibe"]
 
 [ext_resource type="Script" uid="uid://ntxyq81ee02s" path="res://src/player/player_controller.gd" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://ccl1lhr6c3i7t" path="res://src/player/weapon_controller.gd" id="2_dqkch"]
 [ext_resource type="Script" uid="uid://bpatksasov0ob" path="res://src/interactables/interaction_raycast.gd" id="2_fjrip"]
-[ext_resource type="PackedScene" uid="uid://dkx0qsnxsadnv" path="res://scenes/objects/weapons/swords/chipped_iron_shortsword.tscn" id="2_qhqgy"]
-[ext_resource type="Script" uid="uid://y1m4hft8g2hk" path="res://src/player/weapon_viewport.gd" id="5_qlg0r"]
+[ext_resource type="PackedScene" uid="uid://c68f6rlgwvhax" path="res://scenes/player_hands.tscn" id="4_ur7pv"]
+[ext_resource type="Script" uid="uid://y1m4hft8g2hk" path="res://src/player/player_hands_viewport.gd" id="5_qlg0r"]
 [ext_resource type="AudioStream" uid="uid://krrnoh5t4ny7" path="res://assets/audio/effects/footstep_1.wav" id="6_fjrip"]
 [ext_resource type="Script" uid="uid://cn2av4lujayfe" path="res://src/player/footsteps.gd" id="6_smehm"]
 [ext_resource type="AudioStream" uid="uid://cmi46kwp7bcb" path="res://assets/audio/effects/footstep_2.wav" id="7_smehm"]
@@ -12,256 +11,6 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 radius = 0.4
 height = 1.8
-
-[sub_resource type="Animation" id="Animation_qlg0r"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WeaponPivot/WeaponHolder:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.327, -0.392, -0.448)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WeaponPivot/WeaponHolder:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.202969, -0.00377157, 1.54495)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WeaponPivot:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_dqkch"]
-resource_name = "idle"
-length = 3.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WeaponPivot/WeaponHolder:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.4),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0.327, -0.392, -0.448), Vector3(0.325, -0.433, -0.47)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WeaponPivot/WeaponHolder:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.2),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0.202969, -0.00377157, 1.54495), Vector3(0.150098, -0.00698132, 1.54462)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WeaponPivot:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(-2),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_tuyoq"]
-resource_name = "melee_attack_1"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WeaponPivot:rotation")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.35, 0.6),
-"transitions": PackedFloat32Array(2, 1, -2),
-"update": 0,
-"values": [Vector3(0, 0, 0.261799), Vector3(-0.0945141, 1.99992, -0.179266), Vector3(-0.1309, 2.76984, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WeaponPivot/WeaponHolder:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(-2),
-"update": 0,
-"values": [Vector3(0.485, -0.208, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WeaponPivot/WeaponHolder:rotation")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.34, 0.6),
-"transitions": PackedFloat32Array(2, 1, -2),
-"update": 0,
-"values": [Vector3(0, -0.330426, 0), Vector3(0.0872665, 0.0401426, 0.118682), Vector3(0.349066, 0.211185, 0.174533)]
-}
-
-[sub_resource type="Animation" id="Animation_ur7pv"]
-resource_name = "melee_attack_2"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WeaponPivot/WeaponHolder:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(-0.642516, -0.167726, -0.340444), Vector3(-0.642516, -0.516529, -0.340444)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WeaponPivot/WeaponHolder:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0.209042, 0.482935, 2.63751), Vector3(-0.360803, -0.553682, 2.98806)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WeaponPivot:rotation")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, -2.18896, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_smehm"]
-resource_name = "melee_attack_3"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WeaponPivot:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-2.37047, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WeaponPivot/WeaponHolder:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0.452877, 0.402, -0.278), Vector3(0.0902656, 0.685601, -0.0632672)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WeaponPivot/WeaponHolder:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0.625473, 0.0237745, 1.22164), Vector3(-0.5008, 0.343553, 1.69053)]
-}
-
-[sub_resource type="Animation" id="Animation_fjrip"]
-resource_name = "melee_attack_4"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WeaponPivot/WeaponHolder:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(0.339621, -0.452762, 0.055891), Vector3(0.206468, -0.34001, -0.515255)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WeaponPivot/WeaponHolder:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(-2, -2),
-"update": 0,
-"values": [Vector3(-1.19038, 1.15187, 0.481376), Vector3(-0.804245, 1.84318, -0.189402)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WeaponPivot:rotation")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(-2),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qlg0r"]
-_data = {
-&"RESET": SubResource("Animation_qlg0r"),
-&"idle": SubResource("Animation_dqkch"),
-&"melee_attack_1": SubResource("Animation_tuyoq"),
-&"melee_attack_2": SubResource("Animation_ur7pv"),
-&"melee_attack_3": SubResource("Animation_smehm"),
-&"melee_attack_4": SubResource("Animation_fjrip")
-}
 
 [sub_resource type="Animation" id="Animation_qhqgy"]
 length = 0.001
@@ -378,7 +127,7 @@ floor_snap_length = 0.15
 script = ExtResource("1_3vyb7")
 mouse_sensitivity = 0.7
 
-[node name="WeaponViewportContainer" type="SubViewportContainer" parent="."]
+[node name="HandsViewportContainer" type="SubViewportContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -387,14 +136,14 @@ grow_vertical = 2
 stretch = true
 metadata/_edit_lock_ = true
 
-[node name="WeaponViewport" type="SubViewport" parent="WeaponViewportContainer"]
+[node name="HandsViewport" type="SubViewport" parent="HandsViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(1152, 648)
+size = Vector2i(1600, 900)
 render_target_update_mode = 4
 script = ExtResource("5_qlg0r")
 
-[node name="WeaponCamera" type="Camera3D" parent="WeaponViewportContainer/WeaponViewport"]
+[node name="HandsCamera" type="Camera3D" parent="HandsViewportContainer/HandsViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 cull_mask = 1048574
 fov = 60.0
@@ -429,24 +178,8 @@ target_position = Vector3(0, 0, -1.8)
 collision_mask = 2
 collide_with_areas = true
 
-[node name="Weapon" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
-script = ExtResource("2_dqkch")
-
-[node name="WeaponPivot" type="Node3D" parent="Weapon"]
-
-[node name="WeaponHolder" type="Node3D" parent="Weapon/WeaponPivot"]
-transform = Transform3D(0.025083212, -0.999678, -0.0036941345, 0.97914386, 0.025312925, -0.20157798, 0.20160669, 0.0014391373, 0.979464, 0.327, -0.392, -0.448)
-
-[node name="ChippedIronShortsword" parent="Weapon/WeaponPivot/WeaponHolder" instance=ExtResource("2_qhqgy")]
-metadata/_edit_lock_ = true
-
-[node name="WeaponAnimationPlayer" type="AnimationPlayer" parent="Weapon"]
-libraries = {
-&"": SubResource("AnimationLibrary_qlg0r")
-}
-autoplay = "idle"
-playback_default_blend_time = 0.06
+[node name="PlayerHands" parent="CameraPivot" instance=ExtResource("4_ur7pv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 
 [node name="CrouchAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

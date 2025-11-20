@@ -18,7 +18,7 @@ stretch_shrink = 3
 handle_input_locally = false
 use_occlusion_culling = true
 audio_listener_enable_3d = true
-size = Vector2i(384, 216)
+size = Vector2i(533, 300)
 render_target_update_mode = 4
 
 [node name="TestLevel" parent="WorldSubViewportContainer/WorldSubViewport" instance=ExtResource("1_o5qli")]

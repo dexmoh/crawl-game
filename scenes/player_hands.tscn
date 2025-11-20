@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://c68f6rlgwvhax"]
+
+[ext_resource type="PackedScene" uid="uid://d0wpw6jp352dp" path="res://assets/models/player_hands.glb" id="1_ycf42"]
+[ext_resource type="Script" uid="uid://wc8of588vayt" path="res://src/player/player_hands_controller.gd" id="2_l3qd8"]
+[ext_resource type="PackedScene" uid="uid://dkx0qsnxsadnv" path="res://scenes/objects/weapons/swords/chipped_iron_shortsword.tscn" id="2_vkk7g"]
+[ext_resource type="Texture2D" uid="uid://cdtklfx8f3co6" path="res://assets/textures/player_hands_256.png" id="4_tvfxd"]
+[ext_resource type="AudioStream" uid="uid://cv81b77bl108s" path="res://assets/audio/effects/combat/weapon_swing_1.wav" id="5_pnlkv"]
+[ext_resource type="AudioStream" uid="uid://dhrykyu32c28e" path="res://assets/audio/effects/combat/weapon_swing_3.wav" id="7_s0fdd"]
+[ext_resource type="AudioStream" uid="uid://dr6gpgnmxn8qe" path="res://assets/audio/effects/combat/weapon_swing_4.wav" id="8_hx6pg"]
+[ext_resource type="AudioStream" uid="uid://benbwqews3vbe" path="res://assets/audio/effects/combat/weapon_swing_2.wav" id="10_jv8j1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5og2n"]
+diffuse_mode = 3
+specular_mode = 2
+albedo_texture = ExtResource("4_tvfxd")
+roughness = 0.8
+texture_filter = 0
+
+[node name="PlayerHands" instance=ExtResource("1_ycf42")]
+script = ExtResource("2_l3qd8")
+
+[node name="Skeleton3D" parent="HandsArmature" index="0"]
+bones/1/rotation = Quaternion(0.024223693, 0.19672526, 0.93111557, 0.30616388)
+bones/2/rotation = Quaternion(0.46281233, 0.2097829, 0.082305536, 0.8573341)
+bones/3/rotation = Quaternion(0.19096918, 0.1492757, 0.032463983, 0.9696359)
+bones/4/position = Vector3(-4.5337365e-05, 0.10665591, -0.027755914)
+bones/4/rotation = Quaternion(-0.055773616, 0.018276291, 0.39618242, 0.91629404)
+bones/5/rotation = Quaternion(-0.01327033, 0.02255991, 0.77486813, 0.6315808)
+bones/6/position = Vector3(-0.007945943, 0.11057712, 0.019493764)
+bones/6/rotation = Quaternion(0.0033660799, -0.04339605, 0.32383248, 0.94511276)
+bones/7/rotation = Quaternion(-0.06793349, 0.05317225, 0.79309475, 0.6029581)
+bones/8/rotation = Quaternion(0.07827349, 0.04272099, 0.24248789, 0.9660475)
+bones/9/rotation = Quaternion(-0.09946616, -0.031200536, -0.14277217, 0.9842506)
+bones/10/rotation = Quaternion(0.015395534, -0.075247, 0.97525847, -0.20729627)
+bones/11/rotation = Quaternion(0.2178293, 0.00023876541, -0.020375468, 0.97577417)
+
+[node name="Bone_002_R" parent="HandsArmature/Skeleton3D" index="0"]
+transform = Transform3D(-0.98722965, -0.1389068, -0.07798833, -0.1158364, 0.289877, 0.950028, -0.109358326, 0.9469298, -0.30226564, -0.38242534, -0.17575698, 0.35404527)
+
+[node name="ChippedIronShortsword" parent="HandsArmature/Skeleton3D/Bone_002_R/RightHandHolder" index="0" instance=ExtResource("2_vkk7g")]
+transform = Transform3D(-4.3711385e-08, -0.9999999, 4.3711385e-08, 0, -4.3711385e-08, -0.99999994, 0.99999994, -4.3711385e-08, 1.9106853e-15, 0, 0, 0)
+
+[node name="Gloves" parent="HandsArmature/Skeleton3D" index="1"]
+layers = 2
+cast_shadow = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_5og2n")
+
+[node name="Hands" parent="HandsArmature/Skeleton3D" index="2"]
+layers = 2
+cast_shadow = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_5og2n")
+
+[node name="AnimationPlayer" parent="." index="1"]
+unique_name_in_owner = true
+autoplay = "ohm_idle"
+playback_default_blend_time = 0.06
+
+[node name="Sounds" type="Node3D" parent="." index="2"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.36937767)
+
+[node name="WeaponSwing1SFX" type="AudioStreamPlayer3D" parent="Sounds" index="0"]
+unique_name_in_owner = true
+stream = ExtResource("5_pnlkv")
+bus = &"Effects"
+
+[node name="WeaponSwing2SFX" type="AudioStreamPlayer3D" parent="Sounds" index="1"]
+unique_name_in_owner = true
+stream = ExtResource("10_jv8j1")
+bus = &"Effects"
+
+[node name="WeaponSwing3SFX" type="AudioStreamPlayer3D" parent="Sounds" index="2"]
+unique_name_in_owner = true
+stream = ExtResource("7_s0fdd")
+bus = &"Effects"
+
+[node name="WeaponSwing4SFX" type="AudioStreamPlayer3D" parent="Sounds" index="3"]
+unique_name_in_owner = true
+stream = ExtResource("8_hx6pg")
+bus = &"Effects"

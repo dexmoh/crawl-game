@@ -5,6 +5,7 @@
 
 ## Audio
 - [Door opening and closing by freesound_community](https://pixabay.com/sound-effects/main-door-opening-closing-38280)
+- [Weapon swings by freesound_community](https://pixabay.com/sound-effects/sword-swipes-7174/)
 - [Player footsteps by Jute](https://opengameart.org/content/foot-walking-step-sounds-on-stone-water-snow-wood-and-dirt)
 - [Message popup UI sound by Lokif](https://opengameart.org/content/gui-sound-effects)
 
