@@ -6,8 +6,6 @@ extends MarginContainer
 
 const _NOTIF_DURATION_SEC: float = 3.0
 
-var _notif_queue: Array[String]
-
 @onready var _notif_label: Label = %NotificationLabel
 @onready var _timer: Timer = %Timer
 
@@ -20,24 +18,14 @@ func _ready():
 	_timer.one_shot = true
 	_timer.timeout.connect(_on_timer_timout)
 
-func _show_next_notif():
-	if _notif_queue.is_empty():
+func send(notif_str: String):
+	if not notif_str:
 		return
-	
+
 	_timer.start()
-	_notif_label.text = _notif_queue.pop_front()
+	_notif_label.text = notif_str
 	
 	show()
 
-
 func _on_timer_timout():
 	hide()
-
-	if !_notif_queue.is_empty():
-		_show_next_notif()
-
-func queue_notification(notif_str: String):
-	_notif_queue.push_back(notif_str)
-
-	if _timer.is_stopped():
-		_show_next_notif()
