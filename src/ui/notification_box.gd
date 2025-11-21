@@ -4,7 +4,7 @@
 class_name NotificationBox
 extends MarginContainer
 
-const _NOTIF_DURATION_SEC: float = 3.0
+const _DEFAULT_NOTIF_DURATION_SEC: float = 3.0
 
 @onready var _notif_label: Label = %NotificationLabel
 @onready var _timer: Timer = %Timer
@@ -14,14 +14,19 @@ func _ready():
 
 	_notif_label.text = ""
 
-	_timer.wait_time = _NOTIF_DURATION_SEC
+	_timer.wait_time = _DEFAULT_NOTIF_DURATION_SEC
 	_timer.one_shot = true
 	_timer.timeout.connect(_on_timer_timout)
 
-func send(notif_str: String):
+# Show a notification with a message on player's screen.
+func send(
+	notif_str: String,
+	notif_duration_sec: float = _DEFAULT_NOTIF_DURATION_SEC
+):
 	if not notif_str:
 		return
 
+	_timer.wait_time = notif_duration_sec
 	_timer.start()
 	_notif_label.text = notif_str
 	
