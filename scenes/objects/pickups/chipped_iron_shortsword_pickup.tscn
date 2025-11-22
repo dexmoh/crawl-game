@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cushak6qgvvbq"]
+
+[ext_resource type="Script" uid="uid://h36p386710g1" path="res://src/interactables/interactable_pickup.gd" id="1_temfk"]
+[ext_resource type="PackedScene" uid="uid://3mtlnxckbb2l" path="res://scenes/objects/decorations/chipped_iron_shortsword.tscn" id="2_76lmq"]
+[ext_resource type="Resource" uid="uid://hqfap8y48b1x" path="res://data/items/chipped_iron_shortsword_item.tres" id="2_ur7i4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_76lmq"]
+size = Vector3(0.94018555, 0.034179688, 0.20117188)
+
+[node name="ChippedIronShortswordPickup" type="Area3D"]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_temfk")
+item = ExtResource("2_ur7i4")
+
+[node name="ChippedIronShortsword" parent="." instance=ExtResource("2_76lmq")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34265137, 0, 0)
+shape = SubResource("BoxShape3D_76lmq")

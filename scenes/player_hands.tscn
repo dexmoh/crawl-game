@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://c68f6rlgwvhax"]
+[gd_scene load_steps=11 format=3 uid="uid://c68f6rlgwvhax"]
 
 [ext_resource type="PackedScene" uid="uid://d0wpw6jp352dp" path="res://assets/models/player_hands.glb" id="1_ycf42"]
 [ext_resource type="Script" uid="uid://wc8of588vayt" path="res://src/player/player_hands_controller.gd" id="2_l3qd8"]
-[ext_resource type="PackedScene" uid="uid://dkx0qsnxsadnv" path="res://scenes/objects/weapons/swords/chipped_iron_shortsword.tscn" id="2_vkk7g"]
+[ext_resource type="PackedScene" uid="uid://dkx0qsnxsadnv" path="res://scenes/objects/weapons/swords/chipped_iron_shortsword_weapon.tscn" id="2_vkk7g"]
+[ext_resource type="Material" uid="uid://cvy86datpyjlj" path="res://data/materials/simple/outlines/thin_outline_mat.tres" id="4_bn173"]
 [ext_resource type="Texture2D" uid="uid://cdtklfx8f3co6" path="res://assets/textures/player_hands_256.png" id="4_tvfxd"]
 [ext_resource type="AudioStream" uid="uid://cv81b77bl108s" path="res://assets/audio/effects/combat/weapon_swing_1.wav" id="5_pnlkv"]
 [ext_resource type="AudioStream" uid="uid://dhrykyu32c28e" path="res://assets/audio/effects/combat/weapon_swing_3.wav" id="7_s0fdd"]
@@ -20,33 +21,36 @@ texture_filter = 0
 script = ExtResource("2_l3qd8")
 
 [node name="Skeleton3D" parent="HandsArmature" index="0"]
-bones/1/rotation = Quaternion(0.024223693, 0.19672526, 0.93111557, 0.30616388)
-bones/2/rotation = Quaternion(0.46281233, 0.2097829, 0.082305536, 0.8573341)
-bones/3/rotation = Quaternion(0.19096918, 0.1492757, 0.032463983, 0.9696359)
-bones/4/position = Vector3(-4.5337365e-05, 0.10665591, -0.027755914)
-bones/4/rotation = Quaternion(-0.055773616, 0.018276291, 0.39618242, 0.91629404)
-bones/5/rotation = Quaternion(-0.01327033, 0.02255991, 0.77486813, 0.6315808)
-bones/6/position = Vector3(-0.007945943, 0.11057712, 0.019493764)
-bones/6/rotation = Quaternion(0.0033660799, -0.04339605, 0.32383248, 0.94511276)
-bones/7/rotation = Quaternion(-0.06793349, 0.05317225, 0.79309475, 0.6029581)
-bones/8/rotation = Quaternion(0.07827349, 0.04272099, 0.24248789, 0.9660475)
-bones/9/rotation = Quaternion(-0.09946616, -0.031200536, -0.14277217, 0.9842506)
-bones/10/rotation = Quaternion(0.015395534, -0.075247, 0.97525847, -0.20729627)
-bones/11/rotation = Quaternion(0.2178293, 0.00023876541, -0.020375468, 0.97577417)
+bones/0/rotation = Quaternion(0, -0.19962001, 0, 0.9798734)
+bones/1/rotation = Quaternion(-0.06976046, -0.31943154, 0.90984905, 0.25548327)
+bones/2/rotation = Quaternion(0.5320742, 0.0111101465, 0.06702335, 0.8439677)
+bones/3/rotation = Quaternion(-0.27275255, -0.038238697, 0.11169638, 0.95481294)
+bones/4/position = Vector3(-0.00048574124, 0.10790064, -0.02790692)
+bones/4/rotation = Quaternion(-0.04886346, 0.032512907, 0.6265855, 0.77713954)
+bones/5/rotation = Quaternion(-0.01743638, 0.019519778, 0.6359783, 0.771263)
+bones/6/position = Vector3(-0.0076018446, 0.10883671, 0.019609792)
+bones/6/rotation = Quaternion(-0.023743354, 0.02745774, 0.56422246, 0.8248245)
+bones/7/rotation = Quaternion(-0.079274744, 0.03402584, 0.61247146, 0.7857713)
+bones/8/rotation = Quaternion(0.14083439, 0.05780675, 0.26309124, 0.95268416)
+bones/9/rotation = Quaternion(-0.09718197, -0.037718005, -0.20762876, 0.9726373)
+bones/10/rotation = Quaternion(0.015395431, -0.07524649, 0.9752585, -0.2072963)
+bones/11/rotation = Quaternion(0.2178283, 0.0002387725, -0.020375313, 0.97577447)
 
 [node name="Bone_002_R" parent="HandsArmature/Skeleton3D" index="0"]
-transform = Transform3D(-0.98722965, -0.1389068, -0.07798833, -0.1158364, 0.289877, 0.950028, -0.109358326, 0.9469298, -0.30226564, -0.38242534, -0.17575698, 0.35404527)
+transform = Transform3D(-0.9414736, -0.14665629, -0.30351156, 0.1936881, -0.972277, -0.13100597, -0.27588442, -0.18212524, 0.9437785, -0.3275342, -0.34670228, -0.19770177)
 
 [node name="ChippedIronShortsword" parent="HandsArmature/Skeleton3D/Bone_002_R/RightHandHolder" index="0" instance=ExtResource("2_vkk7g")]
 transform = Transform3D(-4.3711385e-08, -0.9999999, 4.3711385e-08, 0, -4.3711385e-08, -0.99999994, 0.99999994, -4.3711385e-08, 1.9106853e-15, 0, 0, 0)
 
 [node name="Gloves" parent="HandsArmature/Skeleton3D" index="1"]
 layers = 2
+material_overlay = ExtResource("4_bn173")
 cast_shadow = 0
 surface_material_override/0 = SubResource("StandardMaterial3D_5og2n")
 
 [node name="Hands" parent="HandsArmature/Skeleton3D" index="2"]
 layers = 2
+material_overlay = ExtResource("4_bn173")
 cast_shadow = 0
 surface_material_override/0 = SubResource("StandardMaterial3D_5og2n")
 

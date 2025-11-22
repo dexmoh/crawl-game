@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/wooden_box.glb-eac0abaa8a00c37950239ed78d2e75
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="StaticBody3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

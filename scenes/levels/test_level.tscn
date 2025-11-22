@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://btayvugja36qd"]
+[gd_scene load_steps=23 format=3 uid="uid://btayvugja36qd"]
 
 [ext_resource type="Texture2D" uid="uid://b0ro7kpw1xnbw" path="res://assets/hdri/skybox.hdr" id="1_eaa0b"]
 [ext_resource type="PackedScene" uid="uid://ffbgnntag8er" path="res://scenes/objects/furniture/small_wooden_table.tscn" id="2_a5rnb"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://b0yelmp8i6fq5" path="res://scenes/objects/decorations/candle_3.tscn" id="7_v6k17"]
 [ext_resource type="PackedScene" uid="uid://bifi0qkik1ll5" path="res://scenes/objects/doors/wooden_door.tscn" id="8_upsmr"]
 [ext_resource type="PackedScene" uid="uid://bnvi18pdis06b" path="res://scenes/health_box.tscn" id="9_qgrpf"]
-[ext_resource type="PackedScene" uid="uid://getkuo43b81d" path="res://scenes/objects/item-pickups/chipped_iron_shortsword_item.tscn" id="10_c7nhy"]
 [ext_resource type="PackedScene" uid="uid://btm3t1dehumic" path="res://scenes/objects/doors/portals/wooden_door_portal.tscn" id="11_lxl1u"]
 [ext_resource type="PackedScene" uid="uid://cmdgabac8nggo" path="res://scenes/portal_spawn_marker.tscn" id="12_cibht"]
 [ext_resource type="PackedScene" uid="uid://ci2qbygwuaq85" path="res://scenes/objects/foods/bread_loaf.tscn" id="13_a5rnb"]
@@ -18,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://cqus8xc7ctibe" path="res://scenes/player.tscn" id="16_hppjq"]
 [ext_resource type="PackedScene" uid="uid://ciko4qmrcgf6x" path="res://scenes/objects/trees/birch_tree_4.tscn" id="17_v6k17"]
 [ext_resource type="PackedScene" uid="uid://cq2om4fasb7op" path="res://scenes/objects/trees/birch_tree_3.tscn" id="18_upsmr"]
+[ext_resource type="PackedScene" uid="uid://cushak6qgvvbq" path="res://scenes/objects/pickups/chipped_iron_shortsword_pickup.tscn" id="19_qgrpf"]
+[ext_resource type="PackedScene" uid="uid://mrkjp8ft6iaj" path="res://scenes/objects/furniture/wooden_box.tscn" id="19_upsmr"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_71j4m"]
 panorama = ExtResource("1_eaa0b")
@@ -130,9 +131,6 @@ transform = Transform3D(0.929429, 0, -0.369001, 0, 1, 0, 0.369001, 0, 0.929429, 
 [node name="HealthBox2" parent="." instance=ExtResource("9_qgrpf")]
 transform = Transform3D(0.772634, 0, 0.634852, 0, 1, 0, -0.634852, 0, 0.772634, 5.51309, 0.5, 4.47209)
 
-[node name="ChippedIronShortsword" parent="." instance=ExtResource("10_c7nhy")]
-transform = Transform3D(-0.12524667, 0, -0.99212575, 0, 1, 0, 0.99212575, 0, -0.12524667, 2.4754229, 0.97673035, 2.520139)
-
 [node name="WoodenDoor2" parent="." instance=ExtResource("11_lxl1u")]
 transform = Transform3D(0.88554776, 0, -0.4645484, 0, 1, 0, 0.4645484, 0, 0.88554776, -4.822, 0, 3.597)
 level_path = "uid://u11w0orioiix"
@@ -166,3 +164,12 @@ transform = Transform3D(0.9355427, 0, -0.3532136, 0, 1, 0, 0.3532136, 0, 0.93554
 
 [node name="BirchTree3" parent="." instance=ExtResource("18_upsmr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4957066, 0.008117436, -0.31053865)
+
+[node name="WoodenBox" parent="." instance=ExtResource("19_upsmr")]
+transform = Transform3D(0.9592992, 0, 0.2823917, 0, 1, 0, -0.2823917, 0, 0.9592992, 3.0776038, 0.4, 3.9835365)
+
+[node name="WoodenBox2" parent="." instance=ExtResource("19_upsmr")]
+transform = Transform3D(0.66513914, 0, 0.7467195, 0, 1, 0, -0.7467195, 0, 0.66513914, -3.6843686, 0.4, -1.3738794)
+
+[node name="ChippedIronShortswordPickup" parent="." instance=ExtResource("19_qgrpf")]
+transform = Transform3D(-0.19775996, 0, -0.98025054, 0.013737755, 0.9999018, -0.0027715138, 0.9801543, -0.014014535, -0.19774053, 2.6039813, 0.97766775, 2.506973)

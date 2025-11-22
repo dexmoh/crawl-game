@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bquofq4tfo4ow"
-path="res://.godot/imported/swords.glb-45b1ea2b9fdacc4e406807938ace6b52.scn"
+uid="uid://ck8dqdql2ouyd"
+path="res://.godot/imported/chipped_iron_shortsword.glb-73c41769192ccdcc7d1c2434a081eff7.scn"
 
 [deps]
 
-source_file="res://assets/models/objects/weapons/swords.glb"
-dest_files=["res://.godot/imported/swords.glb-45b1ea2b9fdacc4e406807938ace6b52.scn"]
+source_file="res://assets/models/objects/weapons/chipped_iron_shortsword.glb"
+dest_files=["res://.godot/imported/chipped_iron_shortsword.glb-73c41769192ccdcc7d1c2434a081eff7.scn"]
 
 [params]
 
@@ -38,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=1
+gltf/naming_version=2
 gltf/embedded_image_handling=1

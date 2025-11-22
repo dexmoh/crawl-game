@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/wooden_chair.glb-4d6295861a5dc91cafa2ce842cfd
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="StaticBody3D"
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true

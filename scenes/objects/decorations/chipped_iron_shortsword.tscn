@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://3mtlnxckbb2l"]
+
+[ext_resource type="PackedScene" uid="uid://ck8dqdql2ouyd" path="res://assets/models/objects/weapons/chipped_iron_shortsword.glb" id="1_ih3tw"]
+[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="2_65lcq"]
+[ext_resource type="Material" uid="uid://c4vh28vp5d7aw" path="res://data/materials/simple/metal_mat.tres" id="3_hcker"]
+[ext_resource type="Script" uid="uid://b3mnixcflr2au" path="res://src/outlines/medium_mesh_outline.gd" id="4_tvas0"]
+
+[node name="ChippedIronShortsword" instance=ExtResource("1_ih3tw")]
+
+[node name="ChippedIronShortSword" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_65lcq")
+surface_material_override/1 = ExtResource("3_hcker")
+
+[node name="ChippedIronShortSwordOutline" parent="." index="1"]
+visible = false
+script = ExtResource("4_tvas0")

@@ -7,6 +7,6 @@ diffuse_mode = 3
 specular_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("1_ialrl")
-roughness = 0.8
+roughness = 0.5
 texture_filter = 0
 stencil_flags = 2

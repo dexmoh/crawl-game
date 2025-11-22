@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://b0yelmp8i6fq5"]
+[gd_scene load_steps=6 format=4 uid="uid://b0yelmp8i6fq5"]
 
 [ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="1_1xj8k"]
 [ext_resource type="PackedScene" uid="uid://cx25xtpffplwm" path="res://scenes/candle_flame.tscn" id="3_1xj8k"]
+[ext_resource type="Script" uid="uid://b3mnixcflr2au" path="res://src/outlines/medium_mesh_outline.gd" id="3_4hf65"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_dkj80"]
 _surfaces = [{
@@ -65,3 +66,8 @@ transform = Transform3D(0.03, 0, 0, 0, 0.0245478, 0, 0, 0, 0.03, 0.0170307, 0.13
 
 [node name="CandleFlame2" parent="." instance=ExtResource("3_1xj8k")]
 transform = Transform3D(0.03, 0, 0, 0, 0.0196637, 0, 0, 0, 0.03, -0.0453584, 0.100142, -0.0137245)
+
+[node name="OutlineMesh" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("ArrayMesh_1orhl")
+script = ExtResource("3_4hf65")
