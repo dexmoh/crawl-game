@@ -10,6 +10,9 @@ points = PackedVector3Array(-0.11495826, 0.49542525, -0.17672485, -0.09626378, 0
 [node name="WoodenStool" instance=ExtResource("1_v3uut")]
 
 [node name="WoodenStool" parent="." index="0"]
+visibility_range_end = 25.0
+visibility_range_end_margin = 2.0
+visibility_range_fade_mode = 1
 surface_material_override/0 = ExtResource("2_wdyjf")
 
 [node name="WoodenStoolOutline" parent="." index="1"]

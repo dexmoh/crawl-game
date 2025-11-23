@@ -3,18 +3,18 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://u3nx6alainnj"
-path="res://.godot/imported/wooden_bucket.glb-bdee125988de693abd4c1b6a4c037225.scn"
+uid="uid://cypjn7lsyld8r"
+path="res://.godot/imported/candle_2.glb-498e0e4dbe670864197ed8930337be0a.scn"
 
 [deps]
 
-source_file="res://assets/models/objects/decorations/wooden_bucket.glb"
-dest_files=["res://.godot/imported/wooden_bucket.glb-bdee125988de693abd4c1b6a4c037225.scn"]
+source_file="res://assets/models/objects/decorations/candles/candle_2.glb"
+dest_files=["res://.godot/imported/candle_2.glb-498e0e4dbe670864197ed8930337be0a.scn"]
 
 [params]
 
-nodes/root_type="StaticBody3D"
-nodes/root_name="WoodenBucket"
+nodes/root_type=""
+nodes/root_name="Candle2"
 nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
@@ -38,5 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=1
+gltf/naming_version=2
 gltf/embedded_image_handling=1

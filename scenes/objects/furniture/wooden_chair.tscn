@@ -13,6 +13,9 @@ size = Vector3(0.07788086, 0.5916748, 0.49023438)
 [node name="WoodenChair" instance=ExtResource("1_vrmnu")]
 
 [node name="WoodenChair" parent="." index="0"]
+visibility_range_end = 25.0
+visibility_range_end_margin = 2.0
+visibility_range_fade_mode = 1
 surface_material_override/0 = ExtResource("2_ld83g")
 
 [node name="WoodenChairOutline" parent="." index="1"]

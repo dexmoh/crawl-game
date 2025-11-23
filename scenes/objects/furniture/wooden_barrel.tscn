@@ -11,6 +11,9 @@ points = PackedVector3Array(-0.07982812, -0.46316665, -0.340392, 0.07946074, 0.4
 [node name="WoodenBarrel" instance=ExtResource("1_ak5f7")]
 
 [node name="WoodenBarrel" parent="." index="0"]
+visibility_range_end = 25.0
+visibility_range_end_margin = 2.0
+visibility_range_fade_mode = 1
 surface_material_override/0 = ExtResource("1_whwcm")
 surface_material_override/1 = ExtResource("2_dj67m")
 

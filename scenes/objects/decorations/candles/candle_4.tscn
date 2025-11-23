@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmni86dfwgsdj"]
+
+[ext_resource type="PackedScene" uid="uid://chu26helqxxl2" path="res://assets/models/objects/decorations/candles/candle_4.glb" id="1_binpv"]
+[ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="2_hohnt"]
+[ext_resource type="Script" uid="uid://b3mnixcflr2au" path="res://src/outlines/medium_mesh_outline.gd" id="3_fdq46"]
+[ext_resource type="PackedScene" uid="uid://cx25xtpffplwm" path="res://scenes/candle_flame.tscn" id="3_sw2gy"]
+
+[node name="Candle4" instance=ExtResource("1_binpv")]
+
+[node name="Candle4" parent="." index="0"]
+visibility_range_end = 10.0
+visibility_range_end_margin = 1.0
+visibility_range_fade_mode = 1
+surface_material_override/0 = ExtResource("2_hohnt")
+surface_material_override/1 = ExtResource("2_hohnt")
+
+[node name="Candle4Outline" parent="." index="1"]
+script = ExtResource("3_fdq46")
+
+[node name="CandleFlame" parent="." index="2" instance=ExtResource("3_sw2gy")]
+transform = Transform3D(0.03, 0, 0, 0, 0.020168299, 0, 0, 0, 0.03, -0.00031797588, 0.0613323, -0.0076313736)

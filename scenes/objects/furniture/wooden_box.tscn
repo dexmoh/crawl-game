@@ -10,6 +10,9 @@ size = Vector3(0.8, 0.8, 0.8)
 [node name="WoodenBox" instance=ExtResource("1_f3mpw")]
 
 [node name="WoodenBox" parent="." index="0"]
+visibility_range_end = 25.0
+visibility_range_end_margin = 2.0
+visibility_range_fade_mode = 1
 surface_material_override/0 = ExtResource("2_tidfw")
 
 [node name="WoodenBoxOutline" parent="." index="1"]

@@ -13,6 +13,9 @@ size = Vector3(0.09765625, 0.78271484, 0.107666016)
 [node name="SmallWoodenTable" instance=ExtResource("1_d1m03")]
 
 [node name="SmallWoodenTable" parent="." index="0"]
+visibility_range_end = 25.0
+visibility_range_end_margin = 2.0
+visibility_range_fade_mode = 1
 surface_material_override/0 = ExtResource("2_qb0wl")
 
 [node name="SmallWoodenTableOutline" parent="." index="1"]

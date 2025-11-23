@@ -7,6 +7,9 @@
 [node name="RedApple" instance=ExtResource("1_wa07p")]
 
 [node name="RedApple" parent="." index="0"]
+visibility_range_end = 10.0
+visibility_range_end_margin = 1.0
+visibility_range_fade_mode = 1
 surface_material_override/0 = ExtResource("2_t2twp")
 
 [node name="RedAppleOutline" parent="." index="1"]

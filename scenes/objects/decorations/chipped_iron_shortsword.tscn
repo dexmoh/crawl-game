@@ -8,6 +8,9 @@
 [node name="ChippedIronShortsword" instance=ExtResource("1_ih3tw")]
 
 [node name="ChippedIronShortSword" parent="." index="0"]
+visibility_range_end = 10.0
+visibility_range_end_margin = 1.0
+visibility_range_fade_mode = 1
 surface_material_override/0 = ExtResource("2_65lcq")
 surface_material_override/1 = ExtResource("3_hcker")
 

@@ -13,6 +13,9 @@ size = Vector3(1.1503906, 0.9170532, 0.09841919)
 [node name="WoodenSingleBed" instance=ExtResource("1_3aqyv")]
 
 [node name="WoodenSingleBed" parent="." index="0"]
+visibility_range_end = 25.0
+visibility_range_end_margin = 2.0
+visibility_range_fade_mode = 1
 surface_material_override/0 = ExtResource("1_bb1h8")
 surface_material_override/1 = ExtResource("1_bb1h8")
 
