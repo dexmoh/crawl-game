@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://mrkjp8ft6iaj"]
+[gd_scene format=3 uid="uid://mrkjp8ft6iaj"]
 
 [ext_resource type="PackedScene" uid="uid://c84vpuqdqvuyw" path="res://assets/models/objects/furniture/wooden_box.glb" id="1_f3mpw"]
 [ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="2_tidfw"]
@@ -7,17 +7,17 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_rweed"]
 size = Vector3(0.8, 0.8, 0.8)
 
-[node name="WoodenBox" instance=ExtResource("1_f3mpw")]
+[node name="WoodenBox" unique_id=1626938399 instance=ExtResource("1_f3mpw")]
 
-[node name="WoodenBox" parent="." index="0"]
+[node name="WoodenBox" parent="." index="0" unique_id=1363767297]
 visibility_range_end = 25.0
 visibility_range_end_margin = 2.0
 visibility_range_fade_mode = 1
 surface_material_override/0 = ExtResource("2_tidfw")
 
-[node name="WoodenBoxOutline" parent="." index="1"]
+[node name="WoodenBoxOutline" parent="." index="1" unique_id=1432749604]
 visible = false
 script = ExtResource("3_2be5n")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=223829402]
 shape = SubResource("BoxShape3D_rweed")

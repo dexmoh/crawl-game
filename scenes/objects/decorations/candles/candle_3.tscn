@@ -1,28 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0yelmp8i6fq5"]
+[gd_scene format=3 uid="uid://b0yelmp8i6fq5"]
 
 [ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="1_1xj8k"]
 [ext_resource type="PackedScene" uid="uid://brtsf2w1m5qx4" path="res://assets/models/objects/decorations/candles/candle_3.glb" id="1_mdaif"]
 [ext_resource type="PackedScene" uid="uid://cx25xtpffplwm" path="res://scenes/candle_flame.tscn" id="3_1xj8k"]
 [ext_resource type="Script" uid="uid://b3mnixcflr2au" path="res://src/outlines/medium_mesh_outline.gd" id="3_4hf65"]
 
-[node name="Candle3" instance=ExtResource("1_mdaif")]
+[node name="Candle3" unique_id=1370572124 instance=ExtResource("1_mdaif")]
 
-[node name="Candle3" parent="." index="0"]
+[node name="Candle3" parent="." index="0" unique_id=1526972821]
 visibility_range_end = 10.0
 visibility_range_end_margin = 1.0
 visibility_range_fade_mode = 1
 surface_material_override/0 = ExtResource("1_1xj8k")
 surface_material_override/1 = ExtResource("1_1xj8k")
 
-[node name="Candle3Outline" parent="." index="1"]
+[node name="Candle3Outline" parent="." index="1" unique_id=2008090561]
 visible = false
 script = ExtResource("3_4hf65")
 
-[node name="CandleFlame" parent="." index="2" instance=ExtResource("3_1xj8k")]
+[node name="CandleFlame" parent="." index="2" unique_id=147097962 instance=ExtResource("3_1xj8k")]
 transform = Transform3D(0.03, 0, 0, 0, 0.035403576, 0, 0, 0, 0.03, 0.028908007, 0.22540158, -0.026590288)
 
-[node name="CandleFlame2" parent="." index="3" instance=ExtResource("3_1xj8k")]
+[node name="CandleFlame2" parent="." index="3" unique_id=1057406586 instance=ExtResource("3_1xj8k")]
 transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0.015080504, 0.1289938, 0.03999344)
 
-[node name="CandleFlame3" parent="." index="4" instance=ExtResource("3_1xj8k")]
+[node name="CandleFlame3" parent="." index="4" unique_id=1975604750 instance=ExtResource("3_1xj8k")]
 transform = Transform3D(0.03, 0, 0, 0, 0.02208962, 0, 0, 0, 0.03, -0.045350797, 0.09721689, -0.013268068)

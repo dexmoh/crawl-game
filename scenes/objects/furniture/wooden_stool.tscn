@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0np6oymomy8b"]
+[gd_scene format=3 uid="uid://d0np6oymomy8b"]
 
 [ext_resource type="PackedScene" uid="uid://bnsofua7gw3b5" path="res://assets/models/objects/furniture/wooden_stool.glb" id="1_v3uut"]
 [ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="2_wdyjf"]
@@ -7,17 +7,17 @@
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_v3uut"]
 points = PackedVector3Array(-0.11495826, 0.49542525, -0.17672485, -0.09626378, 0.035853773, 0.2298881, -0.09626378, -0.003973782, -0.23107381, 0.25332278, 0.019922748, 0.031172723, 0.12185905, 0.49388868, 0.17447814, 0.121314876, 0.49254936, -0.1746582, -0.20752868, 0.44104928, 0.07882109, -0.121761635, 0.49399278, 0.17450973, 0.25332278, -0.003973782, -0.032358438, 0.19639578, 0.49171185, -0.07601736, -0.1299137, 0.0057884795, 0.21331686, -0.13884746, 0.0038108858, -0.2085342, -0.20055549, 0.49692836, -0.069902495, 0.19707413, 0.49265563, 0.07508354, 0.0070149545, 0.44104928, 0.22185645, 0.12622091, 0.44104928, -0.18333519, 0.02289705, 0.44104928, -0.21510077, 0.12622091, 0.44104928, 0.18219459, -0.09626378, -0.003973782, 0.2298881, -0.1393505, 0.014278448, 0.1911474, -0.20752868, 0.44104928, -0.07206541, 0.25332278, -0.003973782, 0.031172723, -0.02287502, 0.49462092, -0.20666288, -0.023103742, 0.49584165, 0.2065069, -0.19699599, 0.4930001, 0.0751911, 0.15004405, 0.44104928, 0.15832528, -0.12945084, 0.49412104, -0.16817422, -0.14131555, 0.011419588, -0.19465536, 0.142103, 0.44104928, -0.1674524, -0.09626378, 0.027888268, -0.23107381, 0.02289705, 0.49461243, -0.20665571, -0.1299296, 0.4948872, 0.16751514)
 
-[node name="WoodenStool" instance=ExtResource("1_v3uut")]
+[node name="WoodenStool" unique_id=671006801 instance=ExtResource("1_v3uut")]
 
-[node name="WoodenStool" parent="." index="0"]
+[node name="WoodenStool" parent="." index="0" unique_id=82617103]
 visibility_range_end = 25.0
 visibility_range_end_margin = 2.0
 visibility_range_fade_mode = 1
 surface_material_override/0 = ExtResource("2_wdyjf")
 
-[node name="WoodenStoolOutline" parent="." index="1"]
+[node name="WoodenStoolOutline" parent="." index="1" unique_id=279051352]
 visible = false
 script = ExtResource("3_wdyjf")
 
-[node name="Collider" type="CollisionShape3D" parent="." index="2"]
+[node name="Collider" type="CollisionShape3D" parent="." index="2" unique_id=65467867]
 shape = SubResource("ConvexPolygonShape3D_v3uut")

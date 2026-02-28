@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ib806qonusxn"]
+[gd_scene format=3 uid="uid://ib806qonusxn"]
 
 [ext_resource type="Script" uid="uid://bew5chbmra4dk" path="res://src/components/health_indicator_component.gd" id="1_8k4t5"]
 
@@ -23,18 +23,18 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 anti_aliasing = false
 
-[node name="HealthIndicatorComponent" type="Sprite3D"]
+[node name="HealthIndicatorComponent" type="Sprite3D" unique_id=1431059676]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 billboard = 1
 no_depth_test = true
 texture = SubResource("ViewportTexture_elnke")
 script = ExtResource("1_8k4t5")
 
-[node name="SubViewport" type="SubViewport" parent="."]
+[node name="SubViewport" type="SubViewport" parent="." unique_id=775317117]
 transparent_bg = true
 size = Vector2i(205, 30)
 
-[node name="Panel" type="Panel" parent="SubViewport"]
+[node name="Panel" type="Panel" parent="SubViewport" unique_id=1878303437]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -42,7 +42,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_elnke")
 
-[node name="ProgressBar" type="ProgressBar" parent="SubViewport/Panel"]
+[node name="ProgressBar" type="ProgressBar" parent="SubViewport/Panel" unique_id=1533379916]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,5 +58,5 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_3j1vf")
 value = 75.0
 show_percentage = false
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1740961202]
 wait_time = 5.0

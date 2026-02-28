@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cqus8xc7ctibe"]
+[gd_scene format=3 uid="uid://cqus8xc7ctibe"]
 
 [ext_resource type="Script" uid="uid://ntxyq81ee02s" path="res://src/player/player_controller.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bpatksasov0ob" path="res://src/interactables/interaction_raycast.gd" id="2_fjrip"]
@@ -121,13 +121,13 @@ _data = {
 &"play_footstep_sound": SubResource("Animation_y4r1p")
 }
 
-[node name="Player" type="CharacterBody3D" groups=["player"]]
+[node name="Player" type="CharacterBody3D" unique_id=279959785 groups=["player"]]
 floor_max_angle = 1.0472
 floor_snap_length = 0.15
 script = ExtResource("1_3vyb7")
 mouse_sensitivity = 0.7
 
-[node name="HandsViewportContainer" type="SubViewportContainer" parent="."]
+[node name="HandsViewportContainer" type="SubViewportContainer" parent="." unique_id=556341835]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -136,77 +136,73 @@ grow_vertical = 2
 stretch = true
 metadata/_edit_lock_ = true
 
-[node name="HandsViewport" type="SubViewport" parent="HandsViewportContainer"]
+[node name="HandsViewport" type="SubViewport" parent="HandsViewportContainer" unique_id=213246782]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(1600, 900)
 render_target_update_mode = 4
 script = ExtResource("5_qlg0r")
 
-[node name="HandsCamera" type="Camera3D" parent="HandsViewportContainer/HandsViewport"]
+[node name="HandsCamera" type="Camera3D" parent="HandsViewportContainer/HandsViewport" unique_id=710857157]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 cull_mask = 1048574
 fov = 60.0
 far = 50.0
 metadata/_edit_lock_ = true
 
-[node name="Collider" type="CollisionShape3D" parent="."]
+[node name="Collider" type="CollisionShape3D" parent="." unique_id=187044747]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_u8vuu")
 
-[node name="CameraPivot" type="Node3D" parent="."]
+[node name="CameraPivot" type="Node3D" parent="." unique_id=1038930970]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 
-[node name="Camera" type="Camera3D" parent="CameraPivot" groups=["main_camera"]]
+[node name="Camera" type="Camera3D" parent="CameraPivot" unique_id=2053206053 groups=["main_camera"]]
 cull_mask = 1048573
 fov = 90.0
 far = 2000.0
 
-[node name="AudioListener3D" type="AudioListener3D" parent="CameraPivot/Camera"]
+[node name="AudioListener3D" type="AudioListener3D" parent="CameraPivot/Camera" unique_id=1021550543]
 current = true
 
-[node name="InteractionRay" type="RayCast3D" parent="CameraPivot/Camera"]
+[node name="InteractionRay" type="RayCast3D" parent="CameraPivot/Camera" unique_id=1733563463]
 target_position = Vector3(0, 0, -1.5)
 collision_mask = 4
 collide_with_areas = true
 script = ExtResource("2_fjrip")
 
-[node name="MeleeRay" type="RayCast3D" parent="CameraPivot/Camera"]
+[node name="MeleeRay" type="RayCast3D" parent="CameraPivot/Camera" unique_id=1762811235]
 unique_name_in_owner = true
 enabled = false
 target_position = Vector3(0, 0, -1.8)
 collision_mask = 2
 collide_with_areas = true
 
-[node name="PlayerHands" parent="CameraPivot" instance=ExtResource("4_ur7pv")]
+[node name="PlayerHands" parent="CameraPivot" unique_id=76050204 instance=ExtResource("4_ur7pv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 
-[node name="CrouchAnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_qhqgy")
-}
+[node name="CrouchAnimationPlayer" type="AnimationPlayer" parent="." unique_id=710509121]
+libraries/ = SubResource("AnimationLibrary_qhqgy")
 
-[node name="CrouchShapeCast" type="ShapeCast3D" parent="."]
+[node name="CrouchShapeCast" type="ShapeCast3D" parent="." unique_id=180749651]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.962422, 0)
 enabled = false
 shape = SubResource("SphereShape3D_g2els")
 target_position = Vector3(0, 0.5, 0)
 debug_shape_custom_color = Color(0, 1, 0, 1)
 
-[node name="Footsteps" type="Node3D" parent="."]
+[node name="Footsteps" type="Node3D" parent="." unique_id=731988204]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 script = ExtResource("6_smehm")
 
-[node name="Footstep1SFX" type="AudioStreamPlayer3D" parent="Footsteps"]
+[node name="Footstep1SFX" type="AudioStreamPlayer3D" parent="Footsteps" unique_id=1405276399]
 stream = ExtResource("6_fjrip")
 bus = &"Footsteps"
 
-[node name="Footstep2SFX" type="AudioStreamPlayer3D" parent="Footsteps"]
+[node name="Footstep2SFX" type="AudioStreamPlayer3D" parent="Footsteps" unique_id=828030455]
 stream = ExtResource("7_smehm")
 bus = &"Footsteps"
 
-[node name="FootstepsAnimationPlayer" type="AnimationPlayer" parent="Footsteps"]
+[node name="FootstepsAnimationPlayer" type="AnimationPlayer" parent="Footsteps" unique_id=222778804]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_d2wvv")
-}
+libraries/ = SubResource("AnimationLibrary_d2wvv")

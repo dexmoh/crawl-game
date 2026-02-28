@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbnw7ia0wii7n"]
+[gd_scene format=3 uid="uid://dbnw7ia0wii7n"]
 
 [ext_resource type="Theme" uid="uid://drqswqame6wgb" path="res://data/ui/ui_theme.tres" id="1_rwj71"]
 [ext_resource type="Script" uid="uid://c65raraliqtak" path="res://src/inventory/inventory_screen_ui.gd" id="2_u68l8"]
@@ -19,18 +19,18 @@ corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 anti_aliasing = false
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6fi6k"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ydqr1"]
 load_path = "res://.godot/imported/ui_icons.png-621372537a5a3adea98e450df4f6f600.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uo2fv"]
-atlas = SubResource("CompressedTexture2D_6fi6k")
+atlas = SubResource("CompressedTexture2D_ydqr1")
 region = Rect2(4, 0, 9, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_047uy"]
 atlas = ExtResource("3_gqdh3")
 region = Rect2(19, 0, 10, 16)
 
-[node name="Inventory" type="PanelContainer"]
+[node name="Inventory" type="PanelContainer" unique_id=1868603047]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -47,129 +47,129 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_6fi6k")
 script = ExtResource("2_u68l8")
 item_container_scene = ExtResource("5_5idlm")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=292991289]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1612225159]
 layout_mode = 2
 
-[node name="HBoxContainer1" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer1" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=940641755]
 layout_mode = 2
 alignment = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer1"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer1" unique_id=1533537972]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 0.2784314, 0.43137255, 1)
 text = "Inventory"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer1" unique_id=1621119755]
 modulate = Color(1, 0.8784314, 0.1882353, 1)
 layout_mode = 2
 
-[node name="WealthLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer1/HBoxContainer"]
+[node name="WealthLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer1/HBoxContainer" unique_id=1441110895]
 unique_name_in_owner = true
 layout_mode = 2
 text = "100"
 horizontal_alignment = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer1/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer1/HBoxContainer" unique_id=1986508128]
 layout_mode = 2
 texture = SubResource("AtlasTexture_uo2fv")
 
-[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer1"]
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer1" unique_id=2068277832]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer1"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer1" unique_id=1194002596]
 modulate = Color(0.7137255, 0.7137255, 0.7137255, 1)
 layout_mode = 2
 
-[node name="WeightLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer1/HBoxContainer2"]
+[node name="WeightLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer1/HBoxContainer2" unique_id=1290324250]
 unique_name_in_owner = true
 layout_mode = 2
 text = "0/50"
 horizontal_alignment = 2
 
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer1/HBoxContainer2"]
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer1/HBoxContainer2" unique_id=1841890987]
 layout_mode = 2
 texture = SubResource("AtlasTexture_047uy")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1258476291]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-texture = ExtResource("4_dhce7")
-expand_mode = 2
-
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1665129723]
 layout_mode = 2
 texture = ExtResource("4_dhce7")
 expand_mode = 2
 
-[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=354237739]
 layout_mode = 2
 texture = ExtResource("4_dhce7")
 expand_mode = 2
 
-[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=159990082]
 layout_mode = 2
 texture = ExtResource("4_dhce7")
 expand_mode = 2
 
-[node name="TextureRect5" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1240797311]
 layout_mode = 2
 texture = ExtResource("4_dhce7")
 expand_mode = 2
 
-[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1529443579]
+layout_mode = 2
+texture = ExtResource("4_dhce7")
+expand_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=958799960]
 layout_mode = 2
 
-[node name="ItemSearchBar" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="ItemSearchBar" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1914565491]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "Search..."
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=636201151]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=773237678]
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/ScrollContainer" unique_id=337641769]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_right = 4
 
-[node name="ItemsContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="ItemsContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer" unique_id=273412674]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 3
 
-[node name="ItemContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" instance=ExtResource("5_5idlm")]
+[node name="ItemContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" unique_id=1270387020 instance=ExtResource("5_5idlm")]
 layout_mode = 2
 
-[node name="ItemContainer2" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" instance=ExtResource("5_5idlm")]
+[node name="ItemContainer2" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" unique_id=1011290569 instance=ExtResource("5_5idlm")]
 layout_mode = 2
 
-[node name="ItemContainer3" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" instance=ExtResource("5_5idlm")]
+[node name="ItemContainer3" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" unique_id=1638705054 instance=ExtResource("5_5idlm")]
 layout_mode = 2
 
-[node name="ItemContainer4" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" instance=ExtResource("5_5idlm")]
+[node name="ItemContainer4" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" unique_id=1723769390 instance=ExtResource("5_5idlm")]
 layout_mode = 2
 
-[node name="ItemContainer5" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" instance=ExtResource("5_5idlm")]
+[node name="ItemContainer5" parent="MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ItemsContainer" unique_id=754557957 instance=ExtResource("5_5idlm")]
 layout_mode = 2
 
-[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=2136494133]
 layout_mode = 2

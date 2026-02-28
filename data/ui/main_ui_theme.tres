@@ -1,7 +1,6 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cttjasqunbr0x"]
+[gd_resource type="Theme" format=3 uid="uid://cttjasqunbr0x"]
 
-[ext_resource type="FontFile" uid="uid://28qysypfd7sa" path="res://assets/fonts/friz_quadrata_bold.otf" id="1_2a222"]
-[ext_resource type="FontFile" uid="uid://byslfi6jw6q2d" path="res://assets/fonts/friz_quadrata_regular.ttf" id="1_crfdi"]
+[ext_resource type="FontFile" uid="uid://dm6ytamicujso" path="res://assets/fonts/montserrat_regular.ttf" id="3_rapwk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_crfdi"]
 bg_color = Color(0, 0, 0, 1)
@@ -24,11 +23,46 @@ grow_begin = 0.0
 grow_end = 0.0
 thickness = 2
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rapwk"]
+content_margin_left = 6.0
+content_margin_right = 6.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_detail = 1
+anti_aliasing = false
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pnwk3"]
 bg_color = Color(0, 0, 0, 1)
 border_color = Color(1, 1, 1, 1)
 corner_detail = 1
 anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tein6"]
+bg_color = Color(1, 1, 1, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3fhw"]
+bg_color = Color(0.78352344, 0.7835234, 0.7835234, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikjd7"]
+bg_color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cjkqx"]
+content_margin_left = 6.0
+content_margin_top = 0.0
+content_margin_right = 6.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0, 0, 0)
+corner_detail = 1
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_2a222"]
 color = Color(1, 1, 1, 1)
@@ -38,15 +72,18 @@ thickness = 2
 vertical = true
 
 [resource]
-default_font = ExtResource("1_crfdi")
+default_font = ExtResource("3_rapwk")
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/font_sizes/font_size = 20
-Button/fonts/font = ExtResource("1_2a222")
 Button/styles/focus = SubResource("StyleBoxFlat_crfdi")
 Button/styles/hover = SubResource("StyleBoxFlat_crfdi")
 Button/styles/normal = SubResource("StyleBoxFlat_2a222")
 HSeparator/styles/separator = SubResource("StyleBoxLine_crfdi")
 Label/font_sizes/font_size = 20
-Label/fonts/font = ExtResource("1_crfdi")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_rapwk")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_pnwk3")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_tein6")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_k3fhw")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_ikjd7")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_cjkqx")
 VSeparator/styles/separator = SubResource("StyleBoxLine_2a222")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://btm3t1dehumic"]
+[gd_scene format=4 uid="uid://btm3t1dehumic"]
 
 [ext_resource type="Script" uid="uid://ed5mu4ecjo2i" path="res://src/interactables/portal_interactable.gd" id="1_76i3o"]
 [ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="2_djxuf"]
@@ -161,34 +161,32 @@ _data = {
 [sub_resource type="BoxOccluder3D" id="BoxOccluder3D_pjw8m"]
 size = Vector3(1.779, 2.212, 0.065)
 
-[node name="WoodenDoorPortal" type="AnimatableBody3D"]
+[node name="WoodenDoorPortal" type="AnimatableBody3D" unique_id=1019235147]
 script = ExtResource("1_76i3o")
 
-[node name="DoorCollider" type="CollisionShape3D" parent="."]
+[node name="DoorCollider" type="CollisionShape3D" parent="." unique_id=70728792]
 shape = SubResource("ConcavePolygonShape3D_g3jo8")
 
-[node name="DoorMesh" type="MeshInstance3D" parent="DoorCollider"]
+[node name="DoorMesh" type="MeshInstance3D" parent="DoorCollider" unique_id=545215364]
 mesh = SubResource("ArrayMesh_kh8tg")
 skeleton = NodePath("")
 
-[node name="FrameCollider" type="CollisionShape3D" parent="."]
+[node name="FrameCollider" type="CollisionShape3D" parent="." unique_id=1816728636]
 shape = SubResource("ConcavePolygonShape3D_qgqto")
 
-[node name="FrameMesh" type="MeshInstance3D" parent="FrameCollider"]
+[node name="FrameMesh" type="MeshInstance3D" parent="FrameCollider" unique_id=156261908]
 mesh = SubResource("ArrayMesh_u0baf")
 skeleton = NodePath("")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1832374029]
 callback_mode_process = 0
-libraries = {
-&"": SubResource("AnimationLibrary_gq5pv")
-}
+libraries/ = SubResource("AnimationLibrary_gq5pv")
 
-[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="." unique_id=532341385]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.481572, 1.11029, 0.00361317)
 occluder = SubResource("BoxOccluder3D_pjw8m")
 
-[node name="OpenSFX" type="AudioStreamPlayer3D" parent="."]
+[node name="OpenSFX" type="AudioStreamPlayer3D" parent="." unique_id=304979635]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5072599, 1.2909553, 0.15894014)
 stream = ExtResource("4_pqy8g")
 bus = &"Effects"

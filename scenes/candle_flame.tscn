@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cx25xtpffplwm"]
+[gd_scene format=3 uid="uid://cx25xtpffplwm"]
 
 [ext_resource type="Texture2D" uid="uid://p4ry3phiu3f2" path="res://assets/textures/candle_flame.png" id="1_48c7b"]
 [ext_resource type="Material" uid="uid://by2guow77py5q" path="res://data/materials/yellow_flame_mat.tres" id="2_yfwgs"]
@@ -16,20 +16,20 @@ scale_max = 0.0
 material = ExtResource("2_yfwgs")
 size = Vector2(0.01, 0.01)
 
-[node name="CandleFlame" type="Sprite3D"]
+[node name="CandleFlame" type="Sprite3D" unique_id=455951665]
 transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0, 0)
 offset = Vector2(0, 64)
 billboard = 2
 texture = ExtResource("1_48c7b")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1072838459]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47617, 0)
 light_color = Color(1, 0.756894, 0.473678, 1)
 light_energy = 0.1
 light_size = 0.02
 omni_range = 1.0
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1498360968]
 visibility_range_end = 8.0
 visibility_range_end_margin = 0.3
 visibility_range_fade_mode = 1

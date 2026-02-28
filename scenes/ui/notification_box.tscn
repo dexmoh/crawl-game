@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmo37w6ud8gt8"]
+[gd_scene format=3 uid="uid://bmo37w6ud8gt8"]
 
 [ext_resource type="Theme" uid="uid://cttjasqunbr0x" path="res://data/ui/main_ui_theme.tres" id="1_6hojb"]
 [ext_resource type="Script" uid="uid://byra5dnfltbio" path="res://src/ui/notification_box.gd" id="1_gcd8b"]
+[ext_resource type="FontFile" uid="uid://byslfi6jw6q2d" path="res://assets/fonts/friz_quadrata_regular.ttf" id="3_5yyac"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kb6ab"]
 bg_color = Color(0, 0, 0, 1)
@@ -13,7 +14,7 @@ border_color = Color(0.9122889, 0.9122889, 0.9122887, 1)
 corner_detail = 1
 anti_aliasing = false
 
-[node name="NotificationBox" type="MarginContainer" groups=["gui_notification_box"]]
+[node name="NotificationBox" type="MarginContainer" unique_id=1009932488 groups=["gui_notification_box"]]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -26,33 +27,34 @@ theme = ExtResource("1_6hojb")
 theme_override_constants/margin_top = 15
 script = ExtResource("1_gcd8b")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1404658961]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=195714107]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer" unique_id=674772633]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kb6ab")
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/PanelContainer" unique_id=278536099]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="NotificationLabel" type="Label" parent="PanelContainer/MarginContainer/PanelContainer/MarginContainer"]
+[node name="NotificationLabel" type="Label" parent="PanelContainer/MarginContainer/PanelContainer/MarginContainer" unique_id=574304316]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5yyac")
 text = "This is a floating notification."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1849763622]
 unique_name_in_owner = true

@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0djonequf3rc"]
+[gd_scene format=3 uid="uid://c0djonequf3rc"]
 
 [ext_resource type="Script" uid="uid://ciguahnkironn" path="res://src/components/health_component.gd" id="1_2wcl1"]
 [ext_resource type="Material" uid="uid://hfhfde7l67sq" path="res://data/materials/simple/entity_damaged_mat.tres" id="2_at0e7"]
 
-[node name="HealthComponent" type="Area3D"]
+[node name="HealthComponent" type="Area3D" unique_id=900945116]
 collision_layer = 2
 collision_mask = 2
 monitoring = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbjse8nppioyj"]
+[gd_scene format=3 uid="uid://dbjse8nppioyj"]
 
 [ext_resource type="PackedScene" uid="uid://ef6cy4k7008s" path="res://assets/models/objects/furniture/wooden_chair.glb" id="1_vrmnu"]
 [ext_resource type="Material" uid="uid://7r7n4dqo1nyn" path="res://data/materials/simple/diffuse_mat.tres" id="2_ld83g"]
@@ -10,22 +10,22 @@ size = Vector3(0.5777588, 0.54896545, 0.50097656)
 [sub_resource type="BoxShape3D" id="BoxShape3D_pw5jl"]
 size = Vector3(0.07788086, 0.5916748, 0.49023438)
 
-[node name="WoodenChair" instance=ExtResource("1_vrmnu")]
+[node name="WoodenChair" unique_id=384024926 instance=ExtResource("1_vrmnu")]
 
-[node name="WoodenChair" parent="." index="0"]
+[node name="WoodenChair" parent="." index="0" unique_id=267579622]
 visibility_range_end = 25.0
 visibility_range_end_margin = 2.0
 visibility_range_fade_mode = 1
 surface_material_override/0 = ExtResource("2_ld83g")
 
-[node name="WoodenChairOutline" parent="." index="1"]
+[node name="WoodenChairOutline" parent="." index="1" unique_id=1407672108]
 visible = false
 script = ExtResource("3_67y6r")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=1686494904]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0051879883, 0.2749405, 0)
 shape = SubResource("BoxShape3D_67y6r")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3" unique_id=580867985]
 transform = Transform3D(0.99204236, -0.12590462, 0, 0.12590462, 0.99204236, 0, 0, 0, 1, -0.27446988, 0.81421465, 0)
 shape = SubResource("BoxShape3D_pw5jl")

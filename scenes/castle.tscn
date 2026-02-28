@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://m4n5f2snjree"]
+[gd_scene format=3 uid="uid://m4n5f2snjree"]
 
 [ext_resource type="PackedScene" uid="uid://lvowid183261" path="res://assets/models/levels/castle.glb" id="1_bly62"]
 [ext_resource type="ArrayOccluder3D" uid="uid://cue8aycbbhxus" path="res://data/occlusion/castle.occ" id="2_0ysgy"]
@@ -8,438 +8,438 @@
 [ext_resource type="Material" uid="uid://dgkxvqfrtqqeg" path="res://data/materials/seamless/roof_slates_mat.tres" id="4_7pkwf"]
 [ext_resource type="Material" uid="uid://de3j4avcnqlrl" path="res://data/materials/seamless/rough_wood_mat.tres" id="5_ha01g"]
 
-[node name="Castle" instance=ExtResource("1_bly62")]
+[node name="Castle" unique_id=902927667 instance=ExtResource("1_bly62")]
 
-[node name="Keep" parent="Structures" index="0"]
+[node name="Keep" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="0" unique_id=1298553140]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Keep_001" parent="Structures" index="1"]
+[node name="Keep_001" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="1" unique_id=256345968]
 surface_material_override/0 = ExtResource("4_7pkwf")
 
-[node name="Keep_002" parent="Structures" index="2"]
+[node name="Keep_002" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="2" unique_id=135695938]
 surface_material_override/0 = ExtResource("5_ha01g")
 
-[node name="Keep_003" parent="Structures" index="3"]
+[node name="Keep_003" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="3" unique_id=299695436]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="Keep_004" parent="Structures" index="4"]
+[node name="Keep_004" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="4" unique_id=253462146]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_ha01g")
 surface_material_override/2 = ExtResource("3_jxdab")
 
-[node name="Keep_006" parent="Structures" index="5"]
+[node name="Keep_006" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="5" unique_id=151111248]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="RoundTurret" parent="Structures" index="6"]
+[node name="RoundTurret" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="6" unique_id=1602151174]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="RoundTurret_001" parent="Structures" index="7"]
+[node name="RoundTurret_001" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="7" unique_id=1798301985]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="RoundTurret_002" parent="Structures" index="8"]
+[node name="RoundTurret_002" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="8" unique_id=218100269]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="SmallTurret" parent="Structures" index="9"]
+[node name="SmallTurret" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="9" unique_id=1320665601]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="SmallTurret_001" parent="Structures" index="10"]
+[node name="SmallTurret_001" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="10" unique_id=163132107]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="SmallTurret_002" parent="Structures" index="11"]
+[node name="SmallTurret_002" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="11" unique_id=2089064879]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="SmallTurret_003" parent="Structures" index="12"]
+[node name="SmallTurret_003" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="12" unique_id=1952982107]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="SmallTurret_004" parent="Structures" index="13"]
+[node name="SmallTurret_004" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="13" unique_id=1503483198]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="SmallTurret_005" parent="Structures" index="14"]
+[node name="SmallTurret_005" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="14" unique_id=1139219081]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="SmallTurret_006" parent="Structures" index="15"]
+[node name="SmallTurret_006" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="15" unique_id=541016052]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="SmallTurret_007" parent="Structures" index="16"]
+[node name="SmallTurret_007" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="16" unique_id=692453766]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="SmallTurret_009" parent="Structures" index="17"]
-surface_material_override/0 = ExtResource("2_njhjj")
-surface_material_override/1 = ExtResource("3_jxdab")
-
-[node name="SmallTurret_010" parent="Structures" index="18"]
+[node name="SmallTurret_009" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="17" unique_id=187092452]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="SmallTurretCrenellations_005" parent="Structures" index="19"]
+[node name="SmallTurret_010" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="18" unique_id=1251603779]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="SmallTurretCrenellations_006" parent="Structures" index="20"]
+[node name="SmallTurretCrenellations_005" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="19" unique_id=1495510206]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="SmallTurretCrenellations_007" parent="Structures" index="21"]
+[node name="SmallTurretCrenellations_006" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="20" unique_id=1301797814]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="SmallTurretCrenellations_008" parent="Structures" index="22"]
+[node name="SmallTurretCrenellations_007" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="21" unique_id=1999981802]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="SmallTurretDecorations" parent="Structures" index="23"]
+[node name="SmallTurretCrenellations_008" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="22" unique_id=1144561880]
+surface_material_override/0 = ExtResource("2_njhjj")
+surface_material_override/1 = ExtResource("3_jxdab")
+
+[node name="SmallTurretDecorations" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="23" unique_id=1401676885]
 surface_material_override/0 = ExtResource("3_jxdab")
 
-[node name="SmallTurretDecorations_001" parent="Structures" index="24"]
+[node name="SmallTurretDecorations_001" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="24" unique_id=1400699597]
 surface_material_override/0 = ExtResource("3_jxdab")
 
-[node name="SmallTurretDecorations_002" parent="Structures" index="25"]
+[node name="SmallTurretDecorations_002" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="25" unique_id=797063423]
 surface_material_override/0 = ExtResource("3_jxdab")
 
-[node name="SmallTurretDecorations_003" parent="Structures" index="26"]
+[node name="SmallTurretDecorations_003" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="26" unique_id=1681300001]
 surface_material_override/0 = ExtResource("3_jxdab")
 
-[node name="SmallTurretDecorations_005" parent="Structures" index="27"]
+[node name="SmallTurretDecorations_005" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="27" unique_id=1789377952]
 surface_material_override/0 = ExtResource("3_jxdab")
 
-[node name="SmallTurretDecorations_006" parent="Structures" index="28"]
+[node name="SmallTurretDecorations_006" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="28" unique_id=1573264044]
 surface_material_override/0 = ExtResource("3_jxdab")
 
-[node name="SmallTurretRoof" parent="Structures" index="29"]
+[node name="SmallTurretRoof" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="29" unique_id=1982374205]
 surface_material_override/0 = ExtResource("4_7pkwf")
 surface_material_override/1 = ExtResource("5_ha01g")
 
-[node name="SmallTurretRoof_001" parent="Structures" index="30"]
+[node name="SmallTurretRoof_001" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="30" unique_id=1154938842]
 surface_material_override/0 = ExtResource("4_7pkwf")
 surface_material_override/1 = ExtResource("5_ha01g")
 
-[node name="SmallTurretRoof_002" parent="Structures" index="31"]
+[node name="SmallTurretRoof_002" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="31" unique_id=1211935293]
 surface_material_override/0 = ExtResource("4_7pkwf")
 surface_material_override/1 = ExtResource("5_ha01g")
 
-[node name="SmallTurretRoof_003" parent="Structures" index="32"]
+[node name="SmallTurretRoof_003" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="32" unique_id=416847266]
 surface_material_override/0 = ExtResource("4_7pkwf")
 surface_material_override/1 = ExtResource("5_ha01g")
 
-[node name="SmallTurretRoof_004" parent="Structures" index="33"]
+[node name="SmallTurretRoof_004" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="33" unique_id=214160264]
 surface_material_override/0 = ExtResource("4_7pkwf")
 surface_material_override/1 = ExtResource("5_ha01g")
 
-[node name="Stairs" parent="Structures" index="34"]
+[node name="Stairs" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="34" unique_id=1246159554]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 surface_material_override/2 = ExtResource("5_ha01g")
 
-[node name="Stairs_001" parent="Structures" index="35"]
+[node name="Stairs_001" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="35" unique_id=1313320354]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 surface_material_override/2 = ExtResource("5_ha01g")
 
-[node name="TallWall" parent="Structures" index="36"]
+[node name="TallWall" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="36" unique_id=925747622]
 surface_material_override/0 = ExtResource("2_njhjj")
 surface_material_override/1 = ExtResource("3_jxdab")
 
-[node name="Wall_001" parent="Structures" index="37"]
+[node name="Wall_001" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="37" unique_id=1104093609]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_002" parent="Structures" index="38"]
+[node name="Wall_002" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="38" unique_id=1740608694]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_003" parent="Structures" index="39"]
+[node name="Wall_003" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="39" unique_id=2007781521]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_004" parent="Structures" index="40"]
+[node name="Wall_004" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="40" unique_id=35383379]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_005" parent="Structures" index="41"]
+[node name="Wall_005" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="41" unique_id=589046065]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_006" parent="Structures" index="42"]
+[node name="Wall_006" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="42" unique_id=476477716]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_007" parent="Structures" index="43"]
+[node name="Wall_007" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="43" unique_id=207435168]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_008" parent="Structures" index="44"]
+[node name="Wall_008" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="44" unique_id=757046645]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_009" parent="Structures" index="45"]
+[node name="Wall_009" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="45" unique_id=688711961]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_010" parent="Structures" index="46"]
+[node name="Wall_010" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="46" unique_id=1038000388]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_012" parent="Structures" index="47"]
+[node name="Wall_012" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="47" unique_id=1977315701]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_013" parent="Structures" index="48"]
+[node name="Wall_013" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="48" unique_id=37027628]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_014" parent="Structures" index="49"]
+[node name="Wall_014" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="49" unique_id=1190232850]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_015" parent="Structures" index="50"]
+[node name="Wall_015" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="50" unique_id=1340067601]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_016" parent="Structures" index="51"]
+[node name="Wall_016" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="51" unique_id=617179979]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_017" parent="Structures" index="52"]
+[node name="Wall_017" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="52" unique_id=545617872]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_018" parent="Structures" index="53"]
+[node name="Wall_018" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="53" unique_id=1849431092]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_019" parent="Structures" index="54"]
+[node name="Wall_019" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="54" unique_id=1096139606]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_020" parent="Structures" index="55"]
+[node name="Wall_020" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="55" unique_id=245625106]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_021" parent="Structures" index="56"]
+[node name="Wall_021" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="56" unique_id=977708913]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_022" parent="Structures" index="57"]
+[node name="Wall_022" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="57" unique_id=615746515]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="Wall_023" parent="Structures" index="58"]
+[node name="Wall_023" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="58" unique_id=1881191974]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_001" parent="Structures" index="59"]
+[node name="WallCrenellationsInner_001" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="59" unique_id=1338912165]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_002" parent="Structures" index="60"]
+[node name="WallCrenellationsInner_002" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="60" unique_id=2006097409]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_003" parent="Structures" index="61"]
+[node name="WallCrenellationsInner_003" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="61" unique_id=1571078911]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_004" parent="Structures" index="62"]
+[node name="WallCrenellationsInner_004" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="62" unique_id=5263223]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_005" parent="Structures" index="63"]
+[node name="WallCrenellationsInner_005" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="63" unique_id=1767756025]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_006" parent="Structures" index="64"]
+[node name="WallCrenellationsInner_006" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="64" unique_id=1385988808]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_007" parent="Structures" index="65"]
+[node name="WallCrenellationsInner_007" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="65" unique_id=1268600242]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_008" parent="Structures" index="66"]
+[node name="WallCrenellationsInner_008" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="66" unique_id=1717806288]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_009" parent="Structures" index="67"]
+[node name="WallCrenellationsInner_009" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="67" unique_id=528599124]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_010" parent="Structures" index="68"]
+[node name="WallCrenellationsInner_010" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="68" unique_id=1335239087]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_011" parent="Structures" index="69"]
+[node name="WallCrenellationsInner_011" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="69" unique_id=1044464562]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_012" parent="Structures" index="70"]
+[node name="WallCrenellationsInner_012" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="70" unique_id=57208055]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_013" parent="Structures" index="71"]
+[node name="WallCrenellationsInner_013" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="71" unique_id=101255857]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_014" parent="Structures" index="72"]
+[node name="WallCrenellationsInner_014" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="72" unique_id=440574921]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_015" parent="Structures" index="73"]
+[node name="WallCrenellationsInner_015" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="73" unique_id=2084218755]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_016" parent="Structures" index="74"]
+[node name="WallCrenellationsInner_016" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="74" unique_id=502124968]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_017" parent="Structures" index="75"]
+[node name="WallCrenellationsInner_017" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="75" unique_id=1010130113]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_018" parent="Structures" index="76"]
+[node name="WallCrenellationsInner_018" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="76" unique_id=1670516529]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_019" parent="Structures" index="77"]
+[node name="WallCrenellationsInner_019" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="77" unique_id=373037237]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_020" parent="Structures" index="78"]
+[node name="WallCrenellationsInner_020" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="78" unique_id=132088407]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsInner_022" parent="Structures" index="79"]
+[node name="WallCrenellationsInner_022" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="79" unique_id=1888834547]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_001" parent="Structures" index="80"]
+[node name="WallCrenellationsOuter_001" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="80" unique_id=2039916858]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_002" parent="Structures" index="81"]
+[node name="WallCrenellationsOuter_002" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="81" unique_id=1102225708]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_003" parent="Structures" index="82"]
+[node name="WallCrenellationsOuter_003" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="82" unique_id=1314458371]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_004" parent="Structures" index="83"]
+[node name="WallCrenellationsOuter_004" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="83" unique_id=750199338]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_005" parent="Structures" index="84"]
+[node name="WallCrenellationsOuter_005" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="84" unique_id=660003962]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_006" parent="Structures" index="85"]
+[node name="WallCrenellationsOuter_006" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="85" unique_id=1935278861]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_007" parent="Structures" index="86"]
+[node name="WallCrenellationsOuter_007" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="86" unique_id=525323119]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_008" parent="Structures" index="87"]
+[node name="WallCrenellationsOuter_008" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="87" unique_id=200442953]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_009" parent="Structures" index="88"]
+[node name="WallCrenellationsOuter_009" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="88" unique_id=967928059]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_010" parent="Structures" index="89"]
+[node name="WallCrenellationsOuter_010" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="89" unique_id=1648745218]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_011" parent="Structures" index="90"]
+[node name="WallCrenellationsOuter_011" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="90" unique_id=986166485]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_012" parent="Structures" index="91"]
+[node name="WallCrenellationsOuter_012" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="91" unique_id=880223634]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_013" parent="Structures" index="92"]
+[node name="WallCrenellationsOuter_013" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="92" unique_id=1469510682]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_014" parent="Structures" index="93"]
+[node name="WallCrenellationsOuter_014" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="93" unique_id=964272216]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_015" parent="Structures" index="94"]
+[node name="WallCrenellationsOuter_015" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="94" unique_id=398044444]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_016" parent="Structures" index="95"]
+[node name="WallCrenellationsOuter_016" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="95" unique_id=1630356406]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_017" parent="Structures" index="96"]
+[node name="WallCrenellationsOuter_017" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="96" unique_id=1581559558]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_018" parent="Structures" index="97"]
+[node name="WallCrenellationsOuter_018" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="97" unique_id=1252882925]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_019" parent="Structures" index="98"]
+[node name="WallCrenellationsOuter_019" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="98" unique_id=965992997]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_020" parent="Structures" index="99"]
+[node name="WallCrenellationsOuter_020" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="99" unique_id=2047060562]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_021" parent="Structures" index="100"]
+[node name="WallCrenellationsOuter_021" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="100" unique_id=160923385]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_022" parent="Structures" index="101"]
+[node name="WallCrenellationsOuter_022" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="101" unique_id=1661565539]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallCrenellationsOuter_023" parent="Structures" index="102"]
+[node name="WallCrenellationsOuter_023" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="102" unique_id=1338332242]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallEnterance" parent="Structures" index="103"]
+[node name="WallEnterance" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="103" unique_id=232778022]
 surface_material_override/0 = ExtResource("2_njhjj")
 
-[node name="WallRoof_001" parent="Structures" index="104"]
+[node name="WallRoof_001" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="104" unique_id=1005884283]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_002" parent="Structures" index="105"]
+[node name="WallRoof_002" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="105" unique_id=100165927]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_003" parent="Structures" index="106"]
+[node name="WallRoof_003" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="106" unique_id=2039559358]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_004" parent="Structures" index="107"]
+[node name="WallRoof_004" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="107" unique_id=960847482]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_005" parent="Structures" index="108"]
+[node name="WallRoof_005" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="108" unique_id=666701774]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_006" parent="Structures" index="109"]
+[node name="WallRoof_006" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="109" unique_id=139790937]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_007" parent="Structures" index="110"]
+[node name="WallRoof_007" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="110" unique_id=7594526]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_008" parent="Structures" index="111"]
+[node name="WallRoof_008" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="111" unique_id=1921487020]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_009" parent="Structures" index="112"]
+[node name="WallRoof_009" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="112" unique_id=558725757]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_010" parent="Structures" index="113"]
+[node name="WallRoof_010" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="113" unique_id=537126559]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_011" parent="Structures" index="114"]
+[node name="WallRoof_011" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="114" unique_id=551655820]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_012" parent="Structures" index="115"]
+[node name="WallRoof_012" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="115" unique_id=531513317]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_013" parent="Structures" index="116"]
+[node name="WallRoof_013" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="116" unique_id=1722445474]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_014" parent="Structures" index="117"]
+[node name="WallRoof_014" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="117" unique_id=1131808302]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_015" parent="Structures" index="118"]
+[node name="WallRoof_015" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="118" unique_id=283333796]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_016" parent="Structures" index="119"]
+[node name="WallRoof_016" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="119" unique_id=421297191]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_017" parent="Structures" index="120"]
+[node name="WallRoof_017" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="120" unique_id=207198615]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_018" parent="Structures" index="121"]
+[node name="WallRoof_018" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="121" unique_id=1184889803]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_019" parent="Structures" index="122"]
+[node name="WallRoof_019" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="122" unique_id=729600181]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_020" parent="Structures" index="123"]
+[node name="WallRoof_020" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="123" unique_id=506142818]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_021" parent="Structures" index="124"]
+[node name="WallRoof_021" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="124" unique_id=2036954721]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_022" parent="Structures" index="125"]
+[node name="WallRoof_022" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="125" unique_id=1357682215]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="WallRoof_023" parent="Structures" index="126"]
+[node name="WallRoof_023" parent="Structures" parent_id_path=PackedInt32Array(774279842) index="126" unique_id=602047224]
 surface_material_override/0 = ExtResource("5_ha01g")
 surface_material_override/1 = ExtResource("4_7pkwf")
 
-[node name="OccluderInstance3D" type="OccluderInstance3D" parent="." index="1"]
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="." index="1" unique_id=753724895]
 occluder = ExtResource("2_0ysgy")

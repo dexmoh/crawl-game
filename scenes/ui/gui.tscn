@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfs2a7a6caqw7"]
+[gd_scene format=3 uid="uid://cfs2a7a6caqw7"]
 
 [ext_resource type="Script" uid="uid://de3n1l1wvt2c" path="res://src/ui/reticle.gd" id="1_5ysmq"]
 [ext_resource type="Shader" uid="uid://drnv3ccpimv7s" path="res://src/shaders/crt_effect.gdshader" id="1_ahhtf"]
@@ -24,7 +24,7 @@ shader_parameter/flicker_intensity = 0.025
 shader_parameter/color_offset = 1.0
 shader_parameter/blur = 0.2
 
-[node name="GUI" type="Control"]
+[node name="GUI" type="Control" unique_id=60321138]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -35,7 +35,7 @@ grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_lock_ = true
 
-[node name="ReticleContainer" type="CenterContainer" parent="."]
+[node name="ReticleContainer" type="CenterContainer" parent="." unique_id=2109434563]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -52,7 +52,7 @@ mouse_filter = 2
 script = ExtResource("1_5ysmq")
 dot_radius = 3.0
 
-[node name="InteractionLabel" type="Label" parent="." groups=["gui_interaction_label"]]
+[node name="InteractionLabel" type="Label" parent="." unique_id=1215018296 groups=["gui_interaction_label"]]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -69,21 +69,21 @@ text = "[E] Interact"
 label_settings = SubResource("LabelSettings_136eg")
 vertical_alignment = 1
 
-[node name="Inventory" parent="." instance=ExtResource("1_oo0fn")]
+[node name="Inventory" parent="." unique_id=1389753559 instance=ExtResource("1_oo0fn")]
 visible = false
 layout_mode = 1
 
-[node name="MessageBox" parent="." instance=ExtResource("4_bb880")]
+[node name="MessageBox" parent="." unique_id=565094669 instance=ExtResource("4_bb880")]
 layout_mode = 1
 offset_left = -265.0
 offset_top = -176.5
 offset_right = 265.0
 offset_bottom = 176.5
 
-[node name="NotificationBox" parent="." instance=ExtResource("5_suhd1")]
+[node name="NotificationBox" parent="." unique_id=1927718385 instance=ExtResource("5_suhd1")]
 layout_mode = 1
 
-[node name="CRT" type="ColorRect" parent="."]
+[node name="CRT" type="ColorRect" parent="." unique_id=1739564121]
 visible = false
 material = SubResource("ShaderMaterial_oo0fn")
 layout_mode = 1

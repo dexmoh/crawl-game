@@ -6,7 +6,7 @@
 
 A first-person dungeon crawler made in Godot. 
 
-Godot version: 4.5.1
+Godot version: 4.6.1
 
 ## License
 The code is released under the MIT License. See [LICENSE](/LICENSE).
