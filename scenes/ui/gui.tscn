@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://de3n1l1wvt2c" path="res://src/ui/reticle.gd" id="1_5ysmq"]
 [ext_resource type="Shader" uid="uid://drnv3ccpimv7s" path="res://src/shaders/crt_effect.gdshader" id="1_ahhtf"]
-[ext_resource type="PackedScene" uid="uid://dbnw7ia0wii7n" path="res://scenes/ui/inventory_screen.tscn" id="1_oo0fn"]
 [ext_resource type="FontFile" uid="uid://28qysypfd7sa" path="res://assets/fonts/friz_quadrata_bold.otf" id="2_suhd1"]
 [ext_resource type="PackedScene" uid="uid://u18nfepn86h2" path="res://scenes/ui/message_box.tscn" id="4_bb880"]
 [ext_resource type="PackedScene" uid="uid://bmo37w6ud8gt8" path="res://scenes/ui/notification_box.tscn" id="5_suhd1"]
@@ -68,10 +67,6 @@ size_flags_horizontal = 4
 text = "[E] Interact"
 label_settings = SubResource("LabelSettings_136eg")
 vertical_alignment = 1
-
-[node name="Inventory" parent="." unique_id=1389753559 instance=ExtResource("1_oo0fn")]
-visible = false
-layout_mode = 1
 
 [node name="MessageBox" parent="." unique_id=565094669 instance=ExtResource("4_bb880")]
 layout_mode = 1

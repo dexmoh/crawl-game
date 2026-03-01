@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://cqus8xc7ctibe" path="res://scenes/player.tscn" id="16_hppjq"]
 [ext_resource type="PackedScene" uid="uid://ciko4qmrcgf6x" path="res://scenes/objects/trees/birch_tree_4.tscn" id="17_v6k17"]
 [ext_resource type="PackedScene" uid="uid://cq2om4fasb7op" path="res://scenes/objects/trees/birch_tree_3.tscn" id="18_upsmr"]
-[ext_resource type="PackedScene" uid="uid://cushak6qgvvbq" path="res://scenes/objects/pickups/chipped_iron_shortsword_pickup.tscn" id="19_qgrpf"]
 [ext_resource type="PackedScene" uid="uid://mrkjp8ft6iaj" path="res://scenes/objects/furniture/wooden_box.tscn" id="19_upsmr"]
 [ext_resource type="PackedScene" uid="uid://caktu0yx5ojom" path="res://scenes/objects/decorations/wooden_bucket.tscn" id="20_qgrpf"]
 
@@ -170,9 +169,6 @@ transform = Transform3D(0.9592992, 0, 0.2823917, 0, 1, 0, -0.2823917, 0, 0.95929
 
 [node name="WoodenBox2" parent="." unique_id=1086303247 instance=ExtResource("19_upsmr")]
 transform = Transform3D(0.66513914, 0, 0.7467195, 0, 1, 0, -0.7467195, 0, 0.66513914, -3.6843686, 0.4, -1.3738794)
-
-[node name="ChippedIronShortswordPickup" parent="." unique_id=1601981769 instance=ExtResource("19_qgrpf")]
-transform = Transform3D(-0.19775996, 0, -0.98025054, 0.013737755, 0.9999018, -0.0027715138, 0.9801543, -0.014014535, -0.19774053, 2.6039813, 0.97766775, 2.506973)
 
 [node name="WoodenBucket" parent="." unique_id=1528273774 instance=ExtResource("20_qgrpf")]
 transform = Transform3D(0.82654065, 0, -0.56287706, 0, 1, 0, 0.56287706, 0, 0.82654065, 1.3509839, -1.5631318e-05, 1.8825272)
